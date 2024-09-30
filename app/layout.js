@@ -1,7 +1,15 @@
 import "./globals.css";
 import { Manrope, Montserrat } from "next/font/google"
 import Header from "./components/Header";
+import { Hero } from "./components/Hero";
+import { Footer } from "./components/Footer";
+import Script from "next/script";
 
+
+<Script 
+  src="https://kit.fontawesome.com/386f0d29b2.js"
+  strategy="beforeInteractive"	
+/>
 
 const manrope = Manrope({
   subsets: ['latin'],
@@ -25,7 +33,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${manrope.className} ${montserrat.variable}`}>
         <Header />
+        <Hero />
         {children}
+        <Footer />
       </body>
     </html>
   );

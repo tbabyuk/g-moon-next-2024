@@ -6,3 +6,25 @@
 h1, h2, h3 {
   font-family: var(--font-montserrat);
 }
+
+.g-moon-nav-link {
+  @apply w-full h-full px-5 text-g-moon-white hover:bg-g-moon-dark-gray-hover flex justify-center items-center;
+}
+
+.g-moon-subnav-link {
+  @apply w-full h-full text-g-moon-white flex justify-center md:justify-normal items-center px-5 py-3 hover:bg-g-moon-dark-gray-hover;
+}
+
+.g-moon-action-btn {
+  @apply bg-g-moon-gold hover:bg-g-moon-gold-hover;
+}
+
+.g-moon-footer-link {
+  @apply hover:text-g-moon-gold-hover;
+}
+
+
+.blah {
+  color: #D6B981;
+  background-color: #c9a459;
+}
