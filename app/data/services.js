@@ -40,28 +40,28 @@ export const teamMembersList = [
         description: "Manager / Registered Massage Therapist - IASTM, Cupping and Thai Massage specialist"
     },
     {
-        image: "/images/team/vivi.jpg",
-        name: "Vivi",
-        description: "Manager / Registered Massage Therapist - IASTM, Cupping and Thai Massage specialist"
+        image: "/images/team/anna.jpg",
+        name: "Anna",
+        description: "Specialist - Japanese Shiatsu, Deep Tissue and Ear Cleaning"
     },
     {
-        image: "/images/team/vivi.jpg",
-        name: "Vivi",
-        description: "Manager / Registered Massage Therapist - IASTM, Cupping and Thai Massage specialist"
+        image: "/images/team/sophie.jpg",
+        name: "Sophie",
+        description: "Specialist - Deep Tissue and Swedish Massage"
     },
     {
-        image: "/images/team/vivi.jpg",
-        name: "Vivi",
-        description: "Manager / Registered Massage Therapist - IASTM, Cupping and Thai Massage specialist"
+        image: "/images/team/amy.jpg",
+        name: "Amy",
+        description: "Specialist - Table Shower and Swedish Massage"
     },
     {
-        image: "/images/team/vivi.jpg",
-        name: "Vivi",
-        description: "Manager / Registered Massage Therapist - IASTM, Cupping and Thai Massage specialist"
+        image: "/images/team/lily.jpg",
+        name: "Lily",
+        description: "Specialist - Reflexology and Swedish Massage"
     },
     {
-        image: "/images/team/vivi.jpg",
-        name: "Vivi",
-        description: "Manager / Registered Massage Therapist - IASTM, Cupping and Thai Massage specialist"
+        image: "/images/team/vicky.jpg",
+        name: "Vicky",
+        description: "Specialist - Table Shower and Aromatherapy"
     },
 ]

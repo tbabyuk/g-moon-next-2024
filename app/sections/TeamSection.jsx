@@ -5,15 +5,15 @@ import { teamMembersList } from "../data/services"
 export const TeamSection = () => {
 
     return (
-        <div className="py-28 bg-g-moon-very-light-gray">
+        <div className="py-28 bg-gray-100">
             <SectionHeader title="OUR TEAM" />
-            <div className="px-72 flex justify-center flex-wrap gap-x-4 gap-y-8">
+            <div className="px-72 flex justify-center flex-wrap gap-x-4 gap-y-10">
                 {teamMembersList.map((member) => (
-                    <div className="h-[150px] w-[190px] bg-g-moon-very-light-gray hover:bg-g-moon-light-gray hover:cursor-pointer">
-                        <div className="h-[70%] flex justify-center items-center">
-                            <img src={member.image} className="h-[70%]" alt="" />
+                    <div className="min-h-[430px] w-[300px] bg-g-moon-very-light-gray">
+                        <div className="h-[80%] flex justify-center items-center overflow-hidden">
+                            <img src={member.image} className="w-[100%]" alt="" />
                         </div>
-                        <div className="h-[30%] flex justify-center items-center">
+                        <div className="h-[20%] px-3 flex justify-center items-center">
                             <div>{member.description}</div>
                         </div>
                     </div>

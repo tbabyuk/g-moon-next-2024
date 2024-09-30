@@ -23,8 +23,19 @@ h1, h2, h3 {
   @apply hover:text-g-moon-gold-hover;
 }
 
-
-.blah {
-  color: #D6B981;
-  background-color: #c9a459;
+.pricing-table td {
+  @apply text-center py-2
 }
+
+.pricing-table td:first-child {
+  @apply text-start ps-2
+}
+
+.pricing-table tr:nth-child(even) {
+  @apply bg-gray-200
+}
+
+/* .blah {
+  color: #f0f0f0;
+  background-color: #c9a459;
+} */
