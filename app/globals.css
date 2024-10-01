@@ -8,11 +8,11 @@ h1, h2, h3 {
 }
 
 .g-moon-nav-link {
-  @apply w-full h-full px-5 text-g-moon-white hover:bg-g-moon-dark-gray-hover flex justify-center items-center;
+  @apply w-full h-full px-5 py-3 text-g-moon-white flex justify-center items-center;
 }
 
 .g-moon-subnav-link {
-  @apply w-full h-full text-g-moon-white flex justify-center md:justify-normal items-center px-5 py-3 hover:bg-g-moon-dark-gray-hover;
+  @apply w-full h-full px-5 py-3 text-g-moon-white flex justify-center md:justify-normal items-center hover:bg-g-moon-dark-gray-hover;
 }
 
 .g-moon-action-btn {
@@ -23,15 +23,23 @@ h1, h2, h3 {
   @apply hover:text-g-moon-gold-hover;
 }
 
+.pricing-table {
+  @apply w-full mb-12
+}
+
 .pricing-table td {
   @apply text-center py-2
+}
+
+.pricing-table thead tr {
+  @apply bg-g-moon-gold text-g-moon-white
 }
 
 .pricing-table td:first-child {
   @apply text-start ps-2
 }
 
-.pricing-table tr:nth-child(even) {
+.pricing-table tbody tr:nth-child(even) {
   @apply bg-gray-200
 }
 

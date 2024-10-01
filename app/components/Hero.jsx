@@ -5,18 +5,18 @@ import { IoMdCheckmarkCircle } from "react-icons/io";
 export const Hero = () => {
 
     return(
-        <div className="h-[calc(100vh-115px)] bg-[#EDEADF] flex">
-            <div className="flex-1 flex flex-col text-g-moon-dark-gray p-20">
-                <h2 className="text-6xl mb-10">Rejuvenate your body, mind and soul</h2>
-                <ul className="text-xl space-y-4 mb-10">
-                <li className="flex items-center"><IoMdCheckmarkCircle className="text-green-500 me-2" />Relaxing Massages</li>
-                <li className="flex items-center"><IoMdCheckmarkCircle className="text-green-500 me-2" />Exfoliating Body Scrubs</li>
-                <li className="flex items-center"><IoMdCheckmarkCircle className="text-green-500 me-2" />Experienced Staff</li>
+        <div className="min-h-[calc(100vh-120px)] bg-[url('/hero-bg.jpg')] bg-center bg-cover grid grid-cols-1 lg:grid-cols-2">
+            <div className="flex pt-12 lg:pt-0 justify-center items-center">
+                <img src="/g-moon-header-image-500.png" className="w-[70%] max-w-[500px]" alt="Relaxing Massage" />
+            </div>
+            <div className="flex flex-col text-g-moon-dark-gray px-6 md:px-12 py-12 md:py-20">
+                <h2 className="text-5xl md:text-6xl mb-10">Rejuvenate your body, mind and soul</h2>
+                <ul className="text-xl space-y-4 mb-12">
+                    <li className="flex items-center"><IoMdCheckmarkCircle className="text-green-500 me-2" />Relaxing Massages</li>
+                    <li className="flex items-center"><IoMdCheckmarkCircle className="text-green-500 me-2" />Exfoliating Body Scrubs</li>
+                    <li className="flex items-center"><IoMdCheckmarkCircle className="text-green-500 me-2" />Experienced Staff</li>
                 </ul>
                 <button className="btn btn-lg g-moon-action-btn w-fit text-lg text-g-moon-white">Book My Appointment</button>
-            </div>
-            <div className="flex-1 flex justify-center items-center">
-                <img src="/g-moon-header-image-500.png" className="w-[80%]" alt="Relaxing Massage" />
             </div>
         </div>
     )

@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
       <body className={`${manrope.className} ${montserrat.variable}`}>
         <Header />
         <Hero />
-        {children}
+          {children}
         <Footer />
       </body>
     </html>
