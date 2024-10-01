@@ -15,7 +15,7 @@ export const Navbar = () => {
     return (
         <div className="flex flex-col md:flex-row">
             <div className="px-5 h-[60px] flex justify-between items-center md:w-[300px] md:justify-center bg-g-moon-dark-gray">
-                <Link href="/"><img src="https://g-moon-wellness.ca/wp-content/uploads/2022/06/g-moon-logo-final-light-768x365.png" alt="G Moon Wellness Centre Logo" width="120px" /></Link>
+                <Link href="/"><img src="/images/g-moon-logo-transparent-white.png" alt="G Moon Wellness Centre Logo" width="120px" /></Link>
                 <RxHamburgerMenu className="text-g-moon-white text-[35px] md:hidden cursor-pointer" onClick={() => setDropdownIsOpen(!dropdownIsOpen)} />
             </div>
             <nav className={`${dropdownIsOpen ? "block" : "hidden"} md:flex-1 md:flex justify-center items-center bg-g-moon-dark-gray z-20`}>

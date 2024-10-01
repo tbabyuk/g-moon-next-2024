@@ -24,7 +24,7 @@ h1, h2, h3 {
 }
 
 .pricing-table {
-  @apply w-full mb-12
+  @apply w-full mb-12 text-[0.95rem] text-gray-600
 }
 
 .pricing-table td {
