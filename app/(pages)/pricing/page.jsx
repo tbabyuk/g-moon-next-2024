@@ -1,13 +1,12 @@
-import { SectionHeader } from "../components/SectionHeader"
-
+import { PageHeader } from "../components/PageHeader";
 
 
 const PricingPage = () => {
 
     return(
-        <div className="px-6 py-28">
-            <SectionHeader title="PRICING" />
-            <div className="mx-auto w-full md:max-w-[650px] lg:max-w-[900px]">
+        <main>
+            <PageHeader title="PRICING" />
+            <div className="py-28 px-5 mx-auto w-full md:max-w-[650px] lg:max-w-[900px]">
                 <table className="pricing-table">
                     <thead>
                         <tr className="bg-g-moon-gold text-g-moon-white">
@@ -167,7 +166,7 @@ const PricingPage = () => {
                     </tbody>
                 </table>
             </div>
-        </div>
+        </main>
     )
 }
 

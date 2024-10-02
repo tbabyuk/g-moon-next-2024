@@ -4,7 +4,7 @@ import { SectionHeader } from "../components/SectionHeader"
 export const PricingSection = () => {
 
     return (
-        <div className="px-6 py-28">
+        <div className="px-5 py-28">
             <SectionHeader title="PRICING" />
                 <div className="mx-auto w-full md:max-w-[650px] lg:max-w-[900px]">
                     <table className="pricing-table">

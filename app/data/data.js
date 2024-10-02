@@ -65,3 +65,52 @@ export const teamMembersList = [
         description: "Specialist - Table Shower and Aromatherapy"
     },
 ]
+
+
+export const massagesList = [
+    {
+        name: "Thai Massage",
+        image: "/images/icons/massage.svg",
+        url: "/massages/thai-massage"
+    },
+    {
+        name: "Shiatsu Massage",
+        image: "/images/icons/massage.svg",
+        url: "/massages/shiatsu-massage"
+    },
+    {
+        name: "Swedish Massage",
+        image: "/images/icons/massage.svg",
+        url: "/massages/swedish-massage"
+    },
+    {
+        name: "Deep Tissue Massage",
+        image: "/images/icons/massage.svg",
+        url: "/massages/deep-tissue-massage"
+    },
+    {
+        name: "Face Massage",
+        image: "/images/icons/massage.svg",
+        url: "/massages/face-massage"
+    },
+    {
+        name: "Scalp Massage",
+        image: "/images/icons/massage.svg",
+        url: "/massages/scalp-massage"
+    },
+    {
+        name: "Couples Massage",
+        image: "/images/icons/massage.svg",
+        url: "/massages/couples-massage"
+    },
+    {
+        name: "Prenatal Massage",
+        image: "/images/icons/massage.svg",
+        url: "/massages/prenatal-massage"
+    },
+    {
+        name: "Postnatal Massage",
+        image: "/images/icons/massage.svg",
+        url: "/massages/postnatal-massage"
+    },
+]
