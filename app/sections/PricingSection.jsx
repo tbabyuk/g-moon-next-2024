@@ -10,7 +10,7 @@ export const PricingSection = () => {
                     <table className="pricing-table">
                         <thead>
                             <tr className="bg-g-moon-gold text-g-moon-white">
-                                <th className="py-2">MASSAGES</th>
+                                <th>MASSAGES</th>
                                 <th>30 mins</th>
                                 <th>45 mins</th>
                                 <th>60 mins</th>
@@ -19,7 +19,7 @@ export const PricingSection = () => {
                         </thead>
                         <tbody>
                             <tr>
-                                <td className="w-[200px]">Thai Massage</td>
+                                <td className="w-[150px]">Thai Massage</td>
                                 <td>n/a</td>
                                 <td>n/a</td>
                                 <td>$80*</td>
@@ -95,7 +95,7 @@ export const PricingSection = () => {
                         </thead>
                         <tbody>
                             <tr>
-                                <td className="w-[200px]">Sea Salt Scrub</td>
+                                <td className="w-[150px]">Sea Salt Scrub</td>
                                 <td>$60</td>
                                 <td>n/a</td>
                                 <td>$80</td>
@@ -129,7 +129,7 @@ export const PricingSection = () => {
                         </thead>
                         <tbody>
                             <tr>
-                                <td className="w-[200px]">Table Shower</td>
+                                <td className="w-[150px]">Table Shower</td>
                                 <td>$60</td>
                                 <td>n/a</td>
                                 <td>$80</td>

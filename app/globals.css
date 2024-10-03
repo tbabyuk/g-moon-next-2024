@@ -27,8 +27,12 @@ h1, h2, h3 {
   @apply w-full mb-12 text-[0.95rem] text-gray-600
 }
 
+.pricing-table th {
+  @apply py-2;
+}
+
 .pricing-table td {
-  @apply text-center py-2
+  @apply text-center py-2;
 }
 
 .pricing-table thead tr {
@@ -43,7 +47,23 @@ h1, h2, h3 {
   @apply bg-gray-200
 }
 
+.single-pricing-table {
+  @apply w-full mb-12 text-[0.95rem] text-gray-600 border-2;
+}
+
+.single-pricing-table th {
+  @apply py-2;
+}
+
+.single-pricing-table td {
+  @apply py-2 text-center border-2;
+}
+
 /* .blah {
   color: #f0f0f0;
   background-color: #c9a459;
 } */
+
+.g-moon-content-padding {
+  @apply px-5 md:px-20 lg:px-32 xl:px-40 py-28;
+}
