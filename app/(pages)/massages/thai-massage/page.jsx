@@ -9,7 +9,7 @@ const ThaiMassagePage = () => {
             <PageHeader title="Thai Massage" />
             <div className="g-moon-content-padding">
                 <PageSubheader title="OVERVIEW" />
-                <p className="mb-24">Experience the timeless art of Thai Massage, an ancient practice that combines the benefits of stretching, acupressure, and rhythmic movements to create a deeply invigorating and restorative experience. Rooted in traditional Thai medicine, this therapeutic massage works to balance your body's energy, enhance flexibility, and promote overall well-being.</p>
+                <p className="mb-24">Experience the timeless art of Thai Massage, an ancient practice that combines the benefits of stretching, acupressure, and rhythmic movements to create a deeply invigorating and restorative experience. Rooted in traditional Thai medicine, this therapeutic massage works to balance your body&apos;s energy, enhance flexibility, and promote overall well-being.</p>
                 <PageSubheader title="PRICING" />
                 <div className="w-full max-w-[400px] mx-auto mb-24">
                     <table className="single-pricing-table">

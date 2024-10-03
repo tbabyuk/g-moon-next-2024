@@ -12,7 +12,7 @@ const ShiatsuMassagePage = () => {
             <PageHeader title="Shiatsu Massage" />
             <div className="g-moon-content-padding">
                 <PageSubheader title="OVERVIEW" />
-                <p className="mb-24">Experience the profound benefits of Shiatsu Massage, a traditional Japanese therapy rooted in the principles of acupuncture and holistic health. Shiatsu, meaning "finger pressure," uses precise finger and palm pressure on specific points along the body&apos;s energy pathways (meridians) to restore balance, relieve tension, and promote overall well-being.</p>
+                <p className="mb-24">Experience the profound benefits of Shiatsu Massage, a traditional Japanese therapy rooted in the principles of acupuncture and holistic health. Shiatsu, meaning &quot;finger pressure,&quot; uses precise finger and palm pressure on specific points along the body&apos;s energy pathways (meridians) to restore balance, relieve tension, and promote overall well-being.</p>
                 <PageSubheader title="PRICING" />
                 <div className="w-full max-w-[400px] mx-auto mb-24">
                     <table className="single-pricing-table">
