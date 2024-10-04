@@ -114,3 +114,23 @@ export const massagesList = [
         url: "/massages/postnatal-massage"
     },
 ]
+
+
+
+export const bodyScrubsList = [
+    {
+        name: "Sea Salt Scrub",
+        image: "/images/icons/body-scrub.svg",
+        url: "/body-scrubs/sea-salt-scrub"
+    },
+    {
+        name: "Sugar Scrub",
+        image: "/images/icons/body-scrub.svg",
+        url: "/body-scrubs/sugar-scrub"
+    },
+    {
+        name: "Coffee Scrub",
+        image: "/images/icons/body-scrub.svg",
+        url: "/body-scrubs/coffee-scrub"
+    },
+]
