@@ -44,15 +44,15 @@ const DeepTissueMassagePage = () => {
                 </div>
                 <PageSubheader title="WHAT YOU GET" />
                 <PageSubSubheader title="Intensive Pressure" />
-                <p className="mb-12">Experience the benefits of deep, focused pressure applied to the deeper muscle layers and connective tissues. This technique is ideal for relieving chronic muscle tension, knots, and areas of tightness.</p>
+                <p className="g-moon-mb">Experience the benefits of deep, focused pressure applied to the deeper muscle layers and connective tissues. This technique is ideal for relieving chronic muscle tension, knots, and areas of tightness.</p>
                 <PageSubSubheader title="Targeted Relief" />
-                <p className="mb-12">Our skilled therapists use a range of techniques, including deep finger pressure, friction, and slow strokes, to address specific problem areas and facilitate the release of tension and discomfort.</p>
+                <p className="g-moon-mb">Our skilled therapists use a range of techniques, including deep finger pressure, friction, and slow strokes, to address specific problem areas and facilitate the release of tension and discomfort.</p>
                 <PageSubSubheader title="Improved Flexibility" />
-                <p className="mb-12">The focused pressure helps to break down adhesions and scar tissue, improving muscle flexibility and joint range of motion. This can be especially beneficial for athletes and those recovering from injuries.</p>
+                <p className="g-moon-mb">The focused pressure helps to break down adhesions and scar tissue, improving muscle flexibility and joint range of motion. This can be especially beneficial for athletes and those recovering from injuries.</p>
                 <PageSubSubheader title="Enhanced Circulation" />
-                <p className="mb-12">By stimulating blood flow to deeper muscle layers, Deep Tissue Massage helps to enhance circulation, reduce inflammation, and promote the delivery of oxygen and nutrients to tissues.</p>
+                <p className="g-moon-mb">By stimulating blood flow to deeper muscle layers, Deep Tissue Massage helps to enhance circulation, reduce inflammation, and promote the delivery of oxygen and nutrients to tissues.</p>
                 <PageSubSubheader title="Stress Reduction" />
-                <p className="mb-12">While the pressure may be more intense, the therapeutic effects of Deep Tissue Massage contribute to overall stress reduction and improved mental well-being. The release of muscle tension can also lead to a greater sense of relaxation and balance.</p>
+                <p className="g-moon-mb">While the pressure may be more intense, the therapeutic effects of Deep Tissue Massage contribute to overall stress reduction and improved mental well-being. The release of muscle tension can also lead to a greater sense of relaxation and balance.</p>
                 <p className="font-semibold">Ideal for those seeking to address specific muscular issues or chronic pain, Deep Tissue Massage offers a powerful and effective approach to achieving relief and restoring optimal function.</p>
             </div>
         </main>

@@ -2,6 +2,8 @@ import { PageHeader } from "../../components/PageHeader";
 import { PageSubheader } from "../../components/PageSubheader";
 import { PageSubSubheader } from "../../components/PageSubSubheader";
 
+
+
 const ThaiMassagePage = () => {
 
     return(
@@ -33,15 +35,15 @@ const ThaiMassagePage = () => {
                 </div>
                 <PageSubheader title="WHAT YOU GET" />
                 <PageSubSubheader title="Dynamic Stretching" />
-                <p className="mb-12">Enjoy a series of guided stretches and movements that improve your range of motion and flexibility. Our therapists use their hands, feet, elbows, and knees to gently stretch and manipulate your body, promoting deep relaxation and ease.</p>
+                <p className="g-moon-mb">Enjoy a series of guided stretches and movements that improve your range of motion and flexibility. Our therapists use their hands, feet, elbows, and knees to gently stretch and manipulate your body, promoting deep relaxation and ease.</p>
                 <PageSubSubheader title="Acupressure Techniques" />
-                <p className="mb-12">Benefit from targeted pressure applied to specific points along your body&apos;s energy lines (Sen lines). This technique helps to release blockages, stimulate energy flow, and alleviate muscle tension.</p>
+                <p className="g-moon-mb">Benefit from targeted pressure applied to specific points along your body&apos;s energy lines (Sen lines). This technique helps to release blockages, stimulate energy flow, and alleviate muscle tension.</p>
                 <PageSubSubheader title="Enhanced Circulation" />
-                <p className="mb-12">The rhythmic movements and stretches encourage better blood flow and oxygenation, supporting the body&apos;s natural healing processes and revitalizing your energy levels.</p>
+                <p className="g-moon-mb">The rhythmic movements and stretches encourage better blood flow and oxygenation, supporting the body&apos;s natural healing processes and revitalizing your energy levels.</p>
                 <PageSubSubheader title="Holistic Wellness" />
-                <p className="mb-12">Thai Massage aims to harmonize the body, mind, and spirit. By integrating physical manipulation with mindful relaxation, this treatment fosters a profound sense of balance and tranquility.</p>
+                <p className="g-moon-mb">Thai Massage aims to harmonize the body, mind, and spirit. By integrating physical manipulation with mindful relaxation, this treatment fosters a profound sense of balance and tranquility.</p>
                 <PageSubSubheader title="Invigorating Experience" />
-                <p className="mb-12">Unlike other forms of massage, Thai Massage is known for its energizing effects, making it an excellent choice for those seeking both relaxation and rejuvenation.</p>
+                <p className="g-moon-mb">Unlike other forms of massage, Thai Massage is known for its energizing effects, making it an excellent choice for those seeking both relaxation and rejuvenation.</p>
                 <p className="font-semibold">Indulge in the invigorating and holistic benefits of Thai Massage, and discover a path to enhanced flexibility, reduced stress, and overall well-being.</p>
             </div>
         </main>

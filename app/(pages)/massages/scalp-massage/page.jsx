@@ -32,15 +32,15 @@ const ScalpMassagePage = () => {
                 </div>
                 <PageSubheader title="WHAT YOU GET" />
                 <PageSubSubheader title="Tension Release" />
-                <p className="mb-12">Enjoy the calming effects of gentle, yet effective pressure applied to the scalp, neck, and shoulders. This technique helps to release built-up tension and alleviate stress, providing a deep sense of relaxation.</p>
+                <p className="g-moon-mb">Enjoy the calming effects of gentle, yet effective pressure applied to the scalp, neck, and shoulders. This technique helps to release built-up tension and alleviate stress, providing a deep sense of relaxation.</p>
                 <PageSubSubheader title="Enhanced Circulation" />
-                <p className="mb-12">The massage stimulates blood flow to the scalp, improving circulation and promoting healthy hair growth. This increased blood flow also helps to nourish the scalp and invigorate the hair follicles.</p>
+                <p className="g-moon-mb">The massage stimulates blood flow to the scalp, improving circulation and promoting healthy hair growth. This increased blood flow also helps to nourish the scalp and invigorate the hair follicles.</p>
                 <PageSubSubheader title="Stress Reduction" />
-                <p className="mb-12">The rhythmic movements and soothing touch of the Scalp Massage promote mental calmness and relaxation. This treatment is perfect for reducing anxiety and improving overall emotional well-being.</p>
+                <p className="g-moon-mb">The rhythmic movements and soothing touch of the Scalp Massage promote mental calmness and relaxation. This treatment is perfect for reducing anxiety and improving overall emotional well-being.</p>
                 <PageSubSubheader title="Aromatic Bliss" />
-                <p className="mb-12">Often complemented by essential oils or aromatic blends, the Scalp Massage enhances the sensory experience, leaving you feeling refreshed and uplifted. Choose from a variety of scents to customize your experience and support your specific needs.</p>
+                <p className="g-moon-mb">Often complemented by essential oils or aromatic blends, the Scalp Massage enhances the sensory experience, leaving you feeling refreshed and uplifted. Choose from a variety of scents to customize your experience and support your specific needs.</p>
                 <PageSubSubheader title="Improved Hair Health" />
-                <p className="mb-12">The massage can help to reduce scalp dryness and flakiness, improve hair texture, and enhance the overall health of your hair. It’s an excellent choice for those looking to pamper their scalp and promote hair vitality.</p>
+                <p className="g-moon-mb">The massage can help to reduce scalp dryness and flakiness, improve hair texture, and enhance the overall health of your hair. It&apos;s an excellent choice for those looking to pamper their scalp and promote hair vitality.</p>
                 <p className="font-semibold">Ideal for anyone seeking a peaceful escape from everyday stress, our Scalp Massage offers a serene and nurturing experience that revitalizes both body and mind.</p>
             </div>
         </main>

@@ -44,15 +44,15 @@ const SwedishMassagePage = () => {
                 </div>
                 <PageSubheader title="WHAT YOU GET" />
                 <PageSubSubheader title="Soothing Strokes" />
-                <p className="mb-12">Experience the calming effects of long, smooth strokes that help to relax muscles, ease tension, and improve circulation. These techniques are designed to promote a deep sense of relaxation and comfort.</p>
+                <p className="g-moon-mb">Experience the calming effects of long, smooth strokes that help to relax muscles, ease tension, and improve circulation. These techniques are designed to promote a deep sense of relaxation and comfort.</p>
                 <PageSubSubheader title="Kneading and Circular Movements" />
-                <p className="mb-12">Our therapists use kneading and circular motions to target areas of muscle tension and enhance flexibility. This approach helps to release knots and alleviate soreness, providing relief to tired and achy muscles.</p>
+                <p className="g-moon-mb">Our therapists use kneading and circular motions to target areas of muscle tension and enhance flexibility. This approach helps to release knots and alleviate soreness, providing relief to tired and achy muscles.</p>
                 <PageSubSubheader title="Improved Circulation" />
-                <p className="mb-12">The gentle pressure applied during the massage stimulates blood flow and lymphatic drainage, aiding in the removal of toxins and promoting overall cardiovascular health.</p>
+                <p className="g-moon-mb">The gentle pressure applied during the massage stimulates blood flow and lymphatic drainage, aiding in the removal of toxins and promoting overall cardiovascular health.</p>
                 <PageSubSubheader title="Stress Reduction" />
-                <p className="mb-12">Swedish Massage is renowned for its ability to reduce stress and promote relaxation. The soothing movements help to calm the nervous system, decrease anxiety, and elevate mood.</p>
+                <p className="g-moon-mb">Swedish Massage is renowned for its ability to reduce stress and promote relaxation. The soothing movements help to calm the nervous system, decrease anxiety, and elevate mood.</p>
                 <PageSubSubheader title="Enhanced Flexibility" />
-                <p className="mb-12">The therapeutic techniques used in Swedish Massage improve muscle elasticity and joint mobility, making it an excellent choice for those seeking greater physical flexibility and range of motion.</p>
+                <p className="g-moon-mb">The therapeutic techniques used in Swedish Massage improve muscle elasticity and joint mobility, making it an excellent choice for those seeking greater physical flexibility and range of motion.</p>
                 <p className="font-semibold">Indulge in the soothing and restorative benefits of Swedish Massage, and enjoy a session designed to relax your body, rejuvenate your spirit, and enhance your overall well-being.</p>
             </div>
         </main>

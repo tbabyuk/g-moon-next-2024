@@ -48,7 +48,7 @@ h1, h2, h3 {
 }
 
 .single-pricing-table {
-  @apply w-full mb-12 text-[0.95rem] text-gray-600 border-2;
+  @apply w-full mb-2 text-[0.95rem] text-gray-600 border-2;
 }
 
 .single-pricing-table th {
@@ -65,5 +65,9 @@ h1, h2, h3 {
 } */
 
 .g-moon-content-padding {
-  @apply px-5 md:px-20 lg:px-32 xl:px-40 py-28;
+  @apply px-5 md:px-24 lg:px-40 xl:px-56 py-28;
+}
+
+.g-moon-mb {
+  @apply mb-16;
 }

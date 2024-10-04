@@ -32,15 +32,15 @@ const FaceMassagePage = () => {
                 </div>
                 <PageSubheader title="WHAT YOU GET" />
                 <PageSubSubheader title="Gentle Stimulation" />
-                <p className="mb-12">Experience the benefits of gentle, rhythmic strokes that stimulate facial muscles and improve blood flow. This technique helps to relax facial tension, reduce stress, and promote a sense of calm.</p>
+                <p className="g-moon-mb">Experience the benefits of gentle, rhythmic strokes that stimulate facial muscles and improve blood flow. This technique helps to relax facial tension, reduce stress, and promote a sense of calm.</p>
                 <PageSubSubheader title="Enhanced Radiance" />
-                <p className="mb-12">The massage encourages lymphatic drainage and improves circulation, which helps to reduce puffiness and give your skin a healthy, natural glow. The enhanced blood flow also supports a more vibrant and youthful complexion.</p>
+                <p className="g-moon-mb">The massage encourages lymphatic drainage and improves circulation, which helps to reduce puffiness and give your skin a healthy, natural glow. The enhanced blood flow also supports a more vibrant and youthful complexion.</p>
                 <PageSubSubheader title="Muscle Relaxation" />
-                <p className="mb-12">Target key tension points in the face, neck, and shoulders to alleviate stress-related tension and promote relaxation. This can help to smooth out fine lines and enhance overall facial tone.</p>
+                <p className="g-moon-mb">Target key tension points in the face, neck, and shoulders to alleviate stress-related tension and promote relaxation. This can help to smooth out fine lines and enhance overall facial tone.</p>
                 <PageSubSubheader title="Nourishing Effects" />
-                <p className="mb-12">Often combined with high-quality facial oils or creams, the massage allows for deeper penetration of nourishing ingredients, improving skin hydration and texture.</p>
+                <p className="g-moon-mb">Often combined with high-quality facial oils or creams, the massage allows for deeper penetration of nourishing ingredients, improving skin hydration and texture.</p>
                 <PageSubSubheader title="Stress Relief" />
-                <p className="mb-12">Enjoy the calming effects of facial massage, which helps to reduce overall stress and promote a feeling of well-being. The gentle, soothing touch can also aid in better sleep and mental relaxation.</p>
+                <p className="g-moon-mb">Enjoy the calming effects of facial massage, which helps to reduce overall stress and promote a feeling of well-being. The gentle, soothing touch can also aid in better sleep and mental relaxation.</p>
                 <p className="font-semibold">Perfect for anyone seeking a refreshing and rejuvenating experience, our Face Massage provides a harmonious blend of relaxation and skin care, leaving you with a radiant and revitalized appearance.</p>
             </div>
         </main>
