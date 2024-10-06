@@ -1,11 +1,15 @@
 import { PageHeader } from "../components/PageHeader";
 
+export const metadata = {
+    title: "G Moon Wellness Centre | Pricing",
+    description: "Pricing for our services",
+}
 
 const PricingPage = () => {
 
     return(
         <main>
-            <PageHeader title="PRICING" />
+            <PageHeader title="Pricing" />
             <div className="py-28 px-5 mx-auto w-full md:max-w-[650px] lg:max-w-[900px]">
                 <table className="pricing-table">
                     <thead>

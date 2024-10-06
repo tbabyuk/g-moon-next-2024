@@ -23,11 +23,6 @@ const montserrat = Montserrat({
 })
 
 
-export const metadata = {
-  title: "G Moon Wellness Centre",
-  description: "Spa in North York",
-};
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

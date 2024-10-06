@@ -8,11 +8,11 @@ h1, h2, h3 {
 }
 
 .g-moon-nav-link {
-  @apply w-full h-full px-5 py-3 text-g-moon-white flex justify-center items-center;
+  @apply w-full h-full px-5 py-3 text-g-moon-white font-medium flex justify-center items-center;
 }
 
 .g-moon-subnav-link {
-  @apply w-full h-full px-5 py-3 text-g-moon-white flex justify-center md:justify-normal items-center hover:bg-g-moon-dark-gray-hover;
+  @apply w-full h-full px-5 py-3 text-g-moon-white flex justify-center md:justify-normal items-center hover:bg-g-moon-medium-gray-hover;
 }
 
 .g-moon-action-btn {
@@ -59,10 +59,10 @@ h1, h2, h3 {
   @apply py-2 text-center border-2;
 }
 
-/* .blah {
-  color: #f0f0f0;
-  background-color: #c9a459;
-} */
+.blah {
+  color: #8c8c8c;
+  background-color: #737373;
+}
 
 .g-moon-content-padding {
   @apply px-5 md:px-24 lg:px-40 xl:px-56 py-28;

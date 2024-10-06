@@ -10,8 +10,9 @@ module.exports = {
       colors: {
         "g-moon-very-light-gray": "#F0F0F0",
         "g-moon-light-gray": "#C2C0C1",
+        "g-moon-medium-gray": "#8C8C8C",
+        "g-moon-medium-gray-hover": "#737373",
         "g-moon-dark-gray": "#686864",
-        "g-moon-dark-gray-hover": "#4E4E4B",
         "g-moon-gold": "#D6B981",
         "g-moon-gold-hover": "#C9A459",
         "g-moon-white": "#F3F4F6"
