@@ -21,11 +21,9 @@ import { useOrderDetails } from "@/app/hooks/useOrderDetails";
 
 const BookingPage = () => {
 
-  const [selectedService, setSelectedService] = useState("thai massage");
   const [dayOptionsArray, setDayOptionsArray] = useState([]);
-  const [selectedDate, setSelectedDate] = useState(new Date());
   const [therapistOptionsArray, setTherapistOptionsArray] = useState([]);
-  const [durationOptions, setDurationOptions] = useState([]);
+  const [durationOptionsArray, setDurationOptionsArray] = useState([]);
 
   const {orderDetails, setOrderDetails} = useOrderDetails()
 
@@ -34,15 +32,13 @@ const BookingPage = () => {
 
   useEffect(() => {
 
-        console.log("first useEffect fired due to chosenService selected")
         // get days on which chosen service is available
         const dayOptions = daysBasedOnService.filter((day) => day.services.includes(orderDetails.chosenService))
         setDayOptionsArray(dayOptions)
 
         // get default duration for chosen service
         const serviceDurationOptions = allServicesList.filter((service) => service.name === orderDetails.chosenService)
-        console.log("logging serviceDurationOptions from useEffect:", serviceDurationOptions)
-        setDurationOptions(serviceDurationOptions[0]?.duration)
+        setDurationOptionsArray(serviceDurationOptions[0]?.duration)
         setOrderDetails((prevState) => ({...prevState, chosenDuration: serviceDurationOptions[0]?.duration[0]}))
 
     }, [orderDetails.chosenService])
@@ -54,13 +50,12 @@ const BookingPage = () => {
       const selectedDay = date.toLocaleString("en-US", {
           weekday: "long"
         })
-        console.log("needed========================== useEffect fired", selectedDay)
-
-
+        // filter therapists based on chosen date and chosen service
         const therapistOptions = therapistsBasedOnDays.filter((therapist) => therapist.availability.includes(selectedDay.toLowerCase()) && therapist.services.includes(orderDetails.chosenService))
         setTherapistOptionsArray(therapistOptions)
-        setOrderDetails((prevState) => ({...prevState, chosenTherapist: therapistOptions[0]?.name}))
-        console.log("Logging therapistsOptions+++++++++++++++++++", therapistOptions)
+        if(orderDetails.chosenTherapist === "") {
+            setOrderDetails((prevState) => ({...prevState, chosenTherapist: therapistOptions[0]?.name}))
+        }
   }, [orderDetails.chosenDate])
 
 
@@ -72,18 +67,11 @@ const BookingPage = () => {
                     <Step1ChooseService setOrderDetails={setOrderDetails} />
                     <Step2ChooseDate dayOptionsArray={dayOptionsArray} setOrderDetails={setOrderDetails} />
                     <Step3ChooseTime setOrderDetails={setOrderDetails} />
-                    <Step4ChooseDuration durationOptions={durationOptions} setOrderDetails={setOrderDetails} />
+                    <Step4ChooseDuration durationOptionsArray={durationOptionsArray} setOrderDetails={setOrderDetails} />
                     <Step5ChooseTherapist therapistOptionsArray={therapistOptionsArray} setOrderDetails={setOrderDetails} />
                     <Step6ReviewOrder orderDetails={orderDetails} />
                 </StepWizard>
             </div>
-        {/* <div>
-            <div
-            className="calendly-inline-widget"
-            data-url="https://calendly.com/tbabyuk/vivi-schedule"
-            style={{ minWidth: "320px", height: "700px" }}
-            />
-        </div> */}
         </main>
   );
 };

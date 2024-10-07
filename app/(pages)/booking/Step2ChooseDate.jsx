@@ -49,14 +49,14 @@ export const Step2ChooseDate = ({currentStep, totalSteps, previousStep, nextStep
         <div>
             <div className="border-b-2 pb-2 mb-2 text-gray-400">Step {currentStep} of {totalSteps}</div>
             <p className="text-lg font-medium">Choose your preferred day:</p>
-            <small className="block mb-5">These are the only days on which your chosen service is currently available</small>
-            <div className="customDatePickerWidth mb-16">
+            <small className="block mb-4">These are the only days on which your chosen service is currently available</small>
+            <div className="customDatePickerWidth mb-12">
                 <DatePicker 
                     selected={chosenDate} 
                     onChange={handleDateSelection}
                     filterDate={filterDays} // Apply the filterDays function to restrict selectable dates
                     dateFormat="MMMM d, yyyy"
-                    className="w-full border-2 text-center"
+                    className="w-full border border-gray-300 text-center h-[45px]"
                 />
             </div>
 

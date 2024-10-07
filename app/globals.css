@@ -19,7 +19,7 @@ h1, h2, h3 {
   @apply bg-g-moon-gold hover:bg-g-moon-gold-hover;
 }
 
-.g-moon-footer-link {
+.g-moon-link {
   @apply hover:text-g-moon-gold-hover;
 }
 

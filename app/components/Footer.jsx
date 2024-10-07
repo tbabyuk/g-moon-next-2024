@@ -4,7 +4,8 @@ import { IoLogoInstagram } from "react-icons/io";
 import { IoLogoYoutube } from "react-icons/io";
 import { IoMapOutline } from "react-icons/io5";
 import { BsTelephone } from "react-icons/bs";
-import { MdOutlineEmail } from "react-icons/md";
+import { AiOutlineMail } from "react-icons/ai";
+import { IoTimeOutline } from "react-icons/io5";
 
 
 
@@ -16,9 +17,9 @@ export const Footer = () => {
                 <div>
                     <h3 className="text-2xl font-semibold mb-8">Social</h3>
                     <ul className="flex space-x-3">
-                        <li><Link href="#" className="g-moon-footer-link"><IoLogoFacebook size="2.5rem" /></Link></li>
-                        <li><Link href="#" className="g-moon-footer-link"><IoLogoInstagram size="2.5rem" /></Link></li>
-                        <li><Link href="#" className="g-moon-footer-link"><IoLogoYoutube size="2.5rem" /></Link></li>
+                        <li><Link href="#" className="g-moon-link"><IoLogoFacebook size="2.5rem" /></Link></li>
+                        <li><Link href="#" className="g-moon-link"><IoLogoInstagram size="2.5rem" /></Link></li>
+                        <li><Link href="#" className="g-moon-link"><IoLogoYoutube size="2.5rem" /></Link></li>
                     </ul>
                 </div>
             </div>
@@ -26,23 +27,24 @@ export const Footer = () => {
                 <div>
                     <h3 className="text-2xl font-semibold mb-8">Services</h3>
                     <ul className="space-y-2 text-[0.9rem]">
-                        <li><Link href="/services/massages" className="g-moon-footer-link">Massages</Link></li>
-                        <li><Link href="/services/body-scrubs" className="g-moon-footer-link">Body Scrubs</Link></li>
-                        <li><Link href="/services/table-shower" className="g-moon-footer-link">Table Shower</Link></li>
-                        <li><Link href="/services/hot-stone-therapy" className="g-moon-footer-link">Hot Stone Therapy</Link></li>
-                        <li><Link href="/services/aromatherapy" className="g-moon-footer-link">Aromatherapy</Link></li>
-                        <li><Link href="/services/reflexology" className="g-moon-footer-link">Reflexology</Link></li>
-                        <li><Link href="/services/consultation" className="g-moon-footer-link">Consultation</Link></li>
+                        <li><Link href="/services/massages" className="g-moon-link">Massages</Link></li>
+                        <li><Link href="/services/body-scrubs" className="g-moon-link">Body Scrubs</Link></li>
+                        <li><Link href="/services/table-shower" className="g-moon-link">Table Shower</Link></li>
+                        <li><Link href="/services/hot-stone-therapy" className="g-moon-link">Hot Stone Therapy</Link></li>
+                        <li><Link href="/services/aromatherapy" className="g-moon-link">Aromatherapy</Link></li>
+                        <li><Link href="/services/reflexology" className="g-moon-link">Reflexology</Link></li>
+                        <li><Link href="/services/consultation" className="g-moon-link">Consultation</Link></li>
                     </ul>
                 </div>
             </div>
             <div className="flex-1 pt-16 md:pt-0 md:flex md:flex-col md:items-center">
                 <div>
                     <h3 className="text-2xl font-semibold mb-8">Contact</h3>
-                    <ul className="flex flex-col justify-center space-y-8 text-[0.9rem]">
-                        <li><a href="https://maps.app.goo.gl/kjCq6FC7RopNiny19" target="_blank" className="flex items-center g-moon-footer-link"><IoMapOutline className="me-2" size="1.1rem" />160 East Beaver Creek Rd, #21,<br /> Richmond Hill, ON, L4B 3J6</a></li>
-                        <li><a href="tel:+16472239966" className="flex items-center g-moon-footer-link"><BsTelephone className="me-2" size="1.1rem" />(647) 223-9966</a></li>
-                        <li><a href="mailto:vivi@g-moon-wellness.ca" className="flex items-center g-moon-footer-link"><MdOutlineEmail className="me-2" size="1.1rem" />vivi@g-moon-wellness.ca</a></li>
+                    <ul className="flex flex-col justify-center space-y-6 text-[0.85rem]">
+                        <li><a href="tel:+16472239966" className="flex items-center g-moon-link"><BsTelephone className="me-2 text-[18px]" />(647) 223-9966</a></li>
+                        <li><a href="mailto:vivi@g-moon-wellness.ca" className="flex items-center g-moon-link"><AiOutlineMail className="me-2 text-[18px]" />vivi@g-moon-wellness.ca</a></li>
+                        <li className="flex items-center"><IoTimeOutline className="me-2 text-[20px] shrink-0"  />Mon - Sun, 10:00am-10:00pm</li>
+                        <li><a href="https://maps.app.goo.gl/kjCq6FC7RopNiny19" target="_blank" className="flex items-center g-moon-link"><IoMapOutline className="me-2 text-[18px]" />160 East Beaver Creek Rd, #21,<br /> Richmond Hill, ON, L4B 3J6</a></li>
                     </ul>
                 </div>
             </div>

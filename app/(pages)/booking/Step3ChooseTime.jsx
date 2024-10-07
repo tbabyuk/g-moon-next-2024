@@ -9,13 +9,12 @@ export const Step3ChooseTime = ({currentStep, totalSteps, previousStep, nextStep
         setOrderDetails((prevState) => ({...prevState, chosenStartTime: time }))
     }
 
-
     return(
         <div>
             <div className="border-b-2 pb-2 mb-2 text-gray-400">Step {currentStep} of {totalSteps}</div>
             <p className="text-lg font-medium">Choose your preferred start time:</p>
-            <small className="block mb-5">Times are limited to our operating hours</small>
-            <select className="block ps-4 w-full mb-14 border-2" onChange={(e) => handleStartTimeSelection(e)}>
+            <small className="block mb-4">Times are limited to our operating hours</small>
+            <select className="select select-bordered w-full mb-12" onChange={(e) => handleStartTimeSelection(e)}>
                 <option value="10:00am">10:00am</option>
                 <option value="10:15am">10:15am</option>
                 <option value="10:30am">10:30am</option>
@@ -64,12 +63,6 @@ export const Step3ChooseTime = ({currentStep, totalSteps, previousStep, nextStep
                 <option value="9:15pm">9:15pm</option>
                 <option value="9:30pm">9:30pm</option>
             </select>
-
-            {/* <select className="block w-full mb-16 border-2" onChange={(e) => setSelectedService(e.target.value)}>
-                {therapistsOptionsArray?.map((therapist, index) => (
-                    <option key={index} value={therapist.name}>{therapist.name}</option>
-                ))}
-            </select> */}
             <div className="flex justify-between">
                 <button className="btn btn-success text-g-moon-white float-end" onClick={previousStep}>Go Back</button>
                 <button className="btn btn-success text-g-moon-white float-end" onClick={nextStep}>Next Step</button>

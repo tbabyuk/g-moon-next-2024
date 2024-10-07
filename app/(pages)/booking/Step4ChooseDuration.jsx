@@ -1,7 +1,8 @@
 "use client"
 
 
-export const Step4ChooseDuration = ({currentStep, totalSteps, previousStep, nextStep, durationOptions, setOrderDetails}) => {
+
+export const Step4ChooseDuration = ({currentStep, totalSteps, previousStep, nextStep, durationOptionsArray, setOrderDetails}) => {
 
     const handleDurationSelection = (e) => {
         const duration = e.target.value;
@@ -12,9 +13,9 @@ export const Step4ChooseDuration = ({currentStep, totalSteps, previousStep, next
         <div>
             <div className="border-b-2 pb-2 mb-2 text-gray-400">Step {currentStep} of {totalSteps}</div>
             <p className="text-lg font-medium">Choose your preferred appointment duration:</p>
-            <small className="block mb-5">Times are limited to our operating hours</small>
-            <select className="block ps-4 w-full mb-14 border-2" onChange={(e) => handleDurationSelection(e)}>
-                {durationOptions?.map((option, index) => (
+            <small className="block mb-4">Times are limited to our operating hours</small>
+            <select className="select select-bordered w-full mb-12" onChange={(e) => handleDurationSelection(e)}>
+                {durationOptionsArray?.map((option, index) => (
                     <option key={index} value={option}>{option} mins</option>
                 ))}
             </select>
