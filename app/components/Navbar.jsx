@@ -44,7 +44,7 @@ export const Navbar = () => {
                         {bookingSubmenuOpen && 
                             <ul className="bg-g-moon-medium-gray w-full md:w-fit md:absolute" onMouseEnter={() => setBookingSubmenuOpen(true)} onMouseLeave={() => setBookingSubmenuOpen(false)}>
                                 <li className="whitespace-nowrap"><Link href="/resources/videos" className="g-moon-subnav-link" onClick={() => closeAllMenus()}>Contact Form</Link></li>
-                                <li className="whitespace-nowrap"><Link href="/resources/preferred-vendors" className="g-moon-subnav-link" onClick={() => closeAllMenus()}>Booking Calendar</Link></li>
+                                <li className="whitespace-nowrap"><Link href="/booking" className="g-moon-subnav-link" onClick={() => closeAllMenus()}>Booking Calendar</Link></li>
                             </ul>
                         }
                     </li>

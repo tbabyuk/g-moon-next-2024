@@ -1,0 +1,25 @@
+"use client"
+
+import { allServicesList } from "@/app/data/data"
+
+
+export const Step1ChooseService = ({currentStep, totalSteps, nextStep, setOrderDetails}) => {
+
+    const handleServiceSelection = (e) => {
+        const service = e.target.value;
+        setOrderDetails((prevState) => ({...prevState, chosenService: service }))
+    }
+
+    return(
+        <div>
+            <div className="border-b-2 pb-2 mb-2 text-gray-400">Step {currentStep} of {totalSteps}</div>
+            <p className="text-lg font-medium mb-2">Choose the service you are interested in:</p>
+            <select className="block w-full mb-14 border-2" onChange={(e) => handleServiceSelection(e)}>
+                {allServicesList.map((service, index) => (
+                    <option key={index} value={service.name}>{service.name}</option>
+                ))}
+            </select>
+            <button className="btn mt-12 btn-success text-g-moon-white float-end" onClick={nextStep}>Next Step</button>
+        </div>   
+    )
+}
