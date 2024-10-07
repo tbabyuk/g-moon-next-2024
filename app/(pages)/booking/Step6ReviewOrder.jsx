@@ -31,7 +31,7 @@ export const Step6ReviewOrder = ({currentStep, totalSteps, previousStep, nextSte
         <div>
             <div className="border-b-2 pb-2 mb-2 text-gray-400">Step {currentStep} of {totalSteps}</div>
             <p className="text-lg font-medium">Review your selections:</p>
-            <small className="block mb-5">To modify your order, use the "Go Back" button</small>
+            <small className="block mb-5">To modify your order, use the &quot;Go Back&quot; button</small>
             <ul className="mb-14 list-inside list-disc border-2 p-3">
                 <li>Service: <span className="ms-2 font-bold">{formatService(orderDetails.chosenService)}</span></li>
                 <li>Date: <span className="ms-2 font-bold">{formattedDate}</span></li>
