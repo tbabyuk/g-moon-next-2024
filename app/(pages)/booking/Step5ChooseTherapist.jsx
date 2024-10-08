@@ -1,8 +1,14 @@
 "use client"
 
+import { therapistsBasedOnDays } from "@/app/data/data"
+import { useBookingContext } from "@/app/context/BookingContext"
+import { useState, useEffect } from "react"
 
+export const Step5ChooseTherapist = ({currentStep, totalSteps, previousStep, nextStep}) => {
 
-export const Step5ChooseTherapist = ({currentStep, totalSteps, previousStep, nextStep, therapistOptionsArray, setOrderDetails}) => {
+    const {orderDetails, setOrderDetails} = useBookingContext()
+    const [therapistOptionsArray, setTherapistOptionsArray] = useState([])
+
 
     const handleTherapistSelection = (e) => {
         const therapist = e.target.value;
@@ -10,12 +16,23 @@ export const Step5ChooseTherapist = ({currentStep, totalSteps, previousStep, nex
     }
 
 
+    useEffect(() => {
+            const date = new Date(orderDetails.chosenDate);
+            const chosenDay = date.toLocaleString("en-US", {
+            weekday: "long"
+            })
+            const therapistOptions = therapistsBasedOnDays.filter((therapist) => therapist.availability.includes(chosenDay.toLowerCase()) && therapist.services.includes(orderDetails.chosenService))
+            setTherapistOptionsArray(therapistOptions)
+            setOrderDetails((prevState) => ({...prevState, chosenTherapist: therapistOptions[0]?.name}))
+    }, [orderDetails.chosenService, orderDetails.chosenDate])
+
+
     return(
         <div>
             <div className="border-b-2 pb-2 mb-2 text-gray-400">Step {currentStep} of {totalSteps}</div>
             <p className="text-lg font-medium">Choose your preferred therapist:</p>
             <small className="block mb-4">These are the available therapists based on the day and service you chose</small>
-            <select className="select select-bordered w-full mb-12" onChange={(e) => handleTherapistSelection(e)}>
+            <select className="select select-bordered w-full mb-12" value={orderDetails.chosenTherapist} onChange={(e) => handleTherapistSelection(e)}>
                 {therapistOptionsArray?.map((therapist, index) => (
                     <option key={index} value={therapist.name}>{therapist.name[0].toUpperCase() + therapist.name.slice(1)}</option>
                 ))}

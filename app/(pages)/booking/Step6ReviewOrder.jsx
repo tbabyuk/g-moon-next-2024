@@ -1,17 +1,20 @@
 "use client"
 
+import { useBookingContext } from "@/app/context/BookingContext"
 
 
-export const Step6ReviewOrder = ({currentStep, totalSteps, previousStep, nextStep, orderDetails}) => {
+export const Step6ReviewOrder = ({currentStep, totalSteps, previousStep, nextStep}) => {
+
+
+    const {orderDetails} = useBookingContext()
 
     const date = orderDetails.chosenDate;
 
-
     const formattedDate = date?.toLocaleDateString("en-US", {
-        weekday: 'long',
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
+        weekday: "short",
+        year: "numeric",
+        month: "long",
+        day: "numeric"
     });
 
 
@@ -44,3 +47,5 @@ export const Step6ReviewOrder = ({currentStep, totalSteps, previousStep, nextSte
         </div>   
     )
 }
+
+
