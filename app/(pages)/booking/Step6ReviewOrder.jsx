@@ -28,6 +28,30 @@ export const Step6ReviewOrder = ({currentStep, totalSteps, previousStep, nextSte
     }
 
 
+    const handleCheckout = async () => {
+
+        console.log("Logging orderDetails from handleCheckout:", orderDetails)
+
+        try {
+            const res = await fetch("/api/checkout", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({orderDetails})
+            })
+
+            if(res.ok) {
+                const {url} = await res.json()
+                window.location.assign(url)            
+            }
+    
+        } catch (error) {
+            console.log(error.message)
+        }
+    }
+
+
     return(
         <div>
             <div className="border-b-2 pb-2 mb-2 text-gray-400">Step {currentStep} of {totalSteps}</div>
@@ -42,7 +66,7 @@ export const Step6ReviewOrder = ({currentStep, totalSteps, previousStep, nextSte
             </ul>
             <div className="flex justify-between">
                 <button className="btn btn-success text-g-moon-white float-end" onClick={previousStep}>Go Back</button>
-                <button className="btn btn-success text-g-moon-white float-end" onClick={nextStep}>Next Step</button>
+                <button className="btn btn-warning text-g-moon-white float-end" onClick={handleCheckout}>Go to Checkout</button>
             </div>        
         </div>   
     )

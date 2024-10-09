@@ -3,6 +3,10 @@ import { PageSubheader } from "../../components/PageSubheader";
 import { PageSubSubheader } from "../../components/PageSubSubheader";
 
 
+export const metadata = {
+    title: "G Moon Wellness Centre | Couples Massage",
+    description: "Share a serene and intimate experience with our Couples Massage, a luxurious treatment designed for two."
+}
 
 
 const CouplesMassagePage = () => {

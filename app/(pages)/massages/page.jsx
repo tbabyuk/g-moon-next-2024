@@ -3,6 +3,12 @@ import { massagesList } from "@/app/data/data"
 import Link from "next/link"
 
 
+export const metadata = {
+    title: "G Moon Wellness Centre | Massages",
+    description: "Choose from our wide selection of massages!",
+}
+
+
 const MassagesPage = () => {
 
     return(

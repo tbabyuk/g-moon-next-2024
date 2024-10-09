@@ -3,6 +3,12 @@ import { bodyScrubsList } from "@/app/data/data"
 import Link from "next/link"
 
 
+export const metadata = {
+    title: "G Moon Wellness Centre | Body Scrubs",
+    description: "Choose from our selection of body scrubs!",
+}
+
+
 const BodyScrubsPage = () => {
 
     return(

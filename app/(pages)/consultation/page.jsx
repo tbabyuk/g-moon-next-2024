@@ -1,8 +1,11 @@
 import { PageHeader } from "../components/PageHeader";
 import { PageSubheader } from "../components/PageSubheader";
-import { PageSubSubheader } from "../components/PageSubSubheader";
 
 
+export const metadata = {
+    title: "G Moon Wellness Centre | Consultation",
+    description: "Our Wellness Consultation service offers a personalized approach to achieving optimal health and well-being!",
+}
 
 
 const ConsultationPage = () => {

@@ -1,8 +1,11 @@
 import { PageHeader } from "../../components/PageHeader";
 import { PageSubheader } from "../../components/PageSubheader";
-import { PageSubSubheader } from "../../components/PageSubSubheader";
 
 
+export const metadata = {
+    title: "G Moon Wellness Centre | Sugar Scrub",
+    description: "A gentle yet effective exfoliant, our Sugar Scrub nourishes and hydrates, perfect for sensitive skin or a softer touch."
+}
 
 
 const SugarScrubPage = () => {

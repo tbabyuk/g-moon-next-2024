@@ -1,8 +1,11 @@
 import { PageHeader } from "../../components/PageHeader";
 import { PageSubheader } from "../../components/PageSubheader";
-import { PageSubSubheader } from "../../components/PageSubSubheader";
 
 
+export const metadata = {
+    title: "G Moon Wellness Centre | Sea Salt Scrub",
+    description: "Infused with mineral-rich sea salt, this scrub detoxifies and re-mineralizes the skin, leaving it refreshed and invigorated."
+}
 
 
 const SeaSaltScrubPage = () => {

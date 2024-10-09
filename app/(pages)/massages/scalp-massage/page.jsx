@@ -3,6 +3,10 @@ import { PageSubheader } from "../../components/PageSubheader";
 import { PageSubSubheader } from "../../components/PageSubSubheader";
 
 
+export const metadata = {
+    title: "G Moon Wellness Centre | Scalp Massage",
+    description: "Experience the ultimate in relaxation and rejuvenation with our Scalp Massage, a soothing treatment designed to relieve tension, stimulate circulation, and promote overall well-being."
+}
 
 
 const ScalpMassagePage = () => {

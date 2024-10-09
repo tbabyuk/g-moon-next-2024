@@ -3,6 +3,10 @@ import { PageSubheader } from "../../components/PageSubheader";
 import { PageSubSubheader } from "../../components/PageSubSubheader";
 
 
+export const metadata = {
+    title: "G Moon Wellness Centre | Swedish Massage",
+    description: "Discover the ultimate in relaxation with our Swedish Massage, a classic therapy designed to promote overall wellness and ease muscle tension."
+}
 
 
 const SwedishMassagePage = () => {

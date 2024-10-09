@@ -1,8 +1,11 @@
 import { PageHeader } from "../../components/PageHeader";
 import { PageSubheader } from "../../components/PageSubheader";
-import { PageSubSubheader } from "../../components/PageSubSubheader";
 
 
+export const metadata = {
+    title: "G Moon Wellness Centre | Coffee Scrub",
+    description: "Energize your senses and stimulate circulation with our aromatic Coffee Scrub, ideal for rejuvenating tired, dull skin."
+}
 
 
 const CoffeeScrubPage = () => {

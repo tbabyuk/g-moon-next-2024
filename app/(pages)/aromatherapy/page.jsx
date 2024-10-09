@@ -3,6 +3,10 @@ import { PageSubheader } from "../components/PageSubheader";
 import { PageSubSubheader } from "../components/PageSubSubheader";
 
 
+export const metadata = {
+    title: "G Moon Wellness Centre | Aromatherapy",
+    description: "Immerse yourself in the therapeutic benefits of our Aromatherapy sessions!",
+}
 
 
 const AromatherapyPage = () => {

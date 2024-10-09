@@ -3,6 +3,10 @@ import { PageSubheader } from "../../components/PageSubheader";
 import { PageSubSubheader } from "../../components/PageSubSubheader";
 
 
+export const metadata = {
+    title: "G Moon Wellness Centre | Face Massage",
+    description: "Revitalize and refresh your appearance with our luxurious Face Massage, a rejuvenating treatment designed to promote relaxation, improve circulation, and enhance the natural beauty of your skin."
+}
 
 
 const FaceMassagePage = () => {

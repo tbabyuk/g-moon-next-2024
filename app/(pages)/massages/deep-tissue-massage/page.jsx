@@ -3,6 +3,10 @@ import { PageSubheader } from "../../components/PageSubheader";
 import { PageSubSubheader } from "../../components/PageSubSubheader";
 
 
+export const metadata = {
+    title: "G Moon Wellness Centre | Deep Tissue Massage",
+    description: "Unwind with our Deep Tissue Massage, a targeted therapy designed to address deep-seated muscle tension and chronic pain."
+}
 
 
 const DeepTissueMassagePage = () => {

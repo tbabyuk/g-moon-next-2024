@@ -3,6 +3,10 @@ import { PageSubheader } from "../../components/PageSubheader";
 import { PageSubSubheader } from "../../components/PageSubSubheader";
 
 
+export const metadata = {
+    title: "G Moon Wellness Centre | Postnatal Massage",
+    description: "Rejuvenate and restore with our Postnatal Massage, specifically designed to support new mothers as they navigate the postpartum period."
+}
 
 
 const PostnatalMassagePage = () => {

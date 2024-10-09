@@ -3,6 +3,10 @@ import { PageSubheader } from "../components/PageSubheader";
 import { PageSubSubheader } from "../components/PageSubSubheader";
 
 
+export const metadata = {
+    title: "G Moon Wellness Centre | Hot Stone Therapy",
+    description: "Indulge in the ultimate relaxation experience with our Hot Stone Therapy!",
+}
 
 
 const HotStoneTherapyPage = () => {

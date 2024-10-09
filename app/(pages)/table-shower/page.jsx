@@ -3,6 +3,10 @@ import { PageSubheader } from "../components/PageSubheader";
 import { PageSubSubheader } from "../components/PageSubSubheader";
 
 
+export const metadata = {
+    title: "G Moon Wellness Centre | Table Shower",
+    description: "Experience the ultimate in relaxation and rejuvenation with our Table Shower service!",
+}
 
 
 const TableShowerPage = () => {
@@ -12,7 +16,7 @@ const TableShowerPage = () => {
             <PageHeader title="Table Shower" />
             <div className="g-moon-content-padding">
                 <PageSubheader title="OVERVIEW" />
-                <p className="mb-24">Experience the ultimate in relaxation and rejuvenation with our Table Shower service. This unique treatment combines the therapeutic benefits of hydrotherapy with a soothing full-body cleanse. Our skilled therapists will guide you through a gentle, invigorating rinse on a specially designed table, where you’ll be comfortably positioned as warm water cascades over your body.</p>
+                <p className="mb-24">Experience the ultimate in relaxation and rejuvenation with our Table Shower service. This unique treatment combines the therapeutic benefits of hydrotherapy with a soothing full-body cleanse. Our skilled therapists will guide you through a gentle, invigorating rinse on a specially designed table, where you&apos;ll be comfortably positioned as warm water cascades over your body.</p>
                 <PageSubheader title="PRICING" />
                 <div className="w-full max-w-[400px] mx-auto mb-24">
                     <table className="single-pricing-table">
