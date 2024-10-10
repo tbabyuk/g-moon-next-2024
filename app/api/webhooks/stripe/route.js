@@ -12,6 +12,8 @@ export async function POST(req) {
     const amountTotal = requestBody.data.object.amount_total;
     const customerName = requestBody.data.object.customer_details.name
     const customerEmail = requestBody.data.object.customer_details.email
+    const serviceName = requestBody.data.object.metadata.chosenService
+    const serviceDuration = requestBody.data.object.metadata.chosenDuration
 
 
     // const userClerkId = requestBody.data.object.metadata.userClerkId;
@@ -20,6 +22,9 @@ export async function POST(req) {
         console.log("amount total:", amountTotal)
         console.log("customer name:", customerName)
         console.log("customer email:", customerEmail)
+        console.log("service name:", serviceName)
+        console.log("service duration:", serviceDuration)
+
         // console.log("Logging type and amount:", type, amount)
         // console.log("logging userClerkId from Stripe Webhook:", userClerkId)
 
@@ -47,6 +52,12 @@ export async function POST(req) {
                 <hr>
                 <strong>Customer Email:</strong><br />
                 <small>${customerEmail}</small>
+                <hr>
+                <strong>Service Name:</strong><br />
+                <small>${serviceName}</small>
+                <hr>
+                <strong>Service Duration:</strong><br />
+                <small>${serviceDuration}</small>
                 <hr>
             `
     }

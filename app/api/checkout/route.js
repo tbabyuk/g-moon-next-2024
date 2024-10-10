@@ -73,6 +73,11 @@ export async function POST(request) {
         automatic_tax: {
             enabled: true,
         },
+        metadata: {
+          chosenService, // Add your metadata here
+          chosenDuration, // Example metadata
+          // Add any other custom metadata fields you need
+      },
 
 
 
