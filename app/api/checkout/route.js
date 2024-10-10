@@ -2,18 +2,57 @@ import { NextResponse } from "next/server"
 
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY)
 
+const serviceIdMappings = {
+    thai: {
+      "60": "price_1Q7epJRwIe8y2zCR7Xe1sd0F",
+      "90": "price_1Q7eq4RwIe8y2zCRmpb1elAl"
+    },
+    swedish: {
+      "30": "price_1Q7erKRwIe8y2zCRxi7aUZdj",
+      "45": "price_1Q7eriRwIe8y2zCRD3pdoZxD",
+      "60": "price_1Q7esJRwIe8y2zCR5B2WRPgd",
+      "90": "price_1Q7esuRwIe8y2zCRlAsieKej"
+    },
+    face: {
+      "30": "price_1Q7eqjRwIe8y2zCR1idihTLP",
+    },
+    sugar: {
+      "30": "price_1Q7etZRwIe8y2zCRcrTm5HYD",
+      "60": "price_1Q7eu5RwIe8y2zCR4GNyUr70",
+    },
+    aromatherapy: {
+      "30": "price_1Q7rwrRwIe8y2zCRwNBjRNsW",
+      "45": "price_1Q7rxSRwIe8y2zCROxdwpE5G",
+    }
+}
+
+
+const getServiceId = (service, duration) => {
+    const serviceFirstWord = service.split(" ")[0].toLowerCase();
+    console.log("logging service Id from getServiceId:", serviceIdMappings[serviceFirstWord]?.[duration])
+    return serviceIdMappings[serviceFirstWord]?.[duration]
+  };
 
 
 export async function POST(request) {
 
-    const {orderDetails} = await request.json()
 
-    console.log("logging orderDetails from checkout API:", orderDetails)
+
+    const {chosenService, chosenDuration} = await request.json()
+
+
+
+    getServiceId(chosenService, chosenDuration)
+
+
+
+
+//     console.log("logging orderDetails from checkout API:", orderDetails)
 
     // let lineItems = []; //how it was originally
 
-    let lineItems = [            {
-        price: "price_1Q7etZRwIe8y2zCRcrTm5HYD",
+    let lineItems = [{
+        price: getServiceId(chosenService, chosenDuration),
         quantity: 1,
     }];
 
@@ -34,6 +73,9 @@ export async function POST(request) {
         automatic_tax: {
             enabled: true,
         },
+
+
+
         // shipping_address_collection: {
         //     allowed_countries: ["CA"],
         // },
@@ -69,6 +111,9 @@ export async function POST(request) {
         //         },
         //       },
         // ],
+
+
+
         success_url: "https://www.dacapomusic.ca/shop/checkout-success",
         cancel_url: "https://www.dacapomusic.ca/shop/checkout-cancelled"
     })

@@ -5,9 +5,9 @@
 export const TeamMemberProfile = ({member}) => {
 
     return(
-        <div className="min-h-[430px] w-[300px] bg-g-moon-very-light-gray">
+        <div className="min-h-[430px] w-[300px] bg-g-moon-very-light-gray overflow-hidden rounded-md">
             <div className="h-[75%] flex justify-center items-center overflow-hidden">
-                <img src={member.image} className="w-[100%]" alt="" />
+                <img src={member.image} className="w-[100%]" alt={`photo of ${member.name}`} />
             </div>
             <div className="h-[25%] px-5">
                 <div className="font-bold text-center py-2">{member.name}</div>

@@ -16,7 +16,7 @@ const BodyScrubsPage = () => {
             <PageHeader title="BODY SCRUBS" />
             <div className="py-28 xl:px-44 flex justify-center flex-wrap gap-x-4 gap-y-8">
                 {bodyScrubsList.map((scrub, index) => (
-                    <Link key={index} href={scrub.url} className="h-[180px] w-1/4 min-w-[250px] bg-g-moon-very-light-gray hover:bg-g-moon-light-gray hover:cursor-pointer">
+                    <Link key={index} href={scrub.url} className="h-[180px] w-1/4 min-w-[250px] bg-g-moon-light-gray hover:bg-g-moon-light-gray-hover hover:cursor-pointer rounded-md">
                         <div className="h-[70%] flex justify-center items-center">
                             <img src={scrub.image} className="h-[70%]" alt="" />
                         </div>

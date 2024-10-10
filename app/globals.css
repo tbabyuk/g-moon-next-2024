@@ -24,7 +24,7 @@ h1, h2, h3 {
 }
 
 .pricing-table {
-  @apply w-full mb-12 text-[0.95rem] text-gray-600
+  @apply w-full text-[0.95rem] text-gray-600
 }
 
 .pricing-table th {
@@ -77,3 +77,10 @@ h1, h2, h3 {
   .customDatePickerWidth > div > div.react-datepicker__input-container
   .customDatePickerWidth > div > div.react-datepicker__input-container input {
      width: 100%;}
+
+
+
+/* .blah {
+  color: hsl(0, 0%, 55%);
+  background-color: #e6e6e6;
+} */

@@ -22,8 +22,10 @@ export const Step6ReviewOrder = ({currentStep, totalSteps, previousStep, nextSte
         const stringArray = service.split(" ")
         if(stringArray.length === 1) {
             return `${stringArray[0][0].toUpperCase()}${stringArray[0].slice(1)}`
-        } else {
+        } else if (stringArray.length === 2) {
             return `${stringArray[0][0].toUpperCase() + stringArray[0].slice(1)} ${stringArray[1][0].toUpperCase() + stringArray[1].slice(1)}`
+        } else {
+            return `${stringArray[0][0].toUpperCase() + stringArray[0].slice(1)} ${stringArray[1][0].toUpperCase() + stringArray[1].slice(1)} ${stringArray[2][0].toUpperCase() + stringArray[2].slice(1)}`
         }
     }
 
@@ -38,7 +40,7 @@ export const Step6ReviewOrder = ({currentStep, totalSteps, previousStep, nextSte
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify({orderDetails})
+                body: JSON.stringify(orderDetails)
             })
 
             if(res.ok) {

@@ -9,7 +9,8 @@ module.exports = {
     extend: {
       colors: {
         "g-moon-very-light-gray": "#F0F0F0",
-        "g-moon-light-gray": "#C2C0C1",
+        "g-moon-light-gray": "#F2F2F2",
+        "g-moon-light-gray-hover": "#E6E6E6",
         "g-moon-medium-gray": "#8C8C8C",
         "g-moon-medium-gray-hover": "#737373",
         "g-moon-dark-gray": "#686864",
