@@ -4,22 +4,30 @@ import nodemailer from "nodemailer"
 
 export async function POST(req) {
 
+    console.log("STRIPE WEBHOOK API ROUTE FIRED")
+
     const requestBody = await req.json();
 
-    const type = requestBody.type;
-    const amount = requestBody.data.object.amount;
-    const secret_word = "Banana"
+
+    const amountTotal = requestBody.data.object.amount_total;
+    const customerName = requestBody.data.object.customer_details.name
+    const customerEmail = requestBody.data.object.customer_details.email
+
+
     // const userClerkId = requestBody.data.object.metadata.userClerkId;
 
         console.log("logging whole requestBody from Stripe webhook:", requestBody)
-        console.log("Logging type and amount:", type, amount)
+        console.log("amount total:", amountTotal)
+        console.log("customer name:", customerName)
+        console.log("customer email:", customerEmail)
+        // console.log("Logging type and amount:", type, amount)
         // console.log("logging userClerkId from Stripe Webhook:", userClerkId)
 
 
     const transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
-            user: "terry@strictlywebdev.ca",
+            user: "terry@strictlywebdev.com",
             pass: process.env.NODEMAILER_STRICTLY_PASS
         }
     })
@@ -27,35 +35,33 @@ export async function POST(req) {
 
     const emailOptions =
     {
-        from: "terry@strictlywebdev.ca",
-        to: "terry@strictlywebdev.ca",
+        from: "terry@strictlywebdev.com",
+        to: "terry@strictlywebdev.com",
         subject: "New Stripe Transaction",
         html: `
-                <strong>Type:</strong><br />
-                <small>${type}</small>
-                <hr>
                 <strong>Amount:</strong><br />
-                <small>${amount}</small>
+                <small>${amountTotal}</small>
                 <hr>
-                <strong>Secret Word:</strong><br />
-                <small>${secret_word}</small>
+                <strong>Customer Name:</strong><br />
+                <small>${customerName}</small>
+                <hr>
+                <strong>Customer Email:</strong><br />
+                <small>${customerEmail}</small>
                 <hr>
             `
     }
 
 
-    try {
-        // throw new Error("Ooops, error with register form!!!! OOPS")
-        await transporter.sendMail(emailOptions);
-        console.log("try block fired in Node.js")
-        // return NextResponse.json({message: "new registration email sent successfully"}, {status: 200})
-    } catch (error) {
-        console.log("error in catch black on server:", error.message)
-        // return NextResponse.json({message: error.message}, {status: 500})
-    }
 
-
-
+        try {
+            // throw new Error("Ooops, error with register form!!!! OOPS")
+            await transporter.sendMail(emailOptions);
+            console.log("try block fired in Node.js")
+            // return NextResponse.json({message: "new registration email sent successfully"}, {status: 200})
+        } catch (error) {
+            console.log("error in catch black on server:", error.message)
+            // return NextResponse.json({message: error.message}, {status: 500})
+        }
 
 
         // let numCreditsPurchased;
