@@ -11,7 +11,7 @@ export async function POST(req) {
 
     const {name, email} = customer_details;
 
-    const magic_word = "pumpkin"
+    const secret_word="Sparky"
 
 
     console.log("Logging amount total, name and email of customer from webhook API route:", amount_total, name, email)
@@ -41,8 +41,8 @@ export async function POST(req) {
                     <strong>Customer Email</strong><br />
                     <small>${email}</small>
                     <hr>
-                    <strong>Magic Word</strong><br />
-                    <small>${magic_word}</small>
+                    <strong>Secret Word</strong><br />
+                    <small>${secret_word}</small>
                     <hr>
                 `
         }
@@ -52,10 +52,13 @@ export async function POST(req) {
                 // throw new Error("Ooops, error with register form!!!! OOPS")
                 await transporter.sendMail(emailOptions);
                 console.log("try block fired in Node.js")
-                return NextResponse.json({message: "new registration email sent successfully"}, {status: 200})
+                // return NextResponse.json({message: "new registration email sent successfully"}, {status: 200})
             } catch (error) {
                 console.log("error in catch black on server:", error.message)
-                return NextResponse.json({message: error.message}, {status: 500})
+                // return NextResponse.json({message: error.message}, {status: 500})
             }
 
+
+
+    return NextResponse.json({message: "success"})
 }
