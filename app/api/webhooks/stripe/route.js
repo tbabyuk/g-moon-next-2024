@@ -42,7 +42,7 @@ export async function POST(req) {
         {
             from: "terry@strictlywebdev.com",
             // to: "terry@strictlywebdev.com",
-            to: {customerEmail},
+            to: customerEmail,
             subject: "New Stripe Transaction",
             html: `
                 <div style="font-family: Arial, sans-serif; padding: 0 0 20px 0">
