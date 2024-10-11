@@ -9,7 +9,7 @@ const CheckoutSuccessPage = () => {
             </div>         
             <div className="g-moon-content-padding">
                 <p className="font-medium text-center text-2xl text-green-500 mb-6">Thank you for your order!</p>
-                <p className="font-medium leading-9 md:text-center">Please check your email - you should be receiving your payment receipt as well as an email with your order details, such as the date and time of your appointment. If you don't see both emails within a few minutes - be sure to check your junk folder!</p>
+                <p className="font-medium leading-9 md:text-center">Please check your email - you should be receiving your payment receipt as well as an email with your order details, such as the date and time of your appointment. If you don&apos;t see both emails within a few minutes - be sure to check your junk folder!</p>
             </div>
         </main>
     )
