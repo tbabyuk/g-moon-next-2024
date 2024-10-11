@@ -43,23 +43,53 @@ export async function POST(req) {
         from: "terry@strictlywebdev.com",
         to: "terry@strictlywebdev.com",
         subject: "New Stripe Transaction",
+        // html: `
+        //         <strong>Amount:</strong><br />
+        //         <small>${amountTotal}</small>
+        //         <hr>
+        //         <strong>Customer Name:</strong><br />
+        //         <small>${customerName}</small>
+        //         <hr>
+        //         <strong>Customer Email:</strong><br />
+        //         <small>${customerEmail}</small>
+        //         <hr>
+        //         <strong>Service Name:</strong><br />
+        //         <small>${serviceName}</small>
+        //         <hr>
+        //         <strong>Service Duration:</strong><br />
+        //         <small>${serviceDuration}</small>
+        //         <hr>
+        //     `
         html: `
-                <strong>Amount:</strong><br />
-                <small>${amountTotal}</small>
-                <hr>
-                <strong>Customer Name:</strong><br />
-                <small>${customerName}</small>
-                <hr>
-                <strong>Customer Email:</strong><br />
-                <small>${customerEmail}</small>
-                <hr>
-                <strong>Service Name:</strong><br />
-                <small>${serviceName}</small>
-                <hr>
-                <strong>Service Duration:</strong><br />
-                <small>${serviceDuration}</small>
-                <hr>
-            `
+            <div style="font-family: Arial, sans-serif; padding: 20px; background-color: #f4f4f4; border-radius: 5px;">
+                <div style="background-color: #ffffff; padding: 20px; border-radius: 5px;">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/dcam-website.appspot.com/o/other_images%2Fg-moon-logo-final.png?alt=media&token=2f9b2309-3021-4eb2-b39f-409bc8370fb2" alt="Logo" style="width: 150px;" />
+                    <h2 style="background-color: #D6B981; padding: 8px 4px; color: #F3F4F6; margin-top: 0">Dear ${customerName}Thank you for your order with G Moon Wellness!</h2>
+                    <p style="font-style: italic">Please see the summary of your order below, for your reference:</p>
+                    <hr style="border: none; height: 1px; background-color: #ddd;" />
+
+                    <div style="color: #555;">
+                        <strong>Service:</strong>
+                        <span style="color: #8C8C8C;">${serviceName}</span>
+                    </div>
+                    <hr style="border: none; height: 1px; background-color: #ddd;" />
+
+                    <div style="color: #555;">
+                        <strong>Appointment Date:</strong>
+                        <span style="color: #8C8C8C;">${serviceDuration}</span>
+                    </div>
+                    <hr style="border: none; height: 1px; background-color: #ddd;" />
+
+                    <div style="color: #555;">
+                        <strong>Appointment Time:</strong>
+                        <span style="color: #8C8C8C;">${serviceDuration}</span>
+                    </div>
+                    <hr style="border: none; height: 1px; background-color: #ddd;" />
+
+                    <p>All our appointments take place at our location at 160 East Beaver Creek Rd, #21, Richmond Hill, ON, L4B 3J6. We hope to see you there!</p>
+                </div>
+            </div>
+        `
     }
 
 
