@@ -38,7 +38,7 @@ export async function POST(request) {
 
 
 
-    const {chosenService, chosenDuration} = await request.json()
+    const {chosenService, chosenDate, chosenStartTime, chosenDuration} = await request.json()
 
 
 
@@ -75,6 +75,8 @@ export async function POST(request) {
         },
         metadata: {
           chosenService, // Add your metadata here
+          chosenDate,
+          chosenStartTime,
           chosenDuration, // Example metadata
           // Add any other custom metadata fields you need
       },
