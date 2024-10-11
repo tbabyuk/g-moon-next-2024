@@ -18,21 +18,7 @@ export const PricingTable = () => {
                 </thead>
                 <tbody>
                     <tr>
-                        <td className="w-[150px] md:w-[210px]">Thai Massage</td>
-                        <td>n/a</td>
-                        <td>n/a</td>
-                        <td>$80*</td>
-                        <td>$100</td>
-                    </tr>
-                    <tr>
-                        <td>Shiatsu Massage</td>
-                        <td>$40</td>
-                        <td>$50</td>
-                        <td>$60*</td>
-                        <td>$90</td>
-                    </tr>
-                    <tr>
-                        <td>Swedish Massage</td>
+                        <td className="w-[150px] md:w-[210px]">Swedish Massage</td>
                         <td>$40</td>
                         <td>$50</td>
                         <td>$60*</td>
@@ -46,18 +32,18 @@ export const PricingTable = () => {
                         <td>$90</td>
                     </tr>
                     <tr>
-                        <td>Face Massage</td>
+                        <td>Shiatsu Massage</td>
                         <td>$40</td>
-                        <td>n/a</td>
-                        <td>n/a</td>
-                        <td>n/a</td>
+                        <td>$50</td>
+                        <td>$60*</td>
+                        <td>$90</td>
                     </tr>
                     <tr>
-                        <td>Scalp Massage</td>
-                        <td>$40</td>
+                        <td>Thai Massage</td>
                         <td>n/a</td>
                         <td>n/a</td>
-                        <td>n/a</td>
+                        <td>$80*</td>
+                        <td>$100</td>
                     </tr>
                     <tr>
                         <td>Couples Massage</td>
@@ -80,6 +66,20 @@ export const PricingTable = () => {
                         <td>$60*</td>
                         <td>n/a</td>
                     </tr>
+                    <tr>
+                        <td>Scalp Massage</td>
+                        <td>$40</td>
+                        <td>n/a</td>
+                        <td>n/a</td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr>
+                        <td>Face Massage</td>
+                        <td>$40</td>
+                        <td>n/a</td>
+                        <td>n/a</td>
+                        <td>n/a</td>
+                    </tr>
                 </tbody>
             </table>
             <div className="font-semibold text-gray-500 mt-4 mb-12 text-sm text-center md:text-end">*Rates might be different depending on the therapist</div>
@@ -94,20 +94,21 @@ export const PricingTable = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td className="w-[150px] md:w-[210px]">Sea Salt Scrub</td>
-                        <td>$60</td>
-                        <td>n/a</td>
-                        <td>$80</td>
-                        <td>n/a</td>
-                    </tr>
-                    <tr>
+                     <tr className="w-[150px] md:w-[210px]">
                         <td>Sugar Scrub</td>
                         <td>$60</td>
                         <td>n/a</td>
                         <td>$80</td>
                         <td>n/a</td>
                     </tr>
+                    <tr>
+                        <td>Sea Salt Scrub</td>
+                        <td>$60</td>
+                        <td>n/a</td>
+                        <td>$80</td>
+                        <td>n/a</td>
+                    </tr>
+
                     <tr>
                         <td>Coffee Scrub</td>
                         <td>$60</td>
@@ -129,21 +130,7 @@ export const PricingTable = () => {
                 </thead>
                 <tbody>
                     <tr>
-                        <td className="w-[150px] md:w-[210px]">Table Shower</td>
-                        <td>$60</td>
-                        <td>n/a</td>
-                        <td>$80</td>
-                        <td>n/a</td>
-                    </tr>
-                    <tr>
-                        <td>Hot Stone Therapy</td>
-                        <td>$40</td>
-                        <td>n/a</td>
-                        <td>$70</td>
-                        <td>n/a</td>
-                    </tr>
-                    <tr>
-                        <td>Aromatherapy</td>
+                        <td className="w-[150px] md:w-[210px]">Aromatherapy</td>
                         <td>$50</td>
                         <td>$60</td>
                         <td>$70</td>
@@ -155,6 +142,20 @@ export const PricingTable = () => {
                         <td>$50</td>
                         <td>$60</td>
                         <td>$90</td>
+                    </tr>
+                    <tr>
+                        <td>Hot Stone Therapy</td>
+                        <td>$40</td>
+                        <td>n/a</td>
+                        <td>$70</td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr>
+                        <td>Table Shower</td>
+                        <td>$60</td>
+                        <td>n/a</td>
+                        <td>$80</td>
+                        <td>n/a</td>
                     </tr>
                     <tr>
                         <td>Consultation</td>
