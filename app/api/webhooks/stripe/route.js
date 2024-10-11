@@ -18,6 +18,10 @@ export async function POST(req) {
     const serviceDuration = requestBody.data.object.metadata.chosenDuration
 
 
+    console.log("logging requestBody from WEBHOOK:", requestBody)
+    console.log("Logging customer email from WEBHOOK:", customerEmail)
+
+
     // console.log("logging whole requestBody from Stripe webhook:", requestBody)
     // console.log("amount total:", amountTotal)
     // console.log("customer email:", customerEmail)
@@ -41,11 +45,12 @@ export async function POST(req) {
     const mailOptions =
         {
             from: "terry@strictlywebdev.com",
-            // to: "terry@strictlywebdev.com",
+            // to: ["terry@strictlywebdev.com", customerEmail],
             to: customerEmail,
+            // bcc: "terry@strictlywebdev.com",
             subject: "New Stripe Transaction",
             html: `
-                <div style="font-family: Arial, sans-serif; padding: 0 0 20px 0">
+                <div style="font-family: Arial, sans-serif; padding: 0 0 30px 0">
                     <div style="text-align: center;">
                         <img src="https://firebasestorage.googleapis.com/v0/b/dcam-website.appspot.com/o/other_images%2Fg-moon-logo-final.png?alt=media&token=2f9b2309-3021-4eb2-b39f-409bc8370fb2" alt="G Moon Wellness Centre Logo" style="width: 150px;" />
                     </div>
@@ -82,7 +87,6 @@ export async function POST(req) {
             `
         }
 
-
         try {
             await transporter.sendMail(mailOptions);
             // return NextResponse.json({message: "new registration email sent successfully"}, {status: 200})
@@ -90,6 +94,7 @@ export async function POST(req) {
             console.log("error in catch black on server:", error.message)
             // return NextResponse.json({message: error.message}, {status: 500})
         }
+
     
         return NextResponse.json({message: "success"})
 }
