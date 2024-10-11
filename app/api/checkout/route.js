@@ -48,6 +48,9 @@ export async function POST(request) {
         automatic_tax: {
             enabled: true,
         },
+        phone_number_collection: {
+          enabled: true,
+        },
         metadata: {
           chosenService,
           chosenDate: formatDate(chosenDate),
