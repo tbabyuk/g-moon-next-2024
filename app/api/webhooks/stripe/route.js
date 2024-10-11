@@ -20,12 +20,12 @@ export async function POST(req) {
 
     // const userClerkId = requestBody.data.object.metadata.userClerkId;
 
-        console.log("logging whole requestBody from Stripe webhook:", requestBody)
-        console.log("amount total:", amountTotal)
-        console.log("customer name:", customerName)
-        console.log("customer email:", customerEmail)
-        console.log("service name:", serviceName)
-        console.log("service duration:", serviceDuration)
+        // console.log("logging whole requestBody from Stripe webhook:", requestBody)
+        // console.log("amount total:", amountTotal)
+        // console.log("customer email:", customerEmail)
+        // console.log("customer name:", customerName)
+        // console.log("service name:", serviceName)
+        // console.log("service duration:", serviceDuration)
 
         // console.log("Logging type and amount:", type, amount)
         // console.log("logging userClerkId from Stripe Webhook:", userClerkId)

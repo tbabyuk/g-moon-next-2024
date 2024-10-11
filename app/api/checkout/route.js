@@ -42,11 +42,6 @@ export async function POST(request) {
 
 
 
-    getServiceId(chosenService, chosenDuration)
-
-
-
-
 //     console.log("logging orderDetails from checkout API:", orderDetails)
 
     // let lineItems = []; //how it was originally
@@ -66,6 +61,17 @@ export async function POST(request) {
     //     )
     // })
 
+    const formatDate = (date) => {
+      const parsedDate = new Date(date);
+      const formattedDate = parsedDate.toLocaleDateString("en-US", {
+        weekday: "short",
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+      });
+      return formattedDate;
+    }
+
 
     const session = await stripe.checkout.sessions.create({
         line_items: lineItems,
@@ -75,7 +81,7 @@ export async function POST(request) {
         },
         metadata: {
           chosenService, // Add your metadata here
-          chosenDate,
+          chosenDate: formatDate(chosenDate),
           chosenStartTime,
           chosenDuration, // Example metadata
           // Add any other custom metadata fields you need
