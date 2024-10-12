@@ -40,11 +40,12 @@ const ContactFormClientPage = () => {
             })
 
             if(res.ok) {
+                console.log("logging if res.ok", res.status)
                 setSubmitSuccess(true)
             } else {
+                console.log("the else of res.ok block has fired", res.status)
                 setSubmitFail(true)
             }
-
         } catch (error) {
             console.log(error)
             setSubmitFail(true)

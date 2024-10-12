@@ -13,8 +13,7 @@ export async function POST(request) {
         service: "gmail",
         auth: {
             user: "terry@strictlywebdev.com",
-            // pass: process.env.NODEMAILER_STRICTLY_PASS
-            pass: "glskdf"
+            pass: process.env.NODEMAILER_STRICTLY_PASS
         }
     })
 

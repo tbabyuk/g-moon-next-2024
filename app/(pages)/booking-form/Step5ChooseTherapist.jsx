@@ -39,7 +39,7 @@ export const Step5ChooseTherapist = ({currentStep, totalSteps, previousStep, nex
                 ))}
             </select>
             <div className="flex justify-between">
-                <button className="btn g-moon-action-btn" onClick={previousStep}><MdArrowBackIos /> Back</button>
+                <button className="btn g-moon-action-btn" onClick={previousStep}><MdArrowBackIos /> Go Back</button>
                 <button className="btn g-moon-action-btn" onClick={nextStep}>Next Step <MdArrowForwardIos /></button>
             </div>        
         </div>   

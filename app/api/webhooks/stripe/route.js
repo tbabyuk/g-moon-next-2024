@@ -22,17 +22,6 @@ export async function POST(req) {
     console.log("Logging customer email from WEBHOOK:", customerEmail)
 
 
-    // console.log("logging whole requestBody from Stripe webhook:", requestBody)
-    // console.log("amount total:", amountTotal)
-    // console.log("customer email:", customerEmail)
-    // console.log("customer name:", customerName)
-    // console.log("service name:", serviceName)
-    // console.log("service duration:", serviceDuration)
-
-    // console.log("Logging type and amount:", type, amount)
-    // console.log("logging userClerkId from Stripe Webhook:", userClerkId)
-
-
     const transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {

@@ -49,7 +49,7 @@ export const Step2ChooseDate = ({currentStep, totalSteps, previousStep, nextStep
         <div>
             <div className="border-b-2 pb-2 mb-2 text-gray-400">Step {currentStep} of {totalSteps}</div>
             <p className="text-lg font-medium">Choose your preferred day:</p>
-            <small className="block mb-4">These are the only days on which your chosen service is currently available</small>
+            <small className="block mb-4">These are the days on which your chosen service is currently available</small>
             <div className="customDatePickerWidth mb-12">
                 <DatePicker 
                     selected={orderDetails.chosenDate}
@@ -61,7 +61,7 @@ export const Step2ChooseDate = ({currentStep, totalSteps, previousStep, nextStep
             </div>
 
             <div className="flex justify-between">
-                <button className="btn g-moon-action-btn" onClick={previousStep}><MdArrowBackIos /> Back</button>
+                <button className="btn g-moon-action-btn" onClick={previousStep}><MdArrowBackIos /> Go Back</button>
                 <button className="btn g-moon-action-btn" onClick={nextStep}>Next Step <MdArrowForwardIos /></button>
             </div>
         </div>   

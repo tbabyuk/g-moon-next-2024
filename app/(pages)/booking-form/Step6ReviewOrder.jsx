@@ -46,7 +46,7 @@ export const Step6ReviewOrder = ({currentStep, totalSteps, previousStep}) => {
                 <li>Therapist: <span className="ms-4 font-bold">{orderDetails.chosenTherapist[0]?.toUpperCase() + orderDetails.chosenTherapist.slice(1)}</span></li>
             </ul>
             <div className="flex justify-between">
-                <button className="btn g-moon-action-btn" onClick={previousStep}><MdArrowBackIos /> Back</button>
+                <button className="btn g-moon-action-btn" onClick={previousStep}><MdArrowBackIos /> Go Back</button>
                 <button className="btn bg-green-600 hover:bg-green-700  text-g-moon-white" onClick={handleCheckout}>Go to Checkout <MdShoppingCart /></button>
             </div>      
         </div>   

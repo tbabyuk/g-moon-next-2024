@@ -36,7 +36,7 @@ export const Step4ChooseDuration = ({currentStep, totalSteps, previousStep, next
                 ))}
             </select>
             <div className="flex justify-between">
-                <button className="btn g-moon-action-btn" onClick={previousStep}><MdArrowBackIos /> Back</button>
+                <button className="btn g-moon-action-btn" onClick={previousStep}><MdArrowBackIos /> Go Back</button>
                 <button className="btn g-moon-action-btn" onClick={nextStep}>Next Step <MdArrowForwardIos /></button>
             </div>        
         </div>   
