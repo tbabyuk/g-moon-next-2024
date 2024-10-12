@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server"
 import { getServiceId } from "@/app/utils/serviceMapping";
+import { formatDate } from "@/app/utils/formatDate";
 
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY)
 
@@ -7,39 +8,13 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY)
 
 export async function POST(request) {
 
-
     const {chosenService, chosenDate, chosenStartTime, chosenDuration} = await request.json()
 
-
-//     console.log("logging orderDetails from checkout API:", orderDetails)
-
-    // let lineItems = []; //how it was originally
 
     let lineItems = [{
         price: getServiceId(chosenService, chosenDuration),
         quantity: 1,
     }];
-
-    // items.forEach((item) => {
-    //     lineItems.push(
-    //         {
-    //             // price: item.id,
-    //             price: "price_1Q7etZRwIe8y2zCRcrTm5HYD",
-    //             quantity: 1,
-    //         }
-    //     )
-    // })
-
-    const formatDate = (date) => {
-      const parsedDate = new Date(date);
-      const formattedDate = parsedDate.toLocaleDateString("en-US", {
-        weekday: "short",
-        year: "numeric",
-        month: "long",
-        day: "numeric"
-      });
-      return formattedDate;
-    }
 
 
     const session = await stripe.checkout.sessions.create({
@@ -58,8 +33,8 @@ export async function POST(request) {
           chosenDuration
       },
 
-        success_url: "https://www.dacapomusic.ca/shop/checkout-success",
-        cancel_url: "https://www.dacapomusic.ca/shop/checkout-cancelled"
+        success_url: "https://g-moon-next-2024.vercel.app/checkout-success",
+        cancel_url: "https://g-moon-next-2024.vercel.app/checkout-cancelled"
     })
 
     if(session) {
@@ -70,5 +45,4 @@ export async function POST(request) {
         url: session.url
     })
 
-    // return NextResponse.json({message: "hello from server"})
 }

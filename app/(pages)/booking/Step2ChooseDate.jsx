@@ -36,7 +36,7 @@ export const Step2ChooseDate = ({currentStep, totalSteps, previousStep, nextStep
     };
 
     const handleDateSelection = (date) => {
-        setOrderDetails((prevState) => ({...prevState, chosenDate: date}))
+        setOrderDetails((prevState) => ({...prevState, chosenDate: date.toISOString()}))
     }
 
     useEffect(() => {
