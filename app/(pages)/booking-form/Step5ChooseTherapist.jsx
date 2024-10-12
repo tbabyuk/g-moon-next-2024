@@ -1,5 +1,6 @@
 "use client"
 
+import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
 import { therapistsBasedOnDays } from "@/app/data/data"
 import { useBookingContext } from "@/app/context/BookingContext"
 import { useState, useEffect } from "react"
@@ -38,8 +39,8 @@ export const Step5ChooseTherapist = ({currentStep, totalSteps, previousStep, nex
                 ))}
             </select>
             <div className="flex justify-between">
-                <button className="btn btn-success text-g-moon-white float-end" onClick={previousStep}>Go Back</button>
-                <button className="btn btn-success text-g-moon-white float-end" onClick={nextStep}>Next Step</button>
+                <button className="btn g-moon-action-btn" onClick={previousStep}><MdArrowBackIos /> Back</button>
+                <button className="btn g-moon-action-btn" onClick={nextStep}>Next Step <MdArrowForwardIos /></button>
             </div>        
         </div>   
     )

@@ -387,6 +387,7 @@ export const therapistsBasedOnDays = [
         name: "anna",
         services: [    
             "shiatsu massage",
+            "swedish massage",
             "reflexology",
             "deep tissue massage",
             "sea salt scrub",

@@ -5,7 +5,7 @@ import Link from "next/link";
 export const Hero = () => {
 
     return(
-        <div className="min-h-[calc(100vh-120px)] bg-[url('/hero-bg.jpg')] bg-center bg-cover grid grid-cols-1 lg:grid-cols-2">
+        <div className="min-h-[calc(100vh-115px)] bg-[url('/hero-bg.jpg')] bg-center bg-cover grid grid-cols-1 lg:grid-cols-2">
             <div className="flex pt-12 lg:pt-0 justify-center items-center">
                 <img src="/g-moon-header-image-500.png" className="w-[60%] max-w-[500px]" alt="Relaxing Massage" />
             </div>
@@ -16,7 +16,7 @@ export const Hero = () => {
                     <li className="flex items-center"><IoMdCheckmarkCircle className="text-white me-2" />Exfoliating Body Scrubs</li>
                     <li className="flex items-center"><IoMdCheckmarkCircle className="text-white me-2" />Experienced Staff</li>
                 </ul>
-                <Link href="/booking"><button className="btn btn-lg g-moon-action-btn w-fit text-lg text-g-moon-white">Book My Appointment</button></Link>
+                <Link href="/booking-form"><button className="btn btn-lg g-moon-action-btn w-fit text-lg text-g-moon-white">Book My Appointment</button></Link>
             </div>
         </div>
     )

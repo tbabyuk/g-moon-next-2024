@@ -16,7 +16,7 @@ h1, h2, h3 {
 }
 
 .g-moon-action-btn {
-  @apply bg-g-moon-gold hover:bg-g-moon-gold-hover;
+  @apply bg-g-moon-gold hover:bg-g-moon-gold-hover text-g-moon-white;
 }
 
 .g-moon-link {
@@ -65,7 +65,7 @@ h1, h2, h3 {
 }
 
 .g-moon-content-padding {
-  @apply px-5 md:px-24 lg:px-40 xl:px-56 py-28;
+  @apply px-5 md:px-24 lg:px-40 xl:px-56 py-20;
 }
 
 .g-moon-mb {
@@ -79,8 +79,6 @@ h1, h2, h3 {
      width: 100%;}
 
 
-
-/* .blah {
-  color: hsl(0, 0%, 55%);
-  background-color: #e6e6e6;
-} */
+.g-moon-booking-btn {
+  @apply btn btn-outline hover:bg-g-moon-gold-hover;
+}

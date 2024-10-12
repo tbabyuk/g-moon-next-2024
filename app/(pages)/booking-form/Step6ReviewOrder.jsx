@@ -1,5 +1,7 @@
 "use client"
 
+import { MdArrowBackIos, MdShoppingCart } from "react-icons/md";
+
 import { useBookingContext } from "@/app/context/BookingContext"
 import { formatDate } from "@/app/utils/formatDate"
 import { formatService } from "@/app/utils/formatService"
@@ -44,9 +46,9 @@ export const Step6ReviewOrder = ({currentStep, totalSteps, previousStep}) => {
                 <li>Therapist: <span className="ms-4 font-bold">{orderDetails.chosenTherapist[0]?.toUpperCase() + orderDetails.chosenTherapist.slice(1)}</span></li>
             </ul>
             <div className="flex justify-between">
-                <button className="btn btn-success text-g-moon-white float-end" onClick={previousStep}>Go Back</button>
-                <button className="btn btn-warning text-g-moon-white float-end" onClick={handleCheckout}>Go to Checkout</button>
-            </div>        
+                <button className="btn g-moon-action-btn" onClick={previousStep}><MdArrowBackIos /> Back</button>
+                <button className="btn bg-green-600 hover:bg-green-700  text-g-moon-white" onClick={handleCheckout}>Go to Checkout <MdShoppingCart /></button>
+            </div>      
         </div>   
     )
 }

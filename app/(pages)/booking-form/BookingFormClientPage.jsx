@@ -11,13 +11,14 @@ import { BookingContextProvider } from "@/app/context/BookingContext";
 
 
 
-const BookingClientPage = () => {
+const BookingFormClientPage = () => {
 
 
   return (
-        <div className="g-moon-content-padding flex justify-center min-h-[520px]">
+        <div className="g-moon-content-padding flex flex-col justify-center">
+            <p className="text-center mb-12">Book your appointment at <span className="font-bold">G Moon Wellness Centre</span> with these 6 easy steps:</p>
             <BookingContextProvider>
-                <StepWizard className="w-[90%] max-w-[400px]">
+                <StepWizard className="min-h-[300px] w-[90%] max-w-[400px] mx-auto">
                     <Step1ChooseService />
                     <Step2ChooseDate />
                     <Step3ChooseTime />
@@ -30,4 +31,4 @@ const BookingClientPage = () => {
     );
 };
 
-export default BookingClientPage;
+export default BookingFormClientPage;

@@ -1,7 +1,9 @@
 "use client"
 
-import { allServicesList } from "@/app/data/data"
+
 import { useBookingContext } from "@/app/context/BookingContext"
+import { MdArrowForwardIos } from "react-icons/md";
+
 
 
 export const Step1ChooseService = ({currentStep, totalSteps, nextStep}) => {
@@ -44,7 +46,7 @@ export const Step1ChooseService = ({currentStep, totalSteps, nextStep}) => {
                     <option value="consultation">Consultation</option>
                 </optgroup>
             </select>
-            <button className="btn btn-success text-g-moon-white float-end" onClick={nextStep}>Next Step</button>
+            <button className="btn g-moon-action-btn float-end" onClick={nextStep}>Next Step <MdArrowForwardIos /></button>
         </div>   
     )
 }

@@ -16,7 +16,7 @@ export const TopHeader = () => {
                 (647) 223-9966</a></div>
             </div>
             <div>
-                <Link href="/booking"><button className="btn g-moon-action-btn text-lg text-g-moon-white">Book Now</button></Link>
+                <Link href="/booking-form"><button className="btn g-moon-action-btn text-lg text-g-moon-white">Book Now</button></Link>
             </div>
          </div>
     )

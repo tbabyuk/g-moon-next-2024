@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import { daysBasedOnService } from "@/app/data/data";
 import { useBookingContext } from "@/app/context/BookingContext";
 import { startOfTomorrow } from "date-fns";
+import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
 
 
 export const Step2ChooseDate = ({currentStep, totalSteps, previousStep, nextStep}) => {
@@ -60,8 +61,8 @@ export const Step2ChooseDate = ({currentStep, totalSteps, previousStep, nextStep
             </div>
 
             <div className="flex justify-between">
-                <button className="btn btn-success text-g-moon-white float-end" onClick={previousStep}>Go Back</button>
-                <button className="btn btn-success text-g-moon-white float-end" onClick={nextStep}>Next Step</button>
+                <button className="btn g-moon-action-btn" onClick={previousStep}><MdArrowBackIos /> Back</button>
+                <button className="btn g-moon-action-btn" onClick={nextStep}>Next Step <MdArrowForwardIos /></button>
             </div>
         </div>   
     )
