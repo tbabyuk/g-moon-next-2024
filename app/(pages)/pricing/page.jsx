@@ -1,5 +1,5 @@
 import { PageHeader } from "../components/PageHeader";
-import { PricingTable } from "../components/PricingTable";
+import { PricingTable } from "../../components/PricingTable";
 
 
 export const metadata = {

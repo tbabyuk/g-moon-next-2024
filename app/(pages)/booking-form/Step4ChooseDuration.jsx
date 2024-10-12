@@ -2,7 +2,7 @@
 
 import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
 import { useBookingContext } from "@/app/context/BookingContext";
-import { allServicesList } from "@/app/data/data";
+import { servicesByDurationArray } from "@/app/data/data";
 import { useState, useEffect } from "react";
 
 export const Step4ChooseDuration = ({currentStep, totalSteps, previousStep, nextStep}) => {
@@ -19,7 +19,7 @@ export const Step4ChooseDuration = ({currentStep, totalSteps, previousStep, next
 
     useEffect(() => {
         console.log("useEffect inside ChooseDuration fired")
-        const serviceDurationOptions = allServicesList.filter((service) => service.name === orderDetails.chosenService)
+        const serviceDurationOptions = servicesByDurationArray.filter((service) => service.name === orderDetails.chosenService)
         setDurationOptionsArray(serviceDurationOptions[0]?.duration)
         setOrderDetails((prevState) => ({...prevState, chosenDuration: serviceDurationOptions[0]?.duration[0]}))
     }, [orderDetails.chosenService])

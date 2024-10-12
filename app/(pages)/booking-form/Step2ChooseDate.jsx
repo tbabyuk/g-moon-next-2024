@@ -6,14 +6,14 @@ import "react-datepicker/dist/react-datepicker.css";
 import { useEffect } from "react";
 import { daysBasedOnService } from "@/app/data/data";
 import { useBookingContext } from "@/app/context/BookingContext";
-import { startOfTomorrow } from "date-fns";
+import { startOfTomorrow, isEqual, startOfDay } from "date-fns";
 import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
 
 
 export const Step2ChooseDate = ({currentStep, totalSteps, previousStep, nextStep}) => {
 
-    const {orderDetails, setOrderDetails} = useBookingContext()
 
+    const {orderDetails, setOrderDetails} = useBookingContext()
     const tomorrow = startOfTomorrow()
 
     const dayOptions = daysBasedOnService.filter((day) => day.services.includes(orderDetails.chosenService))
@@ -32,8 +32,11 @@ export const Step2ChooseDate = ({currentStep, totalSteps, previousStep, nextStep
     
     const allowedDays = getNums(daysOnlyArray)
 
+    // At this time, only holidays until January 1, 2025 are filtered out
+    const holidayArray = [new Date("2024-10-14T00:00:00-04:00").toDateString(), new Date("2024-12-25T00:00:00-05:00").toDateString(), new Date("2024-12-26T00:00:00-05:00").toDateString(), new Date("2025-01-01T00:00:00-05:00").toDateString()];
+
     const filterDays = (date) => {
-        return date >= tomorrow && allowedDays.includes(date.getDay());
+        return date >= tomorrow && allowedDays.includes(date.getDay()) && !holidayArray.includes(date.toDateString())
     };
 
     const handleDateSelection = (date) => {
@@ -56,6 +59,10 @@ export const Step2ChooseDate = ({currentStep, totalSteps, previousStep, nextStep
                     onChange={handleDateSelection}
                     filterDate={filterDays} //use this function to restrict what date are shown on the calendar
                     dateFormat="MMMM d, yyyy"
+                    // holidays={[
+                    //     { date: "2024-10-14", holidayName: "Thanksgiving" },
+                    //     { date: "2024-12-25", holidayName: "Fake holiday" },
+                    //   ]}
                     className="w-full border border-gray-300 text-center h-[45px]"
                 />
             </div>

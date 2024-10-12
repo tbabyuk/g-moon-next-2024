@@ -44,7 +44,7 @@ h1, h2, h3 {
 }
 
 .pricing-table tbody tr:nth-child(even) {
-  @apply bg-gray-200
+  @apply bg-gray-200/70
 }
 
 .single-pricing-table {
@@ -81,4 +81,8 @@ h1, h2, h3 {
 
 .g-moon-booking-btn {
   @apply btn btn-outline hover:bg-g-moon-gold-hover;
+}
+
+.g-moon-service-icon {
+  @apply bg-g-moon-light-gray hover:bg-g-moon-light-gray-hover;
 }

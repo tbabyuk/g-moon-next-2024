@@ -12,7 +12,7 @@ import { IoTimeOutline } from "react-icons/io5";
 export const Footer = () => {
 
     return(
-        <footer className="flex flex-col md:flex-row py-16 px-6 bg-black/90 text-g-moon-light-gray">
+        <footer className="flex flex-col md:flex-row py-16 px-6 bg-[url('/images/footer-bg.jpg')] bg-center bg-cover text-g-moon-light-gray">
             <div className="flex-1 pb-16 border-b-2 border-gray-600 md:border-none md:flex md:flex-col md:items-center">
                 <div>
                     <h3 className="text-2xl font-semibold mb-8">Social</h3>
@@ -41,10 +41,10 @@ export const Footer = () => {
                 <div>
                     <h3 className="text-2xl font-semibold mb-8">Contact</h3>
                     <ul className="flex flex-col justify-center space-y-6 text-[0.85rem]">
-                        <li><a href="tel:+16472239966" className="flex items-center g-moon-link"><BsTelephone className="me-2 text-[18px]" />(647) 223-9966</a></li>
-                        <li><a href="mailto:vivi@g-moon-wellness.ca" className="flex items-center g-moon-link"><AiOutlineMail className="me-2 text-[18px]" />vivi@g-moon-wellness.ca</a></li>
-                        <li className="flex items-center"><IoTimeOutline className="me-2 text-[20px] shrink-0"  />Mon - Sun, 10:00am-10:00pm</li>
-                        <li><a href="https://maps.app.goo.gl/kjCq6FC7RopNiny19" target="_blank" className="flex items-center g-moon-link"><IoMapOutline className="me-2 text-[18px]" />160 East Beaver Creek Rd, #21,<br /> Richmond Hill, ON, L4B 3J6</a></li>
+                        <li className="w-fit"><a href="tel:+16472239966" className="flex items-center g-moon-link"><BsTelephone className="me-2 text-[18px]" />(647) 223-9966</a></li>
+                        <li className="w-fit"><a href="mailto:vivi@g-moon-wellness.ca" className="flex items-center g-moon-link"><AiOutlineMail className="me-2 text-[18px]" />vivi@g-moon-wellness.ca</a></li>
+                        <li className="flex items-center w-fit"><IoTimeOutline className="me-2 text-[20px] shrink-0"  />Mon - Sun, 10:00am-10:00pm</li>
+                        <li className="w-fit"><a href="https://maps.app.goo.gl/kjCq6FC7RopNiny19" target="_blank" className="flex items-center g-moon-link"><IoMapOutline className="me-2 text-[18px]" />160 East Beaver Creek Rd, #21,<br /> Richmond Hill, ON, L4B 3J6</a></li>
                     </ul>
                 </div>
             </div>

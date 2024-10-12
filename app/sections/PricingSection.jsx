@@ -1,5 +1,5 @@
 import { SectionHeader } from "../components/SectionHeader"
-import { PricingTable } from "../(pages)/components/PricingTable"
+import { PricingTable } from "../components/PricingTable"
 
 export const PricingSection = () => {
 

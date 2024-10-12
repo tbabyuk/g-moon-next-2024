@@ -13,6 +13,7 @@ const initialState = {
 const ContactFormClientPage = () => {
 
     const [contactDetails, setContactDetails] = useState(initialState)
+    const [isSubmitting, setIsSubmitting] = useState(false)
     const [submitSuccess, setSubmitSuccess] = useState(false)
     const [submitFail, setSubmitFail] = useState(false)
 
@@ -31,6 +32,7 @@ const ContactFormClientPage = () => {
         e.preventDefault();
 
         try {
+            setIsSubmitting(true)
             const res = await fetch("/api/contact", {
                 method: "POST",
                 headers: {
@@ -49,6 +51,8 @@ const ContactFormClientPage = () => {
         } catch (error) {
             console.log(error)
             setSubmitFail(true)
+        } finally {
+            setIsSubmitting(false)
         }
     }
 
@@ -86,7 +90,7 @@ const ContactFormClientPage = () => {
                         <span className="text-gray-500 text-sm block mb-1">Message:</span>
                         <textarea name="message" placeholder="type here" className="textarea textarea-bordered w-full h-[100px]"  required onChange={handleInput} />
                     </label>
-                    <button className="btn g-moon-action-btn text-[1rem] w-full">Submit</button>
+                    <button className="btn g-moon-action-btn text-[1rem] w-full" disabled={isSubmitting}>{isSubmitting ? "Submitting..." : "Submit"}</button>
                 </form>
             }
         </div>    

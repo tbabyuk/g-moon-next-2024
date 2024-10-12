@@ -4,33 +4,110 @@
 export const servicesList = [
     {
         name: "Massages",
-        icon: "/images/icons/massage.svg"
+        icon: "/images/services/massage.svg",
+        url: "/massages"
     },
     {
         name: "Body Scrubs",
-        icon: "/images/icons/body-scrub.svg"
+        icon: "/images/services/body-scrub.svg",
+        url: "/body-scrubs"
     },
     {
         name: "Table Shower",
-        icon: "/images/icons/table-shower.svg"
+        icon: "/images/services/table-shower.svg",
+        url: "/table-shower"
     },
     {
         name: "Hot Stone Therapy",
-        icon: "/images/icons/hot-stone-therapy.svg"
+        icon: "/images/services/hot-stone-therapy.svg",
+        url: "/hot-stone-therapy"
     },
     {
         name: "Aromatherapy",
-        icon: "/images/icons/aromatherapy.svg"
+        icon: "/images/services/aromatherapy.svg",
+        url: "/aromatherapy"
     },
     {
         name: "Reflexology",
-        icon: "/images/icons/reflexology.svg"
+        icon: "/images/services/reflexology.svg",
+        url: "reflexology"
     },
     {
         name: "Consultation",
-        icon: "/images/icons/consultation.svg"
+        icon: "/images/services/consultation.svg",
+        url: "consultation"
     }
 ]
+
+
+export const massagesList = [
+    {
+        name: "Thai Massage",
+        icon: "/images/services/massage.svg",
+        url: "/massages/thai-massage"
+    },
+    {
+        name: "Shiatsu Massage",
+        icon: "/images/services/massage.svg",
+        url: "/massages/shiatsu-massage"
+    },
+    {
+        name: "Swedish Massage",
+        icon: "/images/services/massage.svg",
+        url: "/massages/swedish-massage"
+    },
+    {
+        name: "Deep Tissue Massage",
+        icon: "/images/services/massage.svg",
+        url: "/massages/deep-tissue-massage"
+    },
+    {
+        name: "Face Massage",
+        icon: "/images/services/massage.svg",
+        url: "/massages/face-massage"
+    },
+    {
+        name: "Scalp Massage",
+        icon: "/images/services/massage.svg",
+        url: "/massages/scalp-massage"
+    },
+    {
+        name: "Couples Massage",
+        icon: "/images/services/massage.svg",
+        url: "/massages/couples-massage"
+    },
+    {
+        name: "Prenatal Massage",
+        icon: "/images/services/massage.svg",
+        url: "/massages/prenatal-massage"
+    },
+    {
+        name: "Postnatal Massage",
+        icon: "/images/services/massage.svg",
+        url: "/massages/postnatal-massage"
+    },
+]
+
+
+
+export const bodyScrubsList = [
+    {
+        name: "Sea Salt Scrub",
+        icon: "/images/services/body-scrub.svg",
+        url: "/body-scrubs/sea-salt-scrub"
+    },
+    {
+        name: "Sugar Scrub",
+        icon: "/images/services/body-scrub.svg",
+        url: "/body-scrubs/sugar-scrub"
+    },
+    {
+        name: "Coffee Scrub",
+        icon: "/images/services/body-scrub.svg",
+        url: "/body-scrubs/coffee-scrub"
+    },
+]
+
 
 
 export const teamMembersList = [
@@ -67,77 +144,8 @@ export const teamMembersList = [
 ]
 
 
-export const massagesList = [
-    {
-        name: "Thai Massage",
-        image: "/images/icons/massage.svg",
-        url: "/massages/thai-massage"
-    },
-    {
-        name: "Shiatsu Massage",
-        image: "/images/icons/massage.svg",
-        url: "/massages/shiatsu-massage"
-    },
-    {
-        name: "Swedish Massage",
-        image: "/images/icons/massage.svg",
-        url: "/massages/swedish-massage"
-    },
-    {
-        name: "Deep Tissue Massage",
-        image: "/images/icons/massage.svg",
-        url: "/massages/deep-tissue-massage"
-    },
-    {
-        name: "Face Massage",
-        image: "/images/icons/massage.svg",
-        url: "/massages/face-massage"
-    },
-    {
-        name: "Scalp Massage",
-        image: "/images/icons/massage.svg",
-        url: "/massages/scalp-massage"
-    },
-    {
-        name: "Couples Massage",
-        image: "/images/icons/massage.svg",
-        url: "/massages/couples-massage"
-    },
-    {
-        name: "Prenatal Massage",
-        image: "/images/icons/massage.svg",
-        url: "/massages/prenatal-massage"
-    },
-    {
-        name: "Postnatal Massage",
-        image: "/images/icons/massage.svg",
-        url: "/massages/postnatal-massage"
-    },
-]
 
-
-
-export const bodyScrubsList = [
-    {
-        name: "Sea Salt Scrub",
-        image: "/images/icons/body-scrub.svg",
-        url: "/body-scrubs/sea-salt-scrub"
-    },
-    {
-        name: "Sugar Scrub",
-        image: "/images/icons/body-scrub.svg",
-        url: "/body-scrubs/sugar-scrub"
-    },
-    {
-        name: "Coffee Scrub",
-        image: "/images/icons/body-scrub.svg",
-        url: "/body-scrubs/coffee-scrub"
-    },
-]
-
-
-
-export const allServicesList = [
+export const servicesByDurationArray = [
     {
         name: "thai massage",
         duration: ["60", "90"]

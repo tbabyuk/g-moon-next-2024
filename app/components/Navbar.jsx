@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { AiOutlineClose } from "react-icons/ai";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useState } from "react";
 
@@ -23,7 +24,8 @@ export const Navbar = () => {
         <div className="flex flex-col md:flex-row">
             <div className="px-5 h-[55px] flex justify-between items-center md:w-[300px] md:justify-center bg-g-moon-medium-gray">
                 <Link href="/"><img src="/images/g-moon-logo-transparent-white.png" alt="G Moon Wellness Centre Logo" width="120px" /></Link>
-                <RxHamburgerMenu className="text-g-moon-white text-[35px] md:hidden cursor-pointer" onClick={() => setDropdownIsOpen(!dropdownIsOpen)} />
+                {!dropdownIsOpen && <RxHamburgerMenu className="text-g-moon-white text-[35px] md:hidden cursor-pointer" onClick={() => setDropdownIsOpen(!dropdownIsOpen)} />}
+                {dropdownIsOpen && <AiOutlineClose className="text-g-moon-white text-[35px] md:hidden cursor-pointer" onClick={() => setDropdownIsOpen(!dropdownIsOpen)} />}
             </div>
             <nav className={`${dropdownIsOpen ? "block" : "hidden"} md:flex-1 md:flex justify-center items-center bg-g-moon-medium-gray z-20`}>
                 <ul className="flex flex-col md:flex-row h-full">

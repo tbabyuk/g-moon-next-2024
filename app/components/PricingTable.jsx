@@ -94,8 +94,8 @@ export const PricingTable = () => {
                     </tr>
                 </thead>
                 <tbody>
-                     <tr className="w-[150px] md:w-[210px]">
-                        <td>Sugar Scrub</td>
+                     <tr>
+                        <td className="w-[150px] md:w-[210px]">Sugar Scrub</td>
                         <td>$60</td>
                         <td>n/a</td>
                         <td>$80</td>
