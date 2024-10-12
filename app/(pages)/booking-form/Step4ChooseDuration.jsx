@@ -29,7 +29,7 @@ export const Step4ChooseDuration = ({currentStep, totalSteps, previousStep, next
         <div>
             <div className="border-b-2 pb-2 mb-2 text-gray-400">Step {currentStep} of {totalSteps}</div>
             <p className="text-lg font-medium">Choose your preferred appointment duration:</p>
-            <small className="block mb-4">Times are limited to our operating hours</small>
+            <small className="block mb-4">Duration options are different depending on chosen service</small>
             <select className="select select-bordered w-full mb-12" value={orderDetails.chosenDuration} onChange={(e) => handleDurationSelection(e)}>
                 {durationOptionsArray?.map((option, index) => (
                     <option key={index} value={option}>{option} mins</option>
