@@ -34,9 +34,8 @@ export async function POST(req) {
     const mailOptions =
         {
             from: "terry@strictlywebdev.com",
-            // to: ["terry@strictlywebdev.com", customerEmail],
             to: customerEmail,
-            // bcc: "terry@strictlywebdev.com",
+            bcc: "terry@strictlywebdev.com",
             subject: "New Stripe Transaction",
             html: `
                 <div style="font-family: Arial, sans-serif; padding: 0 0 30px 0">
@@ -84,6 +83,5 @@ export async function POST(req) {
             // return NextResponse.json({message: error.message}, {status: 500})
         }
 
-    
         return NextResponse.json({message: "success"})
 }

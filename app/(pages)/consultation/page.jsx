@@ -12,7 +12,7 @@ const ConsultationPage = () => {
 
     return(
         <main className="text-g-moon-dark-gray">
-            <PageHeader title="Wellness Consultation" />
+            <PageHeader title="Consultation" />
             <div className="g-moon-content-padding">
                 <PageSubheader title="OVERVIEW" />
                 <p className="mb-24">Our Wellness Consultation service offers a personalized approach to achieving optimal health and well-being. Book a consultation with our certified RMT specialist today!</p>

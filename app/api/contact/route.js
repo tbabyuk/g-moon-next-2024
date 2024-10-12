@@ -21,8 +21,8 @@ export async function POST(request) {
     const mailOptions =
         {
             from: "terry@strictlywebdev.com",
-            to: "terry@strictlywebdev.com",
-            // bcc: "terry@strictlywebdev.com",
+            to: "g.moon.wellness@gmail.com",
+            bcc: "terry@strictlywebdev.com",
             subject: "New Contact Form Submission",
             html: `
                 <div style="font-family: Arial, sans-serif; padding: 0 0 30px 0">
