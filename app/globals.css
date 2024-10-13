@@ -59,11 +59,6 @@ h1, h2, h3 {
   @apply py-2 text-center border-2;
 }
 
-.blah {
-  color: #8c8c8c;
-  background-color: #737373;
-}
-
 .g-moon-content-padding {
   @apply px-5 md:px-24 lg:px-40 xl:px-56 py-20;
 }
@@ -72,17 +67,16 @@ h1, h2, h3 {
   @apply mb-16;
 }
 
-  .customDatePickerWidth, 
-  .customDatePickerWidth > div.react-datepicker-wrapper, 
-  .customDatePickerWidth > div > div.react-datepicker__input-container
-  .customDatePickerWidth > div > div.react-datepicker__input-container input {
-     width: 100%;}
-
+.customDatePickerWidth, 
+.customDatePickerWidth > div.react-datepicker-wrapper, 
+.customDatePickerWidth > div > div.react-datepicker__input-container
+.customDatePickerWidth > div > div.react-datepicker__input-container input {
+    width: 100%;}
 
 .g-moon-booking-btn {
   @apply btn btn-outline hover:bg-g-moon-gold-hover;
 }
 
-.g-moon-service-icon {
-  @apply bg-g-moon-light-gray hover:bg-g-moon-light-gray-hover;
+.g-moon-service-card {
+  @apply bg-g-moon-light-gray hover:bg-g-moon-light-gray-hover rounded-md shadow-xl cursor-pointer;
 }
