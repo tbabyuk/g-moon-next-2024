@@ -18,22 +18,22 @@ export async function POST(req) {
     const serviceDuration = requestBody.data.object.metadata.chosenDuration
 
 
-    console.log("logging requestBody from WEBHOOK:", requestBody)
-    console.log("Logging customer email from WEBHOOK:", customerEmail)
+    // console.log("logging requestBody from WEBHOOK:", requestBody)
+    // console.log("Logging customer email from WEBHOOK:", customerEmail)
 
 
     const transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
-            user: "terry@strictlywebdev.com",
-            pass: process.env.NODEMAILER_STRICTLY_PASS
+            user: "vivi@g-moon-wellness.ca",
+            pass: process.env.NODEMAILER_VIVI_PASS
         }
     })
 
 
     const mailOptions =
         {
-            from: "terry@strictlywebdev.com",
+            from: "vivi@g-moon-wellness.ca",
             to: customerEmail,
             bcc: "terry@strictlywebdev.com",
             subject: "New Stripe Transaction",
