@@ -1,9 +1,9 @@
 import "./globals.css";
 import { Manrope, Montserrat } from "next/font/google"
 import Header from "./components/Header";
-import { Hero } from "./components/Hero";
 import { Footer } from "./components/Footer";
 import Script from "next/script";
+import { GoogleAnalytics } from "@next/third-parties/google"
 
 
 <Script 
@@ -30,6 +30,7 @@ export default function RootLayout({ children }) {
         <Header />
           {children}
         <Footer />
+        <GoogleAnalytics gaId="G-EZ73CK0BH6" />
       </body>
     </html>
   );
