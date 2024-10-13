@@ -26,12 +26,12 @@ const montserrat = Montserrat({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${manrope.className} ${montserrat.variable}`}>
-        <Header />
-          {children}
-        <Footer />
+        <body className={`${manrope.className} ${montserrat.variable}`}>
+          <Header />
+            {children}
+          <Footer />
+        </body>
         <GoogleAnalytics gaId="G-EZ73CK0BH6" />
-      </body>
     </html>
   );
 }
