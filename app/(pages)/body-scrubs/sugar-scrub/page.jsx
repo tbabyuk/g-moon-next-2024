@@ -3,7 +3,7 @@ import { PageSubheader } from "../../components/PageSubheader";
 
 
 export const metadata = {
-    title: "G Moon Wellness Centre | Sugar Scrub",
+    title: "Sugar Scrub | G Moon Wellness Centre",
     description: "A gentle yet effective exfoliant, our Sugar Scrub nourishes and hydrates, perfect for sensitive skin or a softer touch."
 }
 

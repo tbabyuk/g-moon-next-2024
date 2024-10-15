@@ -9,7 +9,7 @@ const BookingContext = createContext();
 export const BookingContextProvider = ({children}) => {
 
     const [orderDetails, setOrderDetails] = useState({
-        chosenService: "thai massage",
+        chosenService: "swedish massage",
         chosenDate: null,
         chosenStartTime: "10:00am",
         chosenDuration: "",

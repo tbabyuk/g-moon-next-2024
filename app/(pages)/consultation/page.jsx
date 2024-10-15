@@ -3,7 +3,7 @@ import { PageSubheader } from "../components/PageSubheader";
 
 
 export const metadata = {
-    title: "G Moon Wellness Centre | Consultation",
+    title: "Consultation | G Moon Wellness Centre",
     description: "Our Wellness Consultation service offers a personalized approach to achieving optimal health and well-being!",
 }
 

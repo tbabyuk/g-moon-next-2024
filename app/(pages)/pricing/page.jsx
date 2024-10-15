@@ -3,7 +3,7 @@ import { PricingTable } from "../../components/PricingTable";
 
 
 export const metadata = {
-    title: "G Moon Wellness Centre | Pricing",
+    title: "Pricing | G Moon Wellness Centre",
     description: "Pricing for our services",
 }
 

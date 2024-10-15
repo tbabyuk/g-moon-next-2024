@@ -4,7 +4,7 @@ import { PageSubSubheader } from "../../components/PageSubSubheader";
 
 
 export const metadata = {
-    title: "G Moon Wellness Centre | Couples Massage",
+    title: "Couples Massage | G Moon Wellness Centre",
     description: "Share a serene and intimate experience with our Couples Massage, a luxurious treatment designed for two."
 }
 

@@ -3,7 +3,7 @@ import { PageSubheader } from "../../components/PageSubheader";
 
 
 export const metadata = {
-    title: "G Moon Wellness Centre | Sea Salt Scrub",
+    title: "Sea Salt Scrub | G Moon Wellness Centre",
     description: "Infused with mineral-rich sea salt, this scrub detoxifies and re-mineralizes the skin, leaving it refreshed and invigorated."
 }
 

@@ -4,7 +4,7 @@ import { PageSubSubheader } from "../components/PageSubSubheader";
 
 
 export const metadata = {
-    title: "G Moon Wellness Centre | Table Shower",
+    title: "Table Shower | G Moon Wellness Centre",
     description: "Experience the ultimate in relaxation and rejuvenation with our Table Shower service!",
 }
 

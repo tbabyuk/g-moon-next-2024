@@ -3,7 +3,7 @@ import { PageHeader } from "../components/PageHeader";
 
 
 export const metadata = {
-    title: "G Moon Wellness Centre | Contact Form",
+    title: "Contact Form | G Moon Wellness Centre",
     description: "Contact G Moon Wellness Centre today!",
 }
 

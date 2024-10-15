@@ -4,7 +4,7 @@ import { PageSubSubheader } from "../../components/PageSubSubheader";
 
 
 export const metadata = {
-    title: "G Moon Wellness Centre | Shiatsu Massage",
+    title: "Shiatsu Massage | G Moon Wellness Centre",
     description: "Experience the profound benefits of Shiatsu Massage, a traditional Japanese therapy rooted in the principles of acupuncture and holistic health."
 }
 

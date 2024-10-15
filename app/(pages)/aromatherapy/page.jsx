@@ -4,7 +4,7 @@ import { PageSubSubheader } from "../components/PageSubSubheader";
 
 
 export const metadata = {
-    title: "G Moon Wellness Centre | Aromatherapy",
+    title: "Aromatherapy | G Moon Wellness Centre",
     description: "Immerse yourself in the therapeutic benefits of our Aromatherapy sessions!",
 }
 

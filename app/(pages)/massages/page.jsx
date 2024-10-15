@@ -3,7 +3,7 @@ import { massagesList } from "@/app/data/data"
 import { ServiceCard } from "@/app/components/ServiceCard"
 
 export const metadata = {
-    title: "G Moon Wellness Centre | Massages",
+    title: "Massages | G Moon Wellness Centre",
     description: "Choose from our wide selection of massages!",
 }
 

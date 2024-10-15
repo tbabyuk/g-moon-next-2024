@@ -4,7 +4,7 @@ import { PageSubSubheader } from "../../components/PageSubSubheader";
 
 
 export const metadata = {
-    title: "G Moon Wellness Centre | Scalp Massage",
+    title: "Scalp Massage | G Moon Wellness Centre",
     description: "Experience the ultimate in relaxation and rejuvenation with our Scalp Massage, a soothing treatment designed to relieve tension, stimulate circulation, and promote overall well-being."
 }
 

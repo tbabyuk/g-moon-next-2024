@@ -4,7 +4,7 @@ import { PageSubSubheader } from "../../components/PageSubSubheader";
 
 
 export const metadata = {
-    title: "G Moon Wellness Centre | Prenatal Massage",
+    title: "Prenatal Massage | G Moon Wellness Centre",
     description: "Experience the soothing benefits of our Prenatal Massage, designed specifically for expectant mothers to enhance comfort and relaxation during pregnancy."
 }
 

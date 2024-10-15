@@ -4,7 +4,7 @@ import { PageSubSubheader } from "../../components/PageSubSubheader";
 
 
 export const metadata = {
-    title: "G Moon Wellness Centre | Thai Massage",
+    title: "Thai Massage | G Moon Wellness Centre",
     description: "Experience the timeless art of Thai Massage, an ancient practice that combines the benefits of stretching, acupressure, and rhythmic movements to create a deeply invigorating and restorative experience."
 }
 

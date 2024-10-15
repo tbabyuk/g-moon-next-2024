@@ -2,7 +2,7 @@ import { PageHeader } from "../components/PageHeader";
 
 
 export const metadata = {
-    title: "G Moon Wellness Centre | About",
+    title: "About | G Moon Wellness Centre",
     description: "A brief history of G Moon Wellness Centre",
 }
 

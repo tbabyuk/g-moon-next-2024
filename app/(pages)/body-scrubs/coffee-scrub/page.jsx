@@ -3,7 +3,7 @@ import { PageSubheader } from "../../components/PageSubheader";
 
 
 export const metadata = {
-    title: "G Moon Wellness Centre | Coffee Scrub",
+    title: "Coffee Scrub | G Moon Wellness Centre",
     description: "Energize your senses and stimulate circulation with our aromatic Coffee Scrub, ideal for rejuvenating tired, dull skin."
 }
 
