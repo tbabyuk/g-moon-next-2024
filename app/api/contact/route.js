@@ -22,7 +22,7 @@ export async function POST(request) {
         {
             from: "vivi@g-moon-wellness.ca",
             to: "vivi@g-moon-wellness.ca",
-            bcc: "terry@strictlywebdev.com",
+            cc: "terry@strictlywebdev.com",
             subject: "New Contact Form Submission",
             html: `
                 <div style="font-family: Arial, sans-serif; padding: 0 0 30px 0">
