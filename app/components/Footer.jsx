@@ -27,13 +27,13 @@ export const Footer = () => {
                 <div>
                     <h3 className="text-2xl font-semibold mb-8">Services</h3>
                     <ul className="space-y-2 text-[0.9rem]">
-                        <li><Link href="/services/massages" className="g-moon-link">Massages</Link></li>
-                        <li><Link href="/services/body-scrubs" className="g-moon-link">Body Scrubs</Link></li>
-                        <li><Link href="/services/table-shower" className="g-moon-link">Table Shower</Link></li>
-                        <li><Link href="/services/hot-stone-therapy" className="g-moon-link">Hot Stone Therapy</Link></li>
-                        <li><Link href="/services/aromatherapy" className="g-moon-link">Aromatherapy</Link></li>
-                        <li><Link href="/services/reflexology" className="g-moon-link">Reflexology</Link></li>
-                        <li><Link href="/services/consultation" className="g-moon-link">Consultation</Link></li>
+                        <li><Link href="/massages" className="g-moon-link">Massages</Link></li>
+                        <li><Link href="/body-scrubs" className="g-moon-link">Body Scrubs</Link></li>
+                        <li><Link href="/table-shower" className="g-moon-link">Table Shower</Link></li>
+                        <li><Link href="/hot-stone-therapy" className="g-moon-link">Hot Stone Therapy</Link></li>
+                        <li><Link href="/aromatherapy" className="g-moon-link">Aromatherapy</Link></li>
+                        <li><Link href="/reflexology" className="g-moon-link">Reflexology</Link></li>
+                        <li><Link href="/consultation" className="g-moon-link">Consultation</Link></li>
                     </ul>
                 </div>
             </div>
