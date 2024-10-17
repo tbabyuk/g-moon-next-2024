@@ -40,45 +40,45 @@ export const PricingTable = () => {
                     </tr>
                     <tr>
                         <td>Thai Massage</td>
-                        <td>n/a</td>
-                        <td>n/a</td>
+                        <td>-</td>
+                        <td>-</td>
                         <td>$80*</td>
                         <td>$100</td>
                     </tr>
                     <tr>
                         <td>Couples Massage</td>
-                        <td>n/a</td>
-                        <td>n/a</td>
+                        <td>-</td>
+                        <td>-</td>
                         <td>$160*</td>
-                        <td>n/a</td>
+                        <td>-</td>
                     </tr>
                     <tr>
                         <td>Prenatal Massage</td>
-                        <td>n/a</td>
-                        <td>n/a</td>
+                        <td>-</td>
+                        <td>-</td>
                         <td>$60*</td>
-                        <td>n/a</td>
+                        <td>-</td>
                     </tr>
                     <tr>
                         <td>Postnatal Massage</td>
-                        <td>n/a</td>
-                        <td>n/a</td>
+                        <td>-</td>
+                        <td>-</td>
                         <td>$60*</td>
-                        <td>n/a</td>
+                        <td>-</td>
                     </tr>
                     <tr>
                         <td>Scalp Massage</td>
                         <td>$40</td>
-                        <td>n/a</td>
-                        <td>n/a</td>
-                        <td>n/a</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
                     </tr>
                     <tr>
                         <td>Face Massage</td>
                         <td>$40</td>
-                        <td>n/a</td>
-                        <td>n/a</td>
-                        <td>n/a</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
                     </tr>
                 </tbody>
             </table>
@@ -97,24 +97,24 @@ export const PricingTable = () => {
                      <tr>
                         <td className="w-[150px] md:w-[210px]">Sugar Scrub</td>
                         <td>$60</td>
-                        <td>n/a</td>
+                        <td>-</td>
                         <td>$80</td>
-                        <td>n/a</td>
+                        <td>-</td>
                     </tr>
                     <tr>
                         <td>Sea Salt Scrub</td>
                         <td>$60</td>
-                        <td>n/a</td>
+                        <td>-</td>
                         <td>$80</td>
-                        <td>n/a</td>
+                        <td>-</td>
                     </tr>
 
                     <tr>
                         <td>Coffee Scrub</td>
                         <td>$60</td>
-                        <td>n/a</td>
+                        <td>-</td>
                         <td>$80</td>
-                        <td>n/a</td>
+                        <td>-</td>
                     </tr>
                 </tbody>
             </table>
@@ -146,23 +146,23 @@ export const PricingTable = () => {
                     <tr>
                         <td>Hot Stone Therapy</td>
                         <td>$40</td>
-                        <td>n/a</td>
+                        <td>-</td>
                         <td>$70</td>
-                        <td>n/a</td>
+                        <td>-</td>
                     </tr>
                     <tr>
                         <td>Table Shower</td>
                         <td>$60</td>
-                        <td>n/a</td>
+                        <td>-</td>
                         <td>$80</td>
-                        <td>n/a</td>
+                        <td>-</td>
                     </tr>
                     <tr>
                         <td>Consultation</td>
                         <td>$60</td>
                         <td>$80</td>
                         <td>$100</td>
-                        <td>n/a</td>
+                        <td>-</td>
                     </tr>
                 </tbody>
             </table>
