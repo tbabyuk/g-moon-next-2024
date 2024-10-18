@@ -33,8 +33,8 @@ export async function POST(request) {
           chosenDuration
       },
 
-        success_url: "https://g-moon-next-2024.vercel.app/checkout-success",
-        cancel_url: "https://g-moon-next-2024.vercel.app/checkout-cancelled"
+        success_url: "https://www.g-moon-wellness.ca/checkout-success",
+        cancel_url: "https://www.g-moon-wellness.ca/checkout-cancelled"
     })
 
     if(session) {

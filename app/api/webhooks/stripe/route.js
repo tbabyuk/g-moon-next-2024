@@ -35,7 +35,7 @@ export async function POST(req) {
         {
             from: "vivi@g-moon-wellness.ca",
             to: customerEmail,
-            cc: "tbabyuk@gmail.com",
+            cc: "vivi@g-moon-wellness.ca",
             subject: "New Stripe Transaction",
             html: `
                 <div style="font-family: Arial, sans-serif; padding: 0 0 30px 0">
