@@ -17,6 +17,13 @@ export async function POST(request) {
     }];
 
 
+    // FOR TESTING
+    // let lineItems = [{
+    //     price: "price_1Q7eqjRwIe8y2zCR1idihTLP",
+    //     quantity: 1,
+    // }];
+
+
     const session = await stripe.checkout.sessions.create({
         line_items: lineItems,
         mode: "payment",
