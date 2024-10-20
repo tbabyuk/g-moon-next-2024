@@ -43,7 +43,6 @@ export const Step1ChooseService = ({currentStep, totalSteps, nextStep}) => {
                     <option value="reflexology">Reflexology</option>
                     <option value="hot stone therapy">Hot Stone Therapy</option>
                     <option value="table shower">Table Shower</option>
-                    <option value="consultation">Consultation</option>
                 </optgroup>
             </select>
             <button className="btn g-moon-action-btn float-end" onClick={nextStep}>Next Step <MdArrowForwardIos /></button>

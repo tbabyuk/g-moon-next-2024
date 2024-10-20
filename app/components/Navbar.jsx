@@ -39,7 +39,6 @@ export const Navbar = () => {
                                 <li className="whitespace-nowrap"><Link href="/hot-stone-therapy" className="g-moon-subnav-link"  onClick={() => closeAllMenus()}>Hot Stone Therapy</Link></li>
                                 <li className="whitespace-nowrap"><Link href="/aromatherapy" className="g-moon-subnav-link" onClick={() => closeAllMenus()}>Aromatherapy</Link></li>
                                 <li className="whitespace-nowrap"><Link href="/reflexology" className="g-moon-subnav-link" onClick={() => closeAllMenus()}>Reflexology</Link></li>
-                                <li className="whitespace-nowrap"><Link href="/consultation" className="g-moon-subnav-link" onClick={() => closeAllMenus()}>Consultation</Link></li>
                             </ul>
                         }
                     </li>

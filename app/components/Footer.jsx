@@ -33,7 +33,6 @@ export const Footer = () => {
                         <li><Link href="/hot-stone-therapy" className="g-moon-link">Hot Stone Therapy</Link></li>
                         <li><Link href="/aromatherapy" className="g-moon-link">Aromatherapy</Link></li>
                         <li><Link href="/reflexology" className="g-moon-link">Reflexology</Link></li>
-                        <li><Link href="/consultation" className="g-moon-link">Consultation</Link></li>
                     </ul>
                 </div>
             </div>

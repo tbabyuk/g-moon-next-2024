@@ -31,11 +31,6 @@ export const servicesList = [
         name: "Reflexology",
         icon: "/images/services/reflexology.svg",
         url: "reflexology"
-    },
-    {
-        name: "Consultation",
-        icon: "/images/services/consultation.svg",
-        url: "consultation"
     }
 ]
 
@@ -210,10 +205,6 @@ export const servicesByDurationArray = [
         name: "reflexology",
         duration: ["30", "45", "60", "90"]
     },
-    {
-        name: "consultation",
-        duration: ["30", "45", "60"]
-    }
 ]
 
 
@@ -236,7 +227,6 @@ export const daysBasedOnService = [
             "sea salt scrub",
             "sugar scrub",
             "coffee scrub",
-            "consultation"
         ]
     },
     {
@@ -256,7 +246,6 @@ export const daysBasedOnService = [
             "sea salt scrub",
             "sugar scrub",
             "coffee scrub",
-            "consultation"
         ]
     },
     {
@@ -278,7 +267,6 @@ export const daysBasedOnService = [
             "coffee scrub",
             "reflexology",
             "table shower",
-            "consultation"
         ]
     },
     {
@@ -300,7 +288,6 @@ export const daysBasedOnService = [
             "coffee scrub",
             "reflexology",
             "table shower",
-            "consultation"
         ]
     },
     {
@@ -321,7 +308,6 @@ export const daysBasedOnService = [
             "sugar scrub",
             "coffee scrub",
             "reflexology",
-            "consultation"
         ]
     },
     {
@@ -343,7 +329,6 @@ export const daysBasedOnService = [
             "coffee scrub",
             "reflexology",
             "table shower",
-            "consultation"
         ]
     },
     {
@@ -365,7 +350,6 @@ export const daysBasedOnService = [
             "coffee scrub",
             "reflexology",
             "table shower",
-            "consultation"
         ]
     },
 
@@ -387,7 +371,6 @@ export const therapistsBasedOnDays = [
             "postnatal massage",
             "aromatherapy",
             "hot stone therapy",
-            "consultation"
         ],
         availability: ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
     },

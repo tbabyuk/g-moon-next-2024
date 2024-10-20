@@ -70,11 +70,6 @@ const serviceIdMappings = {
     table: {
         "30": "price_1Q8l9lRwIe8y2zCRVaP9V6rZ", // live
         "60": "price_1Q8lAARwIe8y2zCRZZH0Uogo" // live
-    },
-    consultation: {
-        "30": "price_1Q8lAfRwIe8y2zCRiedOsQaH", // live
-        "45": "price_1Q8lB0RwIe8y2zCR5FoZi2OX", // live
-        "60": "price_1Q8lBMRwIe8y2zCRtladHJUo" // live
     }
 };
 

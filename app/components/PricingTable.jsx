@@ -157,13 +157,6 @@ export const PricingTable = () => {
                         <td>$80</td>
                         <td>-</td>
                     </tr>
-                    <tr>
-                        <td>Consultation</td>
-                        <td>$60</td>
-                        <td>$80</td>
-                        <td>$100</td>
-                        <td>-</td>
-                    </tr>
                 </tbody>
             </table>
         </>
