@@ -78,5 +78,5 @@ h1, h2, h3 {
 }
 
 .g-moon-service-card {
-  @apply bg-g-moon-light-gray hover:bg-g-moon-light-gray-hover rounded-md shadow-xl cursor-pointer;
+  @apply rounded-md shadow-xl cursor-pointer relative hover:border-2;
 }

@@ -1,7 +1,35 @@
 
 
-
 export const servicesList = [
+    {
+        name: "Healing Touch Treasures",
+        image: "/images/services/healing-touch-treasures-image.png",
+        url: "/healing-touch-treasures"
+    },
+    {
+        name: "Ladies Retreat",
+        image: "/images/services/ladies-retreat-image.png",
+        url: "/ladies-retreat"
+    },
+    {
+        name: "Nurturing Scalp & Foot Care",
+        image: "/images/services/scalp-and-foot-care-image.png",
+        url: "/scalp-and-foot-care"
+    },
+    {
+        name: "Essence of Body Wellness",
+        image: "/images/services/essence-of-body-wellness-image.png",
+        url: "/essence-of-body-wellness"
+    },
+    {
+        name: "Curated Luxe Additions",
+        image: "/images/services/curated-luxe-additions-image.png",
+        url: "/curated-luxe-additions"
+    },
+]
+
+
+export const oldServicesList = [
     {
         name: "Massages",
         icon: "/images/services/massage.svg",
