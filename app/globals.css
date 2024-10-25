@@ -47,6 +47,29 @@ h1, h2, h3 {
   @apply bg-gray-200/70
 }
 
+/* Short Pricing Table */
+.short-pricing-table {
+  @apply w-full text-[0.95rem] text-gray-600
+}
+
+.short-pricing-table th:first-child {
+  @apply py-2 ps-2 text-start w-[50%];
+}
+
+.short-pricing-table td {
+  @apply text-center py-2 border-b-2;
+}
+
+.short-pricing-table thead tr {
+  @apply bg-g-moon-gold text-g-moon-white
+}
+
+.short-pricing-table td:first-child {
+  @apply text-start ps-2;
+}
+
+
+/* Single Pricing Table */
 .single-pricing-table {
   @apply w-full mb-2 text-[0.95rem] text-gray-600 border-2;
 }
