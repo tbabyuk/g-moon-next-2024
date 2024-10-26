@@ -1,4 +1,4 @@
-import { HealingTouchTreasuresPricingTable } from "@/app/components/HealingTouchTreasuresPricing";
+import { HealingTouchTreasuresPricingTable } from "@/app/components/HealingTouchTreasuresPricingTable";
 import { PageHeader } from "../components/PageHeader";
 import { PageSubheader } from "../components/PageSubheader";
 import { PageSubSubheader } from "../components/PageSubSubheader";
@@ -14,7 +14,7 @@ const LadiesRetreatPage = () => {
             <PageSubheader title="OVERVIEW" />
             <p className="mb-16">Coming soon...</p>
 
-            <PageSubheader title="YOUR OPTIONS" />
+            <PageSubheader title="COMBO SERVICES" />
 
             <div className="mb-20 mx-auto w-full md:max-w-[650px] lg:max-w-[900px]">
                 <PageSubSubheader title="Body & Soul Retreat - $80.00" />

@@ -1,4 +1,4 @@
-import { HealingTouchTreasuresPricingTable } from "@/app/components/HealingTouchTreasuresPricing";
+import { HealingTouchTreasuresPricingTable } from "@/app/components/HealingTouchTreasuresPricingTable";
 import { PageHeader } from "../components/PageHeader";
 import { PageSubheader } from "../components/PageSubheader";
 
