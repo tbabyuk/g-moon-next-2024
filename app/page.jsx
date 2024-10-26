@@ -1,3 +1,4 @@
+import { AboutSection } from "./sections/AboutSection";
 import { ServicesSection } from "./sections/ServicesSection";
 import { TeamSection } from "./sections/TeamSection";
 import { PricingSection } from "./sections/PricingSection";
@@ -16,6 +17,7 @@ export default function Home() {
       <>
         <Hero />
         <main>
+          <AboutSection />
           <ServicesSection />
           <TeamSection />
           <PricingSection />
