@@ -55,8 +55,8 @@ export const Step1ChooseService = ({currentStep, totalSteps, nextStep}) => {
                     <option value="body and soul combo ??">Body & Soul Combo - $??</option>
                     <option value="dream package combo 90">Dream Package Combo - $90</option>
                     <option value="pain relief and pain prevention combo 90">Pain Relief & Pain Prevention Combo - $90</option>
-                    <option value="golfer's heaven combo 100">Golfer's Heaven Combo - $100</option>
-                    <option value="let's relax experience combo 120">Let's Relax Experience Combo - $120</option>
+                    <option value="golfer's heaven combo 100">Golfer&apos;s Heaven Combo - $100</option>
+                    <option value="let's relax experience combo 120">Let&apos;s Relax Experience Combo - $120</option>
                 </optgroup>
             </select>
             <button className="btn g-moon-action-btn float-end" onClick={nextStep}>Next Step <MdArrowForwardIos /></button>
