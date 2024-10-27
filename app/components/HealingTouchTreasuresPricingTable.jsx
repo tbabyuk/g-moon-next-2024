@@ -20,13 +20,13 @@ export const HealingTouchTreasuresPricingTable = () => {
                 </thead>
                 <tbody>
                     <tr>
-                        <td className="w-[150px] md:w-[210px]">Organic Oil Body Massage</td>
+                        <td className="w-[150px] md:w-[210px]">Acupressure Thai Massage</td>
                         <td>-</td>
-                        <td>$40</td>
-                        <td>$50</td>
+                        <td>-</td>
                         <td>$60</td>
-                        <td>$90</td>
-                        <td>$120</td>
+                        <td>$75</td>
+                        <td>-</td>
+                        <td>-</td>
                     </tr>
                     <tr>
                         <td>Aromatic Hot Stone Massage</td>
@@ -38,20 +38,11 @@ export const HealingTouchTreasuresPricingTable = () => {
                         <td>-</td>
                     </tr>
                     <tr>
-                        <td>Traditional Thai Massage</td>
+                        <td>Couples Massage</td>
                         <td>-</td>
                         <td>-</td>
                         <td>-</td>
-                        <td>$80</td>
-                        <td>$100</td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td>Acupressure Thai Massage</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>$60</td>
-                        <td>$75</td>
+                        <td>$160</td>
                         <td>-</td>
                         <td>-</td>
                     </tr>
@@ -83,15 +74,6 @@ export const HealingTouchTreasuresPricingTable = () => {
                         <td>-</td>
                     </tr>
                     <tr>
-                        <td>Swedish Massage</td>
-                        <td>-</td>
-                        <td>$40</td>
-                        <td>$50</td>
-                        <td>$60</td>
-                        <td>$90</td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
                         <td>Japanese Shiatsu Massage</td>
                         <td>-</td>
                         <td>$40</td>
@@ -101,12 +83,30 @@ export const HealingTouchTreasuresPricingTable = () => {
                         <td>-</td>
                     </tr>
                     <tr>
-                        <td>Couples Massage</td>
+                        <td>Lymphatic Detoxification</td>
                         <td>-</td>
                         <td>-</td>
                         <td>-</td>
-                        <td>$160</td>
+                        <td>$80</td>
+                        <td>$110</td>
                         <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Organic Oil Body Massage</td>
+                        <td>-</td>
+                        <td>$40</td>
+                        <td>$50</td>
+                        <td>$60</td>
+                        <td>$90</td>
+                        <td>$120</td>
+                    </tr>
+                    <tr>
+                        <td>Swedish Massage</td>
+                        <td>-</td>
+                        <td>$40</td>
+                        <td>$50</td>
+                        <td>$60</td>
+                        <td>$90</td>
                         <td>-</td>
                     </tr>
                     <tr>
@@ -119,12 +119,12 @@ export const HealingTouchTreasuresPricingTable = () => {
                         <td>-</td>
                     </tr>
                     <tr>
-                        <td>Lymphatic Detoxification</td>
+                        <td>Traditional Thai Massage</td>
                         <td>-</td>
                         <td>-</td>
                         <td>-</td>
                         <td>$80</td>
-                        <td>$110</td>
+                        <td>$100</td>
                         <td>-</td>
                     </tr>
                 </tbody>

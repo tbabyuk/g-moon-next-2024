@@ -91,7 +91,7 @@ const ScalpAndFootCarePage = () => {
             </div>
 
             <div className="mb-20 mx-auto w-full md:max-w-[650px] lg:max-w-[900px]">
-                <PageSubSubheader title="Combo D??? - Destress & Rebalance (60 mins) - $80.00" />
+                <PageSubSubheader title="Destress & Rebalance (60 mins) - $80.00" />
                 <table className="short-pricing-table">
                     <thead>
                         <tr className="bg-g-moon-gold text-g-moon-white">
@@ -113,7 +113,7 @@ const ScalpAndFootCarePage = () => {
             </div>
 
             <div className="mb-20 mx-auto w-full md:max-w-[650px] lg:max-w-[900px]">
-                <PageSubSubheader title="Combo E??? - Sport & Jet Lag Retreat (90 mins) - $100.00" />
+                <PageSubSubheader title="Sport & Jet Lag Retreat (90 mins) - $100.00" />
                 <table className="short-pricing-table">
                     <thead>
                         <tr className="bg-g-moon-gold text-g-moon-white">
@@ -132,7 +132,7 @@ const ScalpAndFootCarePage = () => {
                         </tr>
                         <tr>
                             <td>Aromatic Oil Scalp Massage</td>
-                            <td>45 mins</td>
+                            <td>15 mins</td>
                         </tr>
                     </tbody>
                 </table>
