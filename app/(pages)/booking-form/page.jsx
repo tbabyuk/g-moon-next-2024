@@ -12,9 +12,10 @@ export const metadata = {
 const BookingFormPage = () => {
 
   return (
-        <main>
+        <main className="h-[400px]">
             <PageHeader title="Booking Form" />
-            <BookingFormClientPage />
+            Coming soon...
+            {/* <BookingFormClientPage /> */}
         </main>
   );
 };

@@ -1,13 +1,13 @@
 "use client"
 
 import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
-import { useBookingContext } from "@/app/context/BookingContext";
+import { useCartContext } from "@/app/context/CartContext";
 import { servicesByDurationArray } from "@/app/data/data";
 import { useState, useEffect } from "react";
 
 export const Step4ChooseDuration = ({currentStep, totalSteps, previousStep, nextStep}) => {
 
-    const {orderDetails, setOrderDetails} = useBookingContext()
+    const {orderDetails, setOrderDetails} = useCartContext()
     const [durationOptionsArray, setDurationOptionsArray] = useState([])
 
 

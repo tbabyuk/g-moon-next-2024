@@ -5,7 +5,7 @@ import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css";
 import { useEffect } from "react";
 import { daysBasedOnService } from "@/app/data/data";
-import { useBookingContext } from "@/app/context/BookingContext";
+import { useCartContext } from "@/app/context/CartContext";
 import { startOfTomorrow, isEqual, startOfDay } from "date-fns";
 import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
 
@@ -13,7 +13,7 @@ import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
 export const Step2ChooseDate = ({currentStep, totalSteps, previousStep, nextStep}) => {
 
 
-    const {orderDetails, setOrderDetails} = useBookingContext()
+    const {orderDetails, setOrderDetails} = useCartContext()
     const tomorrow = startOfTomorrow()
 
     const dayOptions = daysBasedOnService.filter((day) => day.services.includes(orderDetails.chosenService))

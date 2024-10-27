@@ -2,12 +2,12 @@
 
 import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
 import { therapistsBasedOnDays } from "@/app/data/data"
-import { useBookingContext } from "@/app/context/BookingContext"
+import { useCartContext } from "@/app/context/CartContext";
 import { useState, useEffect } from "react"
 
 export const Step5ChooseTherapist = ({currentStep, totalSteps, previousStep, nextStep}) => {
 
-    const {orderDetails, setOrderDetails} = useBookingContext()
+    const {orderDetails, setOrderDetails} = useCartContext()
     const [therapistOptionsArray, setTherapistOptionsArray] = useState([])
 
 

@@ -2,14 +2,15 @@
 import { createContext, useContext, useState } from "react";
 
 
-const BookingContext = createContext();
+const CartContext = createContext();
 
 
 
-export const BookingContextProvider = ({children}) => {
+export const CartContextProvider = ({children}) => {
 
     const [orderDetails, setOrderDetails] = useState({
-        chosenService: "swedish massage",
+        chosenService: "acupressure thai massage",
+        allCartItemsArray: [],
         chosenDate: null,
         chosenStartTime: "10:00am",
         chosenDuration: "",
@@ -22,14 +23,14 @@ export const BookingContextProvider = ({children}) => {
 
 
     return (
-        <BookingContext.Provider value={{orderDetails, setOrderDetails}}>
+        <CartContext.Provider value={{orderDetails, setOrderDetails}}>
             {children}
-        </BookingContext.Provider>
+        </CartContext.Provider>
     )
 
 }
 
 
-export const useBookingContext = () => {
-    return useContext(BookingContext)
+export const useCartContext = () => {
+    return useContext(CartContext)
 }
