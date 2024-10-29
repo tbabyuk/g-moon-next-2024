@@ -35,9 +35,9 @@ export const Step2ChooseDate = ({currentStep, totalSteps, previousStep, nextStep
     // At this time, only holidays until January 1, 2025 are filtered out
     const holidayArray = [new Date("2024-10-14T00:00:00-04:00").toDateString(), new Date("2024-12-25T00:00:00-05:00").toDateString(), new Date("2024-12-26T00:00:00-05:00").toDateString(), new Date("2025-01-01T00:00:00-05:00").toDateString()];
 
-    const filterDays = (date) => {
-        return date >= tomorrow && allowedDays.includes(date.getDay()) && !holidayArray.includes(date.toDateString())
-    };
+    // const filterDays = (date) => {
+    //     return date >= tomorrow && allowedDays.includes(date.getDay()) && !holidayArray.includes(date.toDateString())
+    // };
 
     const handleDateSelection = (date) => {
         setOrderDetails((prevState) => ({...prevState, chosenDate: date.toISOString()}))
@@ -57,7 +57,7 @@ export const Step2ChooseDate = ({currentStep, totalSteps, previousStep, nextStep
                 <DatePicker 
                     selected={orderDetails.chosenDate}
                     onChange={handleDateSelection}
-                    filterDate={filterDays} //use this function to restrict what date are shown on the calendar
+                    // filterDate={filterDays} //use this function to restrict what date are shown on the calendar
                     dateFormat="MMMM d, yyyy"
                     // holidays={[
                     //     { date: "2024-10-14", holidayName: "Thanksgiving" },

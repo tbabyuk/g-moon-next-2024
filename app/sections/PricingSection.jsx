@@ -4,7 +4,7 @@ import { PricingTable } from "../components/PricingTable"
 export const PricingSection = () => {
 
     return (
-        <div className="px-5 py-24">
+        <div className="px-5 py-24 bg-gray-100">
             <SectionHeader title="PRICING" />
             <div className="mx-auto w-full md:max-w-[650px] lg:max-w-[900px]">
                 <PricingTable />

@@ -12,7 +12,7 @@ const CuratedLuxeAdditionsPage = () => {
             <PageHeader title="Curated Luxe Additions" />
             <div className="g-moon-content-padding">
             <PageSubheader title="OVERVIEW" />
-            <p className="mb-16">Coming soon...</p>
+            <p className="mb-16">Elevate your relaxation.</p>
             <PageSubheader title="PRICING" />
             <div className="mx-auto w-full md:max-w-[650px] lg:max-w-[900px]">
                 <CuratedLuxeAdditionsPricingTable />

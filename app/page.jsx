@@ -3,6 +3,7 @@ import { ServicesSection } from "./sections/ServicesSection";
 import { TeamSection } from "./sections/TeamSection";
 import { PricingSection } from "./sections/PricingSection";
 import { Hero } from "./components/Hero";
+import { GallerySection } from "./sections/GallerySection";
 
 
 export const metadata = {
@@ -18,9 +19,10 @@ export default function Home() {
         <Hero />
         <main>
           <AboutSection />
+          <GallerySection />
           <ServicesSection />
           <TeamSection />
-          <PricingSection />
+          {/* <PricingSection /> */}
         </main>
       </>
   );

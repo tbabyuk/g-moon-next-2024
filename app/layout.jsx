@@ -1,9 +1,13 @@
+"use client"
+
 import "./globals.css";
 import { Manrope, Montserrat } from "next/font/google"
 import Header from "./components/Header";
 import { Footer } from "./components/Footer";
 import Script from "next/script";
 import { GoogleAnalytics } from "@next/third-parties/google"
+import { CartContextProvider } from "./context/CartContext";
+
 
 
 <Script 
@@ -26,11 +30,13 @@ const montserrat = Montserrat({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-        <body className={`${manrope.className} ${montserrat.variable}`}>
-          <Header />
-            {children}
-          <Footer />
-        </body>
+        <CartContextProvider>
+          <body className={`${manrope.className} ${montserrat.variable}`}>
+            <Header />
+              {children}
+            <Footer />
+          </body>
+        </CartContextProvider>
         <GoogleAnalytics gaId="G-EZ73CK0BH6" />
     </html>
   );
