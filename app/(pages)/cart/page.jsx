@@ -17,7 +17,7 @@ const Cart = () => {
 
             <div className="g-moon-content-padding flex flex-col gap-y-4">
                 
-                {cartItemsArray.length === 0 && <p className="text-center">Your cart is currently empty. Click 'Book Now' to add items to your cart."</p>}
+                {cartItemsArray.length === 0 && <p className="text-center">Your cart is currently empty. Click &quot;Book Now&quot; to add items to your cart.</p>}
                 
                 {cartItemsArray.map((product, index) => (
                     <ProductCard key={index} product={product} decreaseQuantity={decreaseQuantity} increaseQuantity={increaseQuantity} removeProduct={removeProduct} />
