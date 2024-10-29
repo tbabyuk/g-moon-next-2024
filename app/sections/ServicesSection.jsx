@@ -7,7 +7,7 @@ export const ServicesSection = () => {
 
     return (
         <div className="px-5 py-24 bg-gray-100">
-            <SectionHeader title="SERVICES" />
+            <SectionHeader title="OUR SERVICES" />
             <div className="flex lg:px-22 xl:px-28 justify-center flex-wrap gap-8">
                 {servicesList.map((service, index) => (
                     <ServiceCard key={index} service={service} />

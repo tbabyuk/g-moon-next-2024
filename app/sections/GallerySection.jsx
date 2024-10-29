@@ -7,7 +7,7 @@ export const GallerySection = () => {
     return (
         <div className="px-5 py-24">
             <SectionHeader title="OUR FACILITY" />
-            <div class="flex flex-wrap justify-center gap-4 md:px-12 lg:px-28">
+            <div className="flex flex-wrap justify-center gap-4 md:px-12 lg:px-28">
                 <div className="w-full max-w-[252px] h-[336px]">
                     <img src="images/gallery/outside_3x4.jpg" alt="Image 2" className="w-full h-auto object-cover rounded-md" />
                 </div>
