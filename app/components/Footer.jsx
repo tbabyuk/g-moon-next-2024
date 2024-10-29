@@ -43,7 +43,7 @@ export const Footer = () => {
                         <li className="w-fit"><a href="tel:+16472239966" className="flex items-center g-moon-link"><BsTelephone className="me-2 text-[18px]" />(647) 223-9966</a></li>
                         <li className="w-fit"><a href="mailto:vivi@g-moon-wellness.ca" className="flex items-center g-moon-link"><AiOutlineMail className="me-2 text-[18px]" />vivi@g-moon-wellness.ca</a></li>
                         <li className="flex items-center w-fit"><IoTimeOutline className="me-2 text-[20px] shrink-0"  />Mon - Sun, 10:00am-10:00pm</li>
-                        <li className="w-fit"><a href="https://maps.app.goo.gl/kjCq6FC7RopNiny19" target="_blank" className="flex items-center g-moon-link"><IoMapOutline className="me-2 text-[18px]" />160 East Beaver Creek Rd, #21,<br /> Richmond Hill, ON, L4B 3J6</a></li>
+                        <li className="w-fit"><a href="https://maps.app.goo.gl/kjCq6FC7RopNiny19" target="_blank" className="flex items-center g-moon-link"><IoMapOutline className="me-2 text-[18px]" />160 East Beaver Creek Rd, #21,<br /> Richmond Hill, ON, L4B 3L4</a></li>
                     </ul>
                 </div>
             </div>
