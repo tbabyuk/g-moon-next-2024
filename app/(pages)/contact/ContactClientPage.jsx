@@ -10,7 +10,7 @@ const initialState = {
     message: ""
 }
 
-const ContactFormClientPage = () => {
+const ContactClientPage = () => {
 
     const [contactDetails, setContactDetails] = useState(initialState)
     const [isSubmitting, setIsSubmitting] = useState(false)
@@ -58,8 +58,8 @@ const ContactFormClientPage = () => {
 
 
     return(
-        <div className="g-moon-content-padding flex flex-col justify-center">
-            <p className="text-center mb-12">Have a question you want to ask us? We&apos;re here to help! Just fill out the contact form below and click Submit!</p>
+        <div className="flex flex-col justify-center">
+            <p className="mb-10 block lg:w-[400px] mx-auto">Have a question you want to ask us? Ask us here!</p>
 
             {submitSuccess && 
                 (<p className="text-lg text-center text-green-500">Thank you - your form has been submitted successfully!<br /> Please expect to hear from us within 1-2 business days!</p>)
@@ -98,4 +98,4 @@ const ContactFormClientPage = () => {
 }
 
 
-export default ContactFormClientPage;
+export default ContactClientPage;

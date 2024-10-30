@@ -52,7 +52,7 @@ export const Navbar = () => {
                     <li><Link href="/team" className="g-moon-nav-link hover:bg-g-moon-medium-gray-hover" onClick={() => setDropdownIsOpen(false)}>TEAM</Link></li>
                     {/* <li><Link href="/pricing" className="g-moon-nav-link hover:bg-g-moon-medium-gray-hover" onClick={() => setDropdownIsOpen(false)}>PRICING</Link></li> */}
                     <li><Link href="/about" className="g-moon-nav-link hover:bg-g-moon-medium-gray-hover" onClick={() => setDropdownIsOpen(false)}>ABOUT</Link></li>
-                    <li><Link href="/contact-form" className="g-moon-nav-link hover:bg-g-moon-medium-gray-hover" onClick={() => setDropdownIsOpen(false)}>CONTACT</Link></li>
+                    <li><Link href="/contact" className="g-moon-nav-link hover:bg-g-moon-medium-gray-hover" onClick={() => setDropdownIsOpen(false)}>CONTACT</Link></li>
                 </ul>
             </nav>
         </div>
