@@ -17,7 +17,7 @@ const LadiesRetreatPage = () => {
             <PageSubheader title="COMBO SERVICES" />
 
             <div className="mb-20 mx-auto w-full md:max-w-[650px] lg:max-w-[900px]">
-                <PageSubSubheader title="Body & Soul Retreat - $80.00" />
+                <PageSubSubheader title="Body & Soul Retreat (60 mins) - $80.00" />
                 <table className="short-pricing-table">
                     <thead>
                         <tr className="bg-g-moon-gold text-g-moon-white">
@@ -39,7 +39,7 @@ const LadiesRetreatPage = () => {
             </div>
 
             <div className="mb-20 mx-auto w-full md:max-w-[650px] lg:max-w-[900px]">
-                <PageSubSubheader title="Chest & Stomach Energy Awaken - $120.00" />
+                <PageSubSubheader title="Chest & Stomach Energy Awaken (90 mins) - $120.00" />
                 <table className="short-pricing-table">
                     <thead>
                         <tr className="bg-g-moon-gold text-g-moon-white">
@@ -65,7 +65,7 @@ const LadiesRetreatPage = () => {
             </div>
 
             <div className="mb-20 mx-auto w-full md:max-w-[650px] lg:max-w-[900px]">
-                <PageSubSubheader title="Chest & Stomach Energy Awaken - $100.00" />
+                <PageSubSubheader title="Chest & Stomach Energy Awaken (60 mins) - $100.00" />
                 <table className="short-pricing-table">
                     <thead>
                         <tr className="bg-g-moon-gold text-g-moon-white">
@@ -91,7 +91,7 @@ const LadiesRetreatPage = () => {
             </div>
 
             <div className="mb-20 mx-auto w-full md:max-w-[650px] lg:max-w-[900px]">
-                <PageSubSubheader title="Booming Life - $130.00" />
+                <PageSubSubheader title="Booming Life (90 mins) - $130.00" />
                 <table className="short-pricing-table">
                     <thead>
                         <tr className="bg-g-moon-gold text-g-moon-white">
@@ -117,7 +117,7 @@ const LadiesRetreatPage = () => {
             </div>
 
             <div className="mb-20 mx-auto w-full md:max-w-[650px] lg:max-w-[900px]">
-                <PageSubSubheader title="Booming Life - $100.00" />
+                <PageSubSubheader title="Booming Life (60 mins) - $100.00" />
                 <table className="short-pricing-table">
                     <thead>
                         <tr className="bg-g-moon-gold text-g-moon-white">
@@ -143,7 +143,7 @@ const LadiesRetreatPage = () => {
             </div>
 
             <div className="mb-20 mx-auto w-full md:max-w-[650px] lg:max-w-[900px]">
-                <PageSubSubheader title="Sweet Care - $100.00" />
+                <PageSubSubheader title="Sweet Care (60 mins) - $100.00" />
                 <table className="short-pricing-table">
                     <thead>
                         <tr className="bg-g-moon-gold text-g-moon-white">

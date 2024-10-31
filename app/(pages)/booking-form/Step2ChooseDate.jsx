@@ -1,51 +1,52 @@
 "use client"
 
-
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css";
-import { useEffect } from "react";
-import { daysBasedOnService } from "@/app/data/data";
+import { useState, useEffect } from "react";
 import { useCartContext } from "@/app/context/CartContext";
 import { startOfTomorrow, isEqual, startOfDay } from "date-fns";
 import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
+import { allServicesArray } from "@/app/data/data";
 
 
 export const Step2ChooseDate = ({currentStep, totalSteps, previousStep, nextStep}) => {
 
 
     const {orderDetails, setOrderDetails} = useCartContext()
+
+    const [dayOptionsArray, setDayOptionsArray] = useState([])
+
     const tomorrow = startOfTomorrow()
 
-    const dayOptions = daysBasedOnService.filter((day) => day.services.includes(orderDetails.chosenService))
-    const daysOnlyArray = dayOptions.map((dayObject) => dayObject.day)
-    const daysList = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
 
-    const getNums = (array) => {
-        const numsArray = [];
-        array.forEach((day) => {
-            if(daysList.includes(day)) {
-                numsArray.push(daysList.indexOf(day))
-            }
-        })
-        return numsArray
+    const getDayOptions = (chosenService) => {
+        const selectedService = allServicesArray.find((service) => service.id === chosenService)
+        const availableDays = new Set();
+        selectedService.therapists.forEach(therapist => {
+          therapist.availableDays.forEach(day => {
+            availableDays.add(day);
+          });
+        });
+
+        setDayOptionsArray(Array.from(availableDays));
     }
-    
-    const allowedDays = getNums(daysOnlyArray)
 
     // At this time, only holidays until January 1, 2025 are filtered out
     const holidayArray = [new Date("2024-10-14T00:00:00-04:00").toDateString(), new Date("2024-12-25T00:00:00-05:00").toDateString(), new Date("2024-12-26T00:00:00-05:00").toDateString(), new Date("2025-01-01T00:00:00-05:00").toDateString()];
 
-    // const filterDays = (date) => {
-    //     return date >= tomorrow && allowedDays.includes(date.getDay()) && !holidayArray.includes(date.toDateString())
-    // };
+    const filterDays = (date) => {
+        return date >= tomorrow && dayOptionsArray.includes(date.getDay()) && !holidayArray.includes(date.toDateString())
+    };
 
     const handleDateSelection = (date) => {
         setOrderDetails((prevState) => ({...prevState, chosenDate: date.toISOString()}))
     }
 
+
     useEffect(() => {
         setOrderDetails((prevState) => ({...prevState, chosenDate: tomorrow}))
-    }, [])
+        getDayOptions(orderDetails.chosenService)
+    }, [orderDetails.chosenService])
 
 
     return(
@@ -57,7 +58,7 @@ export const Step2ChooseDate = ({currentStep, totalSteps, previousStep, nextStep
                 <DatePicker 
                     selected={orderDetails.chosenDate}
                     onChange={handleDateSelection}
-                    // filterDate={filterDays} //use this function to restrict what date are shown on the calendar
+                    filterDate={filterDays} //use this function to restrict what date are shown on the calendar
                     dateFormat="MMMM d, yyyy"
                     // holidays={[
                     //     { date: "2024-10-14", holidayName: "Thanksgiving" },

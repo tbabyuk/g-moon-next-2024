@@ -2,8 +2,9 @@
 
 import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
 import { useCartContext } from "@/app/context/CartContext";
-import { servicesByDurationArray } from "@/app/data/data";
 import { useState, useEffect } from "react";
+import { allServicesArray } from "@/app/data/data";
+
 
 export const Step4ChooseDuration = ({currentStep, totalSteps, previousStep, nextStep}) => {
 
@@ -16,12 +17,15 @@ export const Step4ChooseDuration = ({currentStep, totalSteps, previousStep, next
         setOrderDetails((prevState) => ({...prevState, chosenDuration: duration }))
     }
 
+    const getDurationOptions = (chosenService) => {
+        const selectedService = allServicesArray.find((service) => service.id === chosenService)
+        setDurationOptionsArray(selectedService.durationOptions || [])
+        console.log("logging duration options array from Step 4:", selectedService.durationOptions)
+        setOrderDetails((prevState) => ({ ...prevState, chosenDuration: selectedService.durationOptions[0] }));
+    }
 
     useEffect(() => {
-        console.log("useEffect inside ChooseDuration fired")
-        const serviceDurationOptions = servicesByDurationArray.filter((service) => service.name === orderDetails.chosenService)
-        setDurationOptionsArray(serviceDurationOptions[0]?.duration)
-        setOrderDetails((prevState) => ({...prevState, chosenDuration: serviceDurationOptions[0]?.duration[0]}))
+        getDurationOptions(orderDetails.chosenService)
     }, [orderDetails.chosenService])
 
 

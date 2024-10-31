@@ -1,5 +1,3 @@
-"use client"
-
 import "./globals.css";
 import { Manrope, Montserrat } from "next/font/google"
 import Header from "./components/Header";

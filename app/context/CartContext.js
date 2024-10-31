@@ -1,3 +1,5 @@
+"use client"
+
 
 import { createContext, useContext, useState } from "react";
 
@@ -9,11 +11,11 @@ const CartContext = createContext();
 export const CartContextProvider = ({children}) => {
 
     const [orderDetails, setOrderDetails] = useState({
-        chosenService: "acupressure thai massage",
+        chosenService: "acupressure-thai-massage",
         chosenDate: null,
         chosenStartTime: "10:00am",
         chosenDuration: "",
-        chosenTherapist: "Bob"
+        chosenTherapist: ""
     })
 
     const [cartItemsArray, setCartItemsArray] = useState([
