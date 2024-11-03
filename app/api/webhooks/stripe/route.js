@@ -15,33 +15,33 @@ const transporter = nodemailer.createTransport({
 })
 
 
-const emailWebDeveloper = async (error) => {
+// const emailWebDeveloper = async (message) => {
 
-    const mailOptions =
-    {
-        from: "vivi@g-moon-wellness.ca",
-        to: "terry@strictlywebdev.com",
-        // bcc: "vivi@g-moon-wellness.ca",
-        subject: "Error retrieving db data at G Moon",
-        html: `
-            <div style="font-family: Arial, sans-serif; padding: 0 0 30px 0">
-                <div style="text-align: center;">
-                    <img src="https://firebasestorage.googleapis.com/v0/b/dcam-website.appspot.com/o/other_images%2Fg-moon-logo-final.png?alt=media&token=2f9b2309-3021-4eb2-b39f-409bc8370fb2" alt="G Moon Wellness Centre Logo" style="width: 150px;" />
-                </div>
-                <h2 style="background-color: #D6B981; padding: 8px 4px; color: #F3F4F6; margin-top: 0">Error Notice</h2>
-                <small style="color: #8C8C8C">An error occurred sending transaction summary email for customer named ${customerName}. Here is the error message: ${error.message} It looks like the transaction data could not be retrieved from the database.</small>
-            </div>
-        `
-    }
+//     const mailOptions =
+//     {
+//         from: "vivi@g-moon-wellness.ca",
+//         to: "terry@strictlywebdev.com",
+//         // bcc: "vivi@g-moon-wellness.ca",
+//         subject: "Error retrieving db data at G Moon",
+//         html: `
+//             <div style="font-family: Arial, sans-serif; padding: 0 0 30px 0">
+//                 <div style="text-align: center;">
+//                     <img src="https://firebasestorage.googleapis.com/v0/b/dcam-website.appspot.com/o/other_images%2Fg-moon-logo-final.png?alt=media&token=2f9b2309-3021-4eb2-b39f-409bc8370fb2" alt="G Moon Wellness Centre Logo" style="width: 150px;" />
+//                 </div>
+//                 <h2 style="background-color: #D6B981; padding: 8px 4px; color: #F3F4F6; margin-top: 0">Error Notice</h2>
+//                 <small style="color: #8C8C8C">An error occurred sending transaction summary email for customer named ${customerName}. Here is the error message: ${message} It looks like the transaction data could not be retrieved from the database.</small>
+//             </div>
+//         `
+//     }
 
-    try {
-        await transporter.sendMail(mailOptions);
-        // return NextResponse.json({message: "new registration email sent successfully"}, {status: 200})
-    } catch (error) {
-        console.log("error in catch black on server:", error.message)
-    }
+//     try {
+//         await transporter.sendMail(mailOptions);
+//         // return NextResponse.json({message: "new registration email sent successfully"}, {status: 200})
+//     } catch (error) {
+//         console.log("error in catch black on server:", error.message)
+//     }
 
-}
+// }
 
 
 
@@ -69,21 +69,20 @@ export async function POST(req) {
 
         try {
             await connectToGMoonDB()
-            // recordsArray = await Record.find({ id: transactionId }); // Fetch all records that match the uuid
-            recordsArray = await Record.find({ id: "444" }); // Fetch all records that match the uuid
+            recordsArray = await Record.find({ id: transactionId }); // Fetch all records that match the uuid
+            // recordsArray = await Record.find({ id: "444" }); // Fetch all records that match the uuid
 
             console.log("Logging transaction record from webhook mongoDB retrieval:", recordsArray, typeof recordsArray)
 
                 if (recordsArray.length === 0) {
-                    const error = new Error("No records found for the given transactionId.");
-                    console.error(error.message);
-                    await emailWebDeveloper(error.message);
-                    return NextResponse.json({ message: error.message }, { status: 404 });
+                    console.log("No transaction records for given id were found in the database.");                  
+                    // await emailWebDeveloper("No transaction records for given id were found in the database.")
+                    return NextResponse.json({ message: "No transaction records for given id were found in the database." }, { status: 404 });
                 }
             } catch (error) {
-                console.error("Error retrieving records:", error);
-                await emailWebDeveloper(error.message)
-                return NextResponse.json({ message: error.message }, { status: 500 });
+                console.log("Network error retrieving records.");
+                // await emailWebDeveloper(error.message)
+                return NextResponse.json({ message: "Network error retrieving records." }, { status: 500 });
             }
 
 
