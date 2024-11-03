@@ -8,7 +8,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 
 
-const stripe = require("stripe")(process.env.STRIPE_SECRET_TEST_KEY)
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY)
 
 
 
