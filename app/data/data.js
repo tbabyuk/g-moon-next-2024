@@ -22,8 +22,8 @@
                     price: 60
                 },
                 60: {
-                    // priceId: "price_1QGCJrRwIe8y2zCRmWZvnBmY", //live
-                    priceId: "price_1QGZPoRwIe8y2zCRky9sCoQu", //test
+                    priceId: "price_1QGCJrRwIe8y2zCRmWZvnBmY", //live
+                    // priceId: "price_1QGZPoRwIe8y2zCRky9sCoQu", //test
                     price: 75
                 }
             },
@@ -43,8 +43,8 @@
             durationOptions: [30, 45, 60],
             pricingOptions: {
                 30: {
-                    // priceId: "price_1QGCLURwIe8y2zCR7PJoHAoN", //live
-                    priceId: "price_1QGZQkRwIe8y2zCRhEbBAQEO", //test
+                    priceId: "price_1QGCLURwIe8y2zCR7PJoHAoN", //live
+                    // priceId: "price_1QGZQkRwIe8y2zCRhEbBAQEO", //test
                     price: 40
                 },
                 45: {
@@ -97,8 +97,8 @@
             durationOptions: [60],
             pricingOptions: {
                 60: {
-                    // priceId: "price_1QGCPpRwIe8y2zCR4TNjNhmj", //live
-                    priceId: "price_1QGZSSRwIe8y2zCREfG2bmz4", //test
+                    priceId: "price_1QGCPpRwIe8y2zCR4TNjNhmj", //live
+                    // priceId: "price_1QGZSSRwIe8y2zCREfG2bmz4", //test
                     price: 160
                 }
             },
@@ -1185,8 +1185,8 @@
             durationOptions: [30],
             pricingOptions: {
                 30: {
-                    // priceId: "price_1QGvS8RwIe8y2zCRruzDlsHT", //live
-                    priceId: "price_1QGvTLRwIe8y2zCRPJVaa9WG", //test
+                    priceId: "price_1QGvS8RwIe8y2zCRruzDlsHT", //live
+                    // priceId: "price_1QGvTLRwIe8y2zCRPJVaa9WG", //test
                     price: 1
                 }
             },
