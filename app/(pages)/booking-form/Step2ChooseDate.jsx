@@ -4,13 +4,12 @@ import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css";
 import { useState, useEffect } from "react";
 import { useCartContext } from "@/app/context/CartContext";
-import { startOfTomorrow, isEqual, startOfDay } from "date-fns";
+import { startOfTomorrow } from "date-fns";
 import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
 import { allServicesArray } from "@/app/data/data";
 
 
 export const Step2ChooseDate = ({currentStep, totalSteps, previousStep, nextStep}) => {
-
 
     const {orderDetails, setOrderDetails} = useCartContext()
 
@@ -19,16 +18,17 @@ export const Step2ChooseDate = ({currentStep, totalSteps, previousStep, nextStep
     const tomorrow = startOfTomorrow()
 
 
-    const getDayOptions = (chosenService) => {
-        const selectedService = allServicesArray.find((service) => service.id === chosenService)
-        const availableDays = new Set();
+    const getDayOptions = (chosenServiceId) => {
+        const selectedService = allServicesArray.find((service) => service.id === chosenServiceId)
+        console.log("logging selectedService from Step2ChooseDate:", selectedService)
+        const availableDaysSet = new Set();
         selectedService.therapists.forEach(therapist => {
           therapist.availableDays.forEach(day => {
-            availableDays.add(day);
+            availableDaysSet.add(day);
           });
         });
 
-        setDayOptionsArray(Array.from(availableDays));
+        setDayOptionsArray(Array.from(availableDaysSet));
     }
 
     // At this time, only holidays until January 1, 2025 are filtered out
@@ -38,15 +38,16 @@ export const Step2ChooseDate = ({currentStep, totalSteps, previousStep, nextStep
         return date >= tomorrow && dayOptionsArray.includes(date.getDay()) && !holidayArray.includes(date.toDateString())
     };
 
-    const handleDateSelection = (date) => {
+    const handleChooseDate = (date) => {
         setOrderDetails((prevState) => ({...prevState, chosenDate: date.toISOString()}))
     }
 
 
     useEffect(() => {
         setOrderDetails((prevState) => ({...prevState, chosenDate: tomorrow}))
-        getDayOptions(orderDetails.chosenService)
-    }, [orderDetails.chosenService])
+        console.log("useEffect of Step2ChoosDate FIRED, chosenServiceId is:", orderDetails.chosenServiceId)
+        getDayOptions(orderDetails.chosenServiceId)
+    }, [orderDetails.chosenServiceId])
 
 
     return(
@@ -57,7 +58,7 @@ export const Step2ChooseDate = ({currentStep, totalSteps, previousStep, nextStep
             <div className="customDatePickerWidth mb-12">
                 <DatePicker 
                     selected={orderDetails.chosenDate}
-                    onChange={handleDateSelection}
+                    onChange={handleChooseDate}
                     filterDate={filterDays} //use this function to restrict what date are shown on the calendar
                     dateFormat="MMMM d, yyyy"
                     // holidays={[

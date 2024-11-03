@@ -3,13 +3,39 @@
 import { PageHeader } from "../components/PageHeader";
 import { useCartContext } from "@/app/context/CartContext";
 import { ProductCard } from "./components/ProductCard";
+import { MdCreditCard } from "react-icons/md";
+import { HiOutlinePlusCircle } from "react-icons/hi";
+import { useRouter } from "next/navigation";
 
 
 const Cart = () => {
 
-    const {cartItemsArray, decreaseQuantity, increaseQuantity, removeProduct} = useCartContext()
+    const {cartItemsArray, decreaseQuantity, increaseQuantity, removeProduct, subtotal} = useCartContext()
 
-    console.log("Logging length of cartItemsArray:", typeof cartItemsArray.length)
+    const router = useRouter()
+
+    // Moved handleCheckout from to here from Step6ReviewOrder
+    const handleCheckout = async () => {
+
+        console.log("Logging orderDetails from handleCheckout:", cartItemsArray)
+
+        try {
+            const res = await fetch("/api/checkout", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(cartItemsArray)
+            })
+            if(res.ok) {
+                // console.log("response was OKAY")
+                const {url} = await res.json()
+                window.location.assign(url)            
+            }
+        } catch (error) {
+            console.log(error.message)
+        }
+    }
 
     return(
         <main>
@@ -19,9 +45,26 @@ const Cart = () => {
                 
                 {cartItemsArray.length === 0 && <p className="text-center">Your cart is currently empty. Click &quot;Book Now&quot; to add items to your cart.</p>}
                 
-                {cartItemsArray.map((product, index) => (
-                    <ProductCard key={index} product={product} decreaseQuantity={decreaseQuantity} increaseQuantity={increaseQuantity} removeProduct={removeProduct} />
+                {cartItemsArray.map((item, index) => (
+                    <ProductCard key={index} item={item} decreaseQuantity={decreaseQuantity} increaseQuantity={increaseQuantity} removeProduct={removeProduct} />
                 ))}
+
+                {cartItemsArray.length !== 0 && (
+                    <div className="w-full flex justify-end md:w-[80%] xl:w-[60%] mx-auto mt-1">
+                        <div className="flex flex-col">
+                            <div className="self-end">Subtotal:&nbsp;&nbsp; <span className="font-semibold">${subtotal.toFixed(2)}</span></div>
+                            <div className="text-sm">(total will be calculated at checkout)</div>
+                        </div>
+                    </div>
+                )}
+
+                {cartItemsArray.length !== 0 && (
+                    <div className="flex flex-col mt-5 space-y-2 md:flex-row md:w-[80%] xl:w-[60%] md:mx-auto md:justify-between md:space-y-0">
+                        <button className="btn g-moon-action-btn" onClick={() => {router.push("/booking-form")}}>Add Another Item<HiOutlinePlusCircle className="text-lg" /></button>
+                        <button className="btn bg-green-600 hover:bg-green-700 text-g-moon-white" onClick={handleCheckout}>Go to Checkout<MdCreditCard className="text-lg" /></button>
+                    </div>
+                )}
+
             </div>
         </main>
     )

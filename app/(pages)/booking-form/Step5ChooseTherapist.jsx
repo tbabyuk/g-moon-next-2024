@@ -12,14 +12,14 @@ export const Step5ChooseTherapist = ({currentStep, totalSteps, previousStep, nex
     const [therapistOptionsArray, setTherapistOptionsArray] = useState([])
 
 
-    const handleTherapistSelection = (e) => {
+    const handleChooseTherapist = (e) => {
         const therapist = e.target.value;
         setOrderDetails((prevState) => ({...prevState, chosenTherapist: therapist[0].toUpperCase() + therapist.slice(1) }))
     }
 
-    const getTherapistOptions = (chosenService, chosenDate) => {
+    const getTherapistOptions = (chosenServiceId, chosenDate) => {
         // get user-selected service
-        const selectedService = allServicesArray.find((service) => service.id === chosenService)
+        const selectedService = allServicesArray.find((service) => service.id === chosenServiceId)
 
         // get user-selected day of the week
         const selectedDate = new Date(chosenDate);
@@ -31,10 +31,9 @@ export const Step5ChooseTherapist = ({currentStep, totalSteps, previousStep, nex
         setOrderDetails((prevState) => ({ ...prevState, chosenTherapist: availableTherapists[0].name }));
     }
 
-
     useEffect(() => {
-        getTherapistOptions(orderDetails.chosenService, orderDetails.chosenDate)
-    }, [orderDetails.chosenService, orderDetails.chosenDate])
+        getTherapistOptions(orderDetails.chosenServiceId, orderDetails.chosenDate)
+    }, [orderDetails.chosenServiceId, orderDetails.chosenDate])
 
 
     return(
@@ -42,7 +41,7 @@ export const Step5ChooseTherapist = ({currentStep, totalSteps, previousStep, nex
             <div className="border-b-2 pb-2 mb-2 text-gray-400">Step {currentStep} of {totalSteps}</div>
             <p className="text-lg font-medium">Choose your preferred therapist:</p>
             <small className="block mb-4">These are the available therapists based on the day and service you chose</small>
-            <select className="select select-bordered w-full mb-12" value={orderDetails.chosenTherapist.toLowerCase()} onChange={(e) => handleTherapistSelection(e)}>
+            <select className="select select-bordered w-full mb-12" value={orderDetails.chosenTherapist.toLowerCase()} onChange={(e) => handleChooseTherapist(e)}>
                 {therapistOptionsArray?.map((therapist, index) => (
                     <option key={index} value={therapist.id}>{therapist.name}</option>
                 ))}

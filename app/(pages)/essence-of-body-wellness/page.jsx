@@ -15,7 +15,7 @@ const EssenceOfBodyWellnessPage = () => {
             <p className="mb-20">Begin your journey to serenity with a massage tailored to soothe muscles and restore your body&apos;s balance to provide a feeling of peaceful rejuvenation. Warmed stone bathed in oil are used to release physical stress and strain.</p>
             <PageSubheader title="COMBO SERVICES" />
             <div className="mb-20 mx-auto w-full md:max-w-[650px] lg:max-w-[900px]">
-                <PageSubSubheader title="Body & Soul (75 mins) - $80.00" />
+                <PageSubSubheader title="Body & Soul (75 mins) - $90.00" />
                 <table className="short-pricing-table">
                     <thead>
                         <tr className="bg-g-moon-gold text-g-moon-white">

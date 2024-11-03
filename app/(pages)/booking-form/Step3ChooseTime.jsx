@@ -7,7 +7,7 @@ export const Step3ChooseTime = ({currentStep, totalSteps, previousStep, nextStep
 
     const {orderDetails, setOrderDetails} = useCartContext()
 
-    const handleStartTimeSelection = (e) => {
+    const handleChooseStartTime = (e) => {
         const time = e.target.value;
         setOrderDetails((prevState) => ({...prevState, chosenStartTime: time }))
     }
@@ -17,7 +17,7 @@ export const Step3ChooseTime = ({currentStep, totalSteps, previousStep, nextStep
             <div className="border-b-2 pb-2 mb-2 text-gray-400">Step {currentStep} of {totalSteps}</div>
             <p className="text-lg font-medium">Choose your preferred start time:</p>
             <small className="block mb-4">Times are limited to our operating hours</small>
-            <select className="select select-bordered w-full mb-12" value={orderDetails.chosenStartTime} onChange={(e) => handleStartTimeSelection(e)}>
+            <select className="select select-bordered w-full mb-12" value={orderDetails.chosenStartTime} onChange={(e) => handleChooseStartTime(e)}>
                 <option value="10:00am">10:00am</option>
                 <option value="10:15am">10:15am</option>
                 <option value="10:30am">10:30am</option>

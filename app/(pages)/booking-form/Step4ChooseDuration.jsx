@@ -12,21 +12,30 @@ export const Step4ChooseDuration = ({currentStep, totalSteps, previousStep, next
     const [durationOptionsArray, setDurationOptionsArray] = useState([])
 
 
-    const handleDurationSelection = (e) => {
+    const handleChooseDuration = (e) => {
         const duration = e.target.value;
-        setOrderDetails((prevState) => ({...prevState, chosenDuration: duration }))
+        const selectedService = allServicesArray.find((service) => service.id === orderDetails.chosenServiceId)
+        console.log("Logging duration and currentService from Step4ChooseDuration:", duration, selectedService)
+        setOrderDetails((prevState) => ({...prevState, chosenDuration: duration, price: selectedService.pricingOptions[duration].price, chosenServicePriceId: selectedService.pricingOptions[duration].priceId }))
     }
 
-    const getDurationOptions = (chosenService) => {
-        const selectedService = allServicesArray.find((service) => service.id === chosenService)
+    const getDurationOptions = (chosenServiceId) => {
+        const selectedService = allServicesArray.find((service) => service.id === chosenServiceId)
+        const defaultServiceDuration = selectedService.durationOptions[0]
         setDurationOptionsArray(selectedService.durationOptions || [])
-        console.log("logging duration options array from Step 4:", selectedService.durationOptions)
-        setOrderDetails((prevState) => ({ ...prevState, chosenDuration: selectedService.durationOptions[0] }));
+        // set both duration and price
+        setOrderDetails((prevState) => ({
+                ...prevState, 
+                chosenDuration: defaultServiceDuration,
+                price: selectedService.pricingOptions[defaultServiceDuration].price,
+                chosenServicePriceId: selectedService.pricingOptions[defaultServiceDuration].priceId
+            }));
     }
+
 
     useEffect(() => {
-        getDurationOptions(orderDetails.chosenService)
-    }, [orderDetails.chosenService])
+        getDurationOptions(orderDetails.chosenServiceId)
+    }, [orderDetails.chosenServiceId])
 
 
     return(
@@ -34,7 +43,7 @@ export const Step4ChooseDuration = ({currentStep, totalSteps, previousStep, next
             <div className="border-b-2 pb-2 mb-2 text-gray-400">Step {currentStep} of {totalSteps}</div>
             <p className="text-lg font-medium">Choose your preferred appointment duration:</p>
             <small className="block mb-4">Duration options are different depending on chosen service</small>
-            <select className="select select-bordered w-full mb-12" value={orderDetails.chosenDuration} onChange={(e) => handleDurationSelection(e)}>
+            <select className="select select-bordered w-full mb-12" value={orderDetails.chosenDuration} onChange={(e) => handleChooseDuration(e)}>
                 {durationOptionsArray?.map((option, index) => (
                     <option key={index} value={option}>{option} mins</option>
                 ))}

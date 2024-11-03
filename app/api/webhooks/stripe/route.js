@@ -1,5 +1,8 @@
 import { NextResponse } from "next/server"
 import nodemailer from "nodemailer"
+import { connectToGMoonDB } from "@/db/database";
+import { Record } from "@/models/models";
+
 
 
 export async function POST(req) {
@@ -9,17 +12,30 @@ export async function POST(req) {
     const requestBody = await req.json();
 
 
-    // const amountTotal = requestBody.data.object.amount_total;
-    const customerEmail = requestBody.data.object.customer_details.email
+    console.log("Logging requestBody from stripe webhook", requestBody)
+
     const customerName = requestBody.data.object.customer_details.name
-    const serviceName = requestBody.data.object.metadata.chosenService
-    const serviceDate = requestBody.data.object.metadata.chosenDate
-    const serviceStartTime = requestBody.data.object.metadata.chosenStartTime
-    const serviceDuration = requestBody.data.object.metadata.chosenDuration
+    const customerEmail = requestBody.data.object.customer_details.email
+    const transactionId = requestBody.data.object.metadata.transactionId
 
 
-    // console.log("logging requestBody from WEBHOOK:", requestBody)
-    // console.log("Logging customer email from WEBHOOK:", customerEmail)
+    console.log("Logging customer name, customer email and transactionId from requestBody fo webhook:", customerName, customerEmail, transactionId)
+
+
+    // Retrieve transaction data from MongoDB
+
+    let recordsArray;
+
+        try {
+            await connectToGMoonDB()
+
+            recordsArray = await Record.find({ id: transactionId }); // Fetch all records that match the uuid
+            console.log("Logging transaction record from webhook mongoDB retrieval:", recordsArray, typeof recordsArray)
+        } catch (error) {
+            console.error("Error retrieving records:", error);
+            throw error; // Handle the error as needed
+        }
+
 
 
     const transporter = nodemailer.createTransport({
@@ -30,11 +46,49 @@ export async function POST(req) {
         }
     })
 
+    const serviceDetails = recordsArray.map(service => {
+        return `
+                    <hr style="border: none; height: 1px; background-color: #ddd;" />
+
+                    <div style="color: #555;">
+                        <span>Service:</span>
+                        <span style="font-weight: bold;">${service.chosenService}</span>
+                    </div>
+
+                    <div style="color: #555;">
+                        <span>Appointment Date:</span>
+                        <span style="font-weight: bold;">${new Date(service.chosenDate).toLocaleString("en-US", {
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric",
+                        })}</span>
+                    </div>
+
+                    <div style="color: #555;">
+                        <span>Appointment Start Time:</span>
+                        <span style="font-weight: bold;">${service.chosenStartTime}</span>
+                    </div>
+
+                    <div style="color: #555;">
+                        <span>Appointment Length:</span>
+                        <span style="font-weight: bold;">${service.chosenDuration} mins</span>
+                    </div>
+
+                    <div style="color: #555;">
+                        <span>Therapist:</span>
+                        <span style="font-weight: bold;">${service.chosenTherapist}</span>
+                    </div>
+
+                    <hr style="border: none; height: 1px; background-color: #ddd;" />
+        `;
+    }).join(''); // Join all service details into a single string
+
 
     const mailOptions =
         {
             from: "vivi@g-moon-wellness.ca",
             to: customerEmail,
+            // to: "terry@strictlywebdev.com",
             cc: "vivi@g-moon-wellness.ca",
             subject: "New Stripe Transaction",
             html: `
@@ -44,33 +98,8 @@ export async function POST(req) {
                     </div>
                     <h2 style="background-color: #D6B981; padding: 8px 4px; color: #F3F4F6; margin-top: 0">Thank you for your order!</h2>
                     <small style="color: #8C8C8C">Dear ${customerName}, thank you for placing an order with G Moon Wellness! Please see a summary of your order below for your reference:</small>
-                    <hr style="border: none; height: 1px; background-color: #ddd;" />
-
-                    <div style="color: #555;">
-                        <span>Service:</span>
-                        <span style="font-weight: bold;">${serviceName}</span>
-                    </div>
-                    <hr style="border: none; height: 1px; background-color: #ddd;" />
-
-                    <div style="color: #555;">
-                        <span>Appointment Date:</span>
-                        <span style="font-weight: bold;">${serviceDate}</span>
-                    </div>
-                    <hr style="border: none; height: 1px; background-color: #ddd;" />
-
-                    <div style="color: #555;">
-                        <span>Appointment Start Time:</span>
-                        <span style="font-weight: bold;">${serviceStartTime}</span>
-                    </div>
-                    <hr style="border: none; height: 1px; background-color: #ddd;" />
-
-                    <div style="color: #555;">
-                        <span>Appointment Length:</span>
-                        <span style="font-weight: bold;">${serviceDuration} mins</span>
-                    </div>
-                    <hr style="border: none; height: 1px; background-color: #ddd;" />
-
-                    <small style="color: #8C8C8C">All our appointments take place at our location at 160 East Beaver Creek Rd, #21, Richmond Hill, ON, L4B 3J6. We hope to see you there!</small>
+                    ${serviceDetails}
+                    <small style="color: #8C8C8C">All our appointments take place at our location at 160 East Beaver Creek Rd, #21, Richmond Hill, ON, L4B 3L4. If you have any questions, please call us at (647) 223-9966. We hope to see you there!</small>
                 </div>
             `
         }

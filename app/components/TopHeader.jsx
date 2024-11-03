@@ -23,7 +23,7 @@ export const TopHeader = () => {
             </div>
             <div className="flex gap-x-5">
                 <Link href="/booking-form"><button className="btn g-moon-action-btn text-[1rem]">Book Now</button></Link>
-                {/* <Link href="/cart"><button className="btn bg-gray-400 hover:bg-gray-500 text-[1rem] text-g-moon-white"><MdShoppingCart />Cart({cartItemsArray.length}) </button></Link> */}
+                <Link href="/cart"><button className="btn bg-gray-400 hover:bg-gray-500 text-[1rem] text-g-moon-white"><MdShoppingCart />Cart({cartItemsArray.length}) </button></Link>
             </div>
          </div>
     )
