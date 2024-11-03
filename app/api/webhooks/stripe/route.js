@@ -5,6 +5,46 @@ import { Record } from "@/models/models";
 
 
 
+// Setting up Nodemailer functionality
+const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+        user: "vivi@g-moon-wellness.ca",
+        pass: process.env.NODEMAILER_VIVI_PASS
+    }
+})
+
+
+const emailWebDeveloper = async (error) => {
+
+    const mailOptions =
+    {
+        from: "vivi@g-moon-wellness.ca",
+        to: "terry@strictlywebdev.com",
+        // bcc: "vivi@g-moon-wellness.ca",
+        subject: "Error retrieving db data at G Moon",
+        html: `
+            <div style="font-family: Arial, sans-serif; padding: 0 0 30px 0">
+                <div style="text-align: center;">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/dcam-website.appspot.com/o/other_images%2Fg-moon-logo-final.png?alt=media&token=2f9b2309-3021-4eb2-b39f-409bc8370fb2" alt="G Moon Wellness Centre Logo" style="width: 150px;" />
+                </div>
+                <h2 style="background-color: #D6B981; padding: 8px 4px; color: #F3F4F6; margin-top: 0">Error Notice</h2>
+                <small style="color: #8C8C8C">An error occurred sending transaction summary email for customer named ${customerName}. Here is the error message: ${error.message} It looks like the transaction data could not be retrieved from the database.</small>
+            </div>
+        `
+    }
+
+    try {
+        await transporter.sendMail(mailOptions);
+        // return NextResponse.json({message: "new registration email sent successfully"}, {status: 200})
+    } catch (error) {
+        console.log("error in catch black on server:", error.message)
+    }
+
+}
+
+
+
 export async function POST(req) {
 
     console.log("STRIPE WEBHOOK API ROUTE FIRED")
@@ -22,29 +62,31 @@ export async function POST(req) {
     console.log("Logging customer name, customer email and transactionId from requestBody fo webhook:", customerName, customerEmail, transactionId)
 
 
+
     // Retrieve transaction data from MongoDB
 
     let recordsArray;
 
         try {
             await connectToGMoonDB()
+            // recordsArray = await Record.find({ id: transactionId }); // Fetch all records that match the uuid
+            recordsArray = await Record.find({ id: "444" }); // Fetch all records that match the uuid
 
-            recordsArray = await Record.find({ id: transactionId }); // Fetch all records that match the uuid
             console.log("Logging transaction record from webhook mongoDB retrieval:", recordsArray, typeof recordsArray)
-        } catch (error) {
-            console.error("Error retrieving records:", error);
-            throw error; // Handle the error as needed
-        }
+
+                if (recordsArray.length === 0) {
+                    const error = new Error("No records found for the given transactionId.");
+                    console.error(error.message);
+                    await emailWebDeveloper(error.message);
+                    return NextResponse.json({ message: error.message }, { status: 404 });
+                }
+            } catch (error) {
+                console.error("Error retrieving records:", error);
+                await emailWebDeveloper(error.message)
+                return NextResponse.json({ message: error.message }, { status: 500 });
+            }
 
 
-
-    const transporter = nodemailer.createTransport({
-        service: "gmail",
-        auth: {
-            user: "vivi@g-moon-wellness.ca",
-            pass: process.env.NODEMAILER_VIVI_PASS
-        }
-    })
 
     const serviceDetails = recordsArray.map(service => {
         return `
@@ -89,7 +131,7 @@ export async function POST(req) {
             from: "vivi@g-moon-wellness.ca",
             to: customerEmail,
             // to: "terry@strictlywebdev.com",
-            cc: "vivi@g-moon-wellness.ca",
+            bcc: "vivi@g-moon-wellness.ca",
             subject: "New Stripe Transaction",
             html: `
                 <div style="font-family: Arial, sans-serif; padding: 0 0 30px 0">

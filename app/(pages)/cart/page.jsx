@@ -6,11 +6,15 @@ import { ProductCard } from "./components/ProductCard";
 import { MdCreditCard } from "react-icons/md";
 import { HiOutlinePlusCircle } from "react-icons/hi";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 
 const Cart = () => {
 
     const {cartItemsArray, decreaseQuantity, increaseQuantity, removeProduct, subtotal} = useCartContext()
+
+    const [processing, setProcessing] = useState(false)
+    const [error, setError] = useState("")
 
     const router = useRouter()
 
@@ -18,6 +22,9 @@ const Cart = () => {
     const handleCheckout = async () => {
 
         console.log("Logging orderDetails from handleCheckout:", cartItemsArray)
+
+        setProcessing(true);
+        setError("");
 
         try {
             const res = await fetch("/api/checkout", {
@@ -27,13 +34,21 @@ const Cart = () => {
                 },
                 body: JSON.stringify(cartItemsArray)
             })
+
+
             if(res.ok) {
                 // console.log("response was OKAY")
                 const {url} = await res.json()
                 window.location.assign(url)            
+            } else {
+                setError("Ooops, an error occurred while processing your payment. Please call us or visit us in person to book your appointment!");
             }
+
         } catch (error) {
             console.log(error.message)
+            setError("A network error has occurred. Please try again later or call/visit us in person to book your appointment.");
+        } finally {
+            setProcessing(false)
         }
     }
 
@@ -61,8 +76,12 @@ const Cart = () => {
                 {cartItemsArray.length !== 0 && (
                     <div className="flex flex-col mt-5 space-y-2 md:flex-row md:w-[80%] xl:w-[60%] md:mx-auto md:justify-between md:space-y-0">
                         <button className="btn g-moon-action-btn" onClick={() => {router.push("/booking-form")}}>Add Another Item<HiOutlinePlusCircle className="text-lg" /></button>
-                        <button className="btn bg-green-600 hover:bg-green-700 text-g-moon-white" onClick={handleCheckout}>Go to Checkout<MdCreditCard className="text-lg" /></button>
+                        <button className="btn bg-green-600 hover:bg-green-700 text-g-moon-white" disabled={processing} onClick={handleCheckout}>{processing ? "Processing..." : "Go to Checkout"}<MdCreditCard className="text-lg" /></button>
                     </div>
+                )}
+
+                {error && (
+                    <div className="font-medium text-center text-2xl text-red-500 mb-6">{error}</div>
                 )}
 
             </div>
