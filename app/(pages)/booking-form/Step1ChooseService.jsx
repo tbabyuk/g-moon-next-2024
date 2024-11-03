@@ -55,8 +55,8 @@ export const Step1ChooseService = ({ currentStep, totalSteps, nextStep }) => {
                     <option value="body-and-soul-combo">Body & Soul Combo</option>
                     <option value="dream-package-combo">Dream Package Combo</option>
                     <option value="pain-relief-and-pain-prevention-combo">Pain Relief & Pain Prevention Combo</option>
-                    <option value="golfers-heaven-combo">Golfer's Heaven Combo</option>
-                    <option value="lets-relax-experience-combo">Let's Relax Experience Combo</option>
+                    <option value="golfers-heaven-combo">Golfer&apos;s Heaven Combo</option>
+                    <option value="lets-relax-experience-combo">Let&apos;s Relax Experience Combo</option>
                     <option value="test-combo">Test Combo</option>
                 </optgroup>
             </select>
