@@ -1,6 +1,6 @@
 import { SectionHeader } from "../components/SectionHeader"
 import { servicesList } from "../data/data"
-import { ServiceCard } from "../components/ServiceCard"
+import { ServiceCard } from "./components/ServiceCard"
 
 
 export const ServicesSection = () => {

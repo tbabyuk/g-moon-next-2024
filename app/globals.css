@@ -101,5 +101,5 @@ h1, h2, h3 {
 }
 
 .g-moon-service-card {
-  @apply rounded-md shadow-xl cursor-pointer relative hover:border-2;
+  @apply rounded-md shadow-xl cursor-pointer relative hover:scale-105 transition duration-300 ease-in-out;
 }

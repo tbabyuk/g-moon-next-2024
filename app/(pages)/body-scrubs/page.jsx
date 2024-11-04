@@ -1,6 +1,6 @@
 import { PageHeader } from "../components/PageHeader"
 import { bodyScrubsList } from "@/app/data/data"
-import { ServiceCard } from "@/app/components/ServiceCard"
+import { ServiceCard } from "@/app/sections/components/ServiceCard"
 
 export const metadata = {
     title: "Body Scrubs | G Moon Wellness Centre",

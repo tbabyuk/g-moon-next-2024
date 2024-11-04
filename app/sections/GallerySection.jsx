@@ -1,37 +1,29 @@
 import { SectionHeader } from "../components/SectionHeader"
+import { GalleryImageCard } from "./components/GalleryImageCard";
+
+
+const galleryImagesArray = [
+    { src: "/images/gallery/outside-1.jpg", alt: "outside view of our facility" },
+    { src: "/images/gallery/reception-1.jpg", alt: "reception area" },
+    { src: "/images/gallery/chairs-1.jpg", alt: "our seating area" },
+    { src: "/images/gallery/corridor-1.jpg", alt: "hallway" },
+    { src: "/images/gallery/plant-1.jpg", alt: "reception area plant" },
+    { src: "/images/gallery/bed-1.jpg", alt: "one of our rooms" },
+    { src: "/images/gallery/outside-2.jpg", alt: "another outside view of our facility" },
+    { src: "/images/gallery/chairs-2.jpg", alt: "another view of our seating area" }
+];
 
 
 
 export const GallerySection = () => {
 
     return (
-        <div className="px-5 py-24">
+        <div className="py-24">
             <SectionHeader title="OUR FACILITY" />
-            <div className="flex flex-wrap justify-center gap-4 md:px-12 lg:px-28">
-                <div className="w-full max-w-[252px] h-[336px]">
-                    <img src="images/gallery/outside_3x4.jpg" alt="Image 2" className="w-full h-auto object-cover rounded-md" />
-                </div>
-                <div className="w-full max-w-[252px] h-[336px]">
-                    <img src="images/gallery/reception_3x4.jpg" alt="Image 2" className="w-full h-auto object-cover rounded-md" />
-                </div>
-                <div className="w-full max-w-[252px] h-[336px]">
-                    <img src="images/gallery/corridor_3x4.jpg" alt="Image 1" className="w-full h-auto object-cover rounded-md" />
-                </div>
-                <div className="w-full max-w-[252px] h-[336px]">
-                    <img src="images/gallery/mosaic_3x4.jpg" alt="Image 2" className="w-full h-auto object-cover rounded-md" />
-                </div>
-                <div className="w-full max-w-[252px] h-[336px]">
-                    <img src="images/gallery/plant_3x4.jpg" alt="Image 2" className="w-full h-auto object-cover rounded-md" />
-                </div>
-                <div className="w-full max-w-[252px] h-[336px]">
-                    <img src="images/gallery/mosaic2_3x4.jpg" alt="Image 2" className="w-full h-auto object-cover rounded-md" />
-                </div>
-                <div className="w-full max-w-[252px] max-h-[336px]">
-                    <img src="images/gallery/bed_3x4.jpg" alt="Image 1" className="w-full h-auto object-cover rounded-md" />
-                </div>
-                <div className="w-full max-w-[252px] h-[336px]">
-                    <img src="images/gallery/flowers_3x4.jpg" alt="Image 2" className="w-full h-auto object-cover rounded-md" />
-                </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                {galleryImagesArray.map((image, index) => (
+                    <GalleryImageCard key={index} image={image} />
+                ))}
             </div>
         </div>
     )
