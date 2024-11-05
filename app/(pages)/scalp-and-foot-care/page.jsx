@@ -10,7 +10,7 @@ const ScalpAndFootCarePage = () => {
       <PageHeader title="Scalp and Foot Care" />
         <div className="g-moon-content-padding">
             <PageSubheader title="OVERVIEW" />
-            <p className="mb-20">Coming soon... </p>
+            <p className="mb-20">Indulge in our signature Scalp and Foot Care, a sensorial experience that awakens your senses and transports you to deep relaxation. Surrender to our expert therapists as they guide you through a stress-relieving treatment, combining mobilizing movements and firm massage to melt away tension and restore vitality.</p>
             <PageSubheader title="COMBO SERVICES" />
             <div className="mb-20 mx-auto w-full md:max-w-[650px] lg:max-w-[900px]">
                 <PageSubSubheader title="Combo A (90 mins) - $95.00" />

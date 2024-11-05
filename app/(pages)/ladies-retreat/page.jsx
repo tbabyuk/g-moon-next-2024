@@ -12,7 +12,7 @@ const LadiesRetreatPage = () => {
         <PageHeader title="Ladies Retreat" />
         <div className="g-moon-content-padding">
             <PageSubheader title="OVERVIEW" />
-            <p className="mb-16">Coming soon...</p>
+            <p className="mb-16">Our Ladies Retreat collection addresses your unique concerns, balancing relaxation, luxury, and tension release. Each treatment is tailored to harmonize body and mind, ensuring a rejuvenating experience. Reclaim serenity, rebalance energy, and rediscover radiance. Book your Retreat today!</p>
 
             <PageSubheader title="COMBO SERVICES" />
 

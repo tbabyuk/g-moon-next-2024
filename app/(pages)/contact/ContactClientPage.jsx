@@ -59,7 +59,7 @@ const ContactClientPage = () => {
 
     return(
         <div className="flex flex-col justify-center">
-            <p className="mb-10 block lg:w-[400px] mx-auto">Have a question you want to ask us? Ask us here!</p>
+            <p className="mb-10 block lg:w-[400px] mx-auto">Have a question? Ask us here!</p>
 
             {submitSuccess && 
                 (<p className="text-lg text-center text-green-500">Thank you - your form has been submitted successfully!<br /> Please expect to hear from us within 1-2 business days!</p>)

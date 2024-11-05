@@ -18,9 +18,9 @@ const galleryImagesArray = [
 export const GallerySection = () => {
 
     return (
-        <div className="py-24">
+        <div className="py-24" id="gallery">
             <SectionHeader title="OUR FACILITY" />
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
                 {galleryImagesArray.map((image, index) => (
                     <GalleryImageCard key={index} image={image} />
                 ))}
