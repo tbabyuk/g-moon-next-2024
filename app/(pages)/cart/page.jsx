@@ -74,9 +74,10 @@ const Cart = () => {
                 )}
 
                 {cartItemsArray.length !== 0 && (
-                    <div className="flex flex-col mt-5 space-y-2 md:flex-row md:w-[80%] xl:w-[60%] md:mx-auto md:justify-between md:space-y-0">
-                        <button className="btn g-moon-action-btn" onClick={() => {router.push("/booking-form")}}>Add Another Item<HiOutlinePlusCircle className="text-lg" /></button>
+                    <div className="flex flex-col space-y-3 justify-between mt-5 md:flex-row-reverse md:w-[80%] xl:w-[60%] md:mx-auto md:justify-between md:space-y-0">
                         <button className="btn bg-green-600 hover:bg-green-700 text-g-moon-white" disabled={processing} onClick={handleCheckout}>{processing ? "Processing..." : "Go to Checkout"}<MdCreditCard className="text-lg" /></button>
+                        <button className="btn g-moon-action-btn" onClick={() => {router.push("/booking-form")}}>Add a Service<HiOutlinePlusCircle className="text-lg" /></button>
+                        <button className="btn g-moon-action-btn" onClick={() => {router.push("/gift-cards")}}>Add a Gift Card<HiOutlinePlusCircle className="text-lg" /></button>
                     </div>
                 )}
 

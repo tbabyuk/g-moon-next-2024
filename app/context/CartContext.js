@@ -7,7 +7,6 @@ import { createContext, useContext, useState, useEffect } from "react";
 const CartContext = createContext();
 
 
-
 export const CartContextProvider = ({children}) => {
 
     const [orderDetails, setOrderDetails] = useState({
@@ -32,20 +31,34 @@ export const CartContextProvider = ({children}) => {
 
     const decreaseQuantity = (id) => {
         console.log("logging product id from decreaseQuantity:", id)
-        setCartItemsArray((prev) => prev.map((item) => item.chosenServiceId === id ? { ...item, quantity: item.quantity - 1 } : item))
+        setCartItemsArray((prev) => prev.map((item) => item.chosenServicePriceId === id ? { ...item, quantity: item.quantity - 1 } : item))
     }
 
     const increaseQuantity = (id) => {
-        setCartItemsArray((prev) => prev.map((item) => item.chosenServiceId === id ? { ...item, quantity: item.quantity + 1 } : item))
+        setCartItemsArray((prev) => prev.map((item) => item.chosenServicePriceId === id ? { ...item, quantity: item.quantity + 1 } : item))
     }
 
     const removeProduct = (id) => {
-        const newCartItemsArray = cartItemsArray.filter((item) => item.chosenServiceId !== id)
+        const newCartItemsArray = cartItemsArray.filter((item) => item.chosenServicePriceId !== id)
         setCartItemsArray(newCartItemsArray)
     }
 
     const addProduct = () => {
         setCartItemsArray((prev) => [...prev, {...orderDetails}])
+    }
+
+    const addGiftCardProduct = (price, priceId) => {
+        setCartItemsArray((prev) => [...prev, ({
+            chosenServiceId: "gift-card",
+            chosenServicePriceId: priceId,
+            chosenService: "Gift Card",
+            chosenDate: "n/a",
+            chosenStartTime: "n/a",
+            chosenDuration: 0,
+            chosenTherapist: "n/a",
+            price: price,
+            quantity: 1
+        })])
     }
 
 
@@ -55,7 +68,7 @@ export const CartContextProvider = ({children}) => {
     }, [cartItemsArray])
 
     return (
-        <CartContext.Provider value={{orderDetails, setOrderDetails, cartItemsArray, setCartItemsArray, decreaseQuantity, increaseQuantity, addProduct, removeProduct, subtotal}}>
+        <CartContext.Provider value={{orderDetails, setOrderDetails, cartItemsArray, setCartItemsArray, decreaseQuantity, increaseQuantity, addProduct, removeProduct, subtotal, addGiftCardProduct}}>
             {children}
         </CartContext.Provider>
     )

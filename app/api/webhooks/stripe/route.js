@@ -47,7 +47,7 @@ const transporter = nodemailer.createTransport({
 
 export async function POST(req) {
 
-    console.log("STRIPE WEBHOOK API ROUTE FIRED")
+    console.log("================STRIPE WEBHOOK API ROUTE FIRED===============")
 
     const requestBody = await req.json();
 
@@ -72,7 +72,7 @@ export async function POST(req) {
             recordsArray = await Record.find({ id: transactionId }); // Fetch all records that match the uuid
             // recordsArray = await Record.find({ id: "444" }); // Fetch all records that match the uuid
 
-            console.log("Logging transaction record from webhook mongoDB retrieval:", recordsArray, typeof recordsArray)
+            console.log("Logging transaction record from webhook mongoDB retrieval:", recordsArray)
 
                 if (recordsArray.length === 0) {
                     console.log("No transaction records for given id were found in the database.");                  
@@ -97,28 +97,43 @@ export async function POST(req) {
                     </div>
 
                     <div style="color: #555;">
+                        <span>Price:</span>
+                        <span style="font-weight: bold;">$${service.price.toFixed(2)} + tax</span>
+                    </div>
+
+                    <div style="color: #555;">
+                        <span>Quantity:</span>
+                        <span style="font-weight: bold;">${service.quantity}</span>
+                    </div>
+
+                    ${service.chosenDate !== "n/a" ? 
+                    `<div style="color: #555;">
                         <span>Appointment Date:</span>
                         <span style="font-weight: bold;">${new Date(service.chosenDate).toLocaleString("en-US", {
                             year: "numeric",
                             month: "long",
                             day: "numeric",
                         })}</span>
-                    </div>
+                    </div>` : ""}
 
-                    <div style="color: #555;">
+                    ${service.chosenStartTime !== "n/a" ? 
+                    `<div style="color: #555;">
                         <span>Appointment Start Time:</span>
                         <span style="font-weight: bold;">${service.chosenStartTime}</span>
-                    </div>
+                    </div>` : ""}
 
-                    <div style="color: #555;">
+                    ${service.chosenDuration !== 0 ? 
+                    `<div style="color: #555;">
                         <span>Appointment Length:</span>
                         <span style="font-weight: bold;">${service.chosenDuration} mins</span>
-                    </div>
+                    </div>` : ""}
 
-                    <div style="color: #555;">
+                    ${service.chosenTherapist !== "n/a" ? 
+                    `<div style="color: #555;">
                         <span>Therapist:</span>
-                        <span style="font-weight: bold;">${service.chosenTherapist}</span>
-                    </div>
+                        <span style="font-weight: bold;">${service.chosenTherapist ? service.chosenTherapist : "n/a"}</span>
+                    </div>` : ""
+}
 
                     <hr style="border: none; height: 1px; background-color: #ddd;" />
         `;

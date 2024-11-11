@@ -13,9 +13,12 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY)
 
 export async function POST(request) {
 
+    console.log("================STRIPE CHECKOUT FIRED===============")
+
+
     const itemsArray = await request.json()
 
-    console.log("Logging itemsArray from Stripe checkout API route")
+    console.log("Logging itemsArray from Stripe checkout API route", itemsArray)
 
     const id = uuidv4();
 
@@ -31,7 +34,9 @@ export async function POST(request) {
                 chosenDate: purchase.chosenDate,
                 chosenStartTime: purchase.chosenStartTime,
                 chosenDuration: purchase.chosenDuration,
-                chosenTherapist: purchase.chosenTherapist
+                chosenTherapist: purchase.chosenTherapist,
+                price: purchase.price,
+                quantity: purchase.quantity
             });
         }));
 

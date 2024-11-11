@@ -16,18 +16,20 @@ export const ProductCard = ({item, decreaseQuantity, increaseQuantity, removePro
             <div className="flex justify-between bg-gray-200 p-2">
                 <div>
                     <div className="font-semibold">{item.chosenService}</div>
-                    <div className="text-sm">{formatDate(item.chosenDate)} at {item.chosenStartTime} ({item.chosenDuration} mins)</div>
+                    {item.chosenDate !== "n/a" && (
+                        <div className="text-sm">{formatDate(item.chosenDate)} at {item.chosenStartTime} ({item.chosenDuration} mins)</div>
+                    )}
                 </div>
                 <div>
-                    <IoCloseCircleSharp className="text-[35px] text-red-500 cursor-pointer" onClick={() => removeProduct(item.chosenServiceId)} />
+                    <IoCloseCircleSharp className="text-[35px] text-red-500 cursor-pointer" onClick={() => removeProduct(item.chosenServicePriceId)} />
                 </div>
             </div>
             <div className="flex justify-between md:justify-evenly items-center px-3 py-4">
                 <div className="text-lg">Quantity:</div>
                 <div className="flex items-center">
-                    <div><IoArrowBackCircle className={`text-[35px] cursor-pointer ${item.quantity === 1 ? "text-gray-300 pointer-events-none" : "cursor-pointer"}`} onClick={() => decreaseQuantity(item.chosenServiceId)} /></div>
+                    <div><IoArrowBackCircle className={`text-[35px] cursor-pointer ${item.quantity === 1 ? "text-gray-300 pointer-events-none" : "cursor-pointer"}`} onClick={() => decreaseQuantity(item.chosenServicePriceId)} /></div>
                     <span className="text-xl mx-4">{item.quantity}</span>
-                    <IoArrowForwardCircle className="text-[35px] cursor-pointer" onClick={() => increaseQuantity(item.chosenServiceId)} />
+                    <IoArrowForwardCircle className="text-[35px] cursor-pointer" onClick={() => increaseQuantity(item.chosenServicePriceId)} />
                 </div>
                 <div className="text-lg">${totalPrice}</div>
             </div>
