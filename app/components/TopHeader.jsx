@@ -38,7 +38,7 @@ export const TopHeader = () => {
             </div>
             {popupIsOpen && 
                 <div className="popup-banner px-5 min-h-[130px] w-[100%] bg-[url('/banner-bg.jpg')] bg-center bg-cover absolute z-40 top-0 flex justify-center items-center">
-                    <IoMdClose className="absolute top-2 right-2 text-[3rem] text-white cursor-pointer" onClick={() => setPopupIsOpen(false)} />
+                    <IoMdClose className="absolute top-2 right-2 text-[3rem] md:text-[4rem] text-white cursor-pointer" onClick={() => setPopupIsOpen(false)} />
                     <div className="text-white text-lg flex flex-col text-center space-y-3">
                         <p>Christmas is just around the corner!</p>
                         <p><span className="underline font-semibold cursor-pointer" onClick={handleClickHere}>CLICK HERE</span> to get your spa gift card from G Moon Wellness!</p>
