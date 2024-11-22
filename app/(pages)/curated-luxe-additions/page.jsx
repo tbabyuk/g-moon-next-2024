@@ -3,6 +3,11 @@ import { PageHeader } from "../components/PageHeader";
 import { PageSubheader } from "../components/PageSubheader";
 
 
+export const metadata = {
+    title: "Curated Luxe Additions | G Moon Wellness Centre",
+    description: "Elevate your spa experience with our curated selection of premium add-ons, including foot sauna, hot stone massage, calming bath, and more for ultimate relaxation!",
+}
+
 
 const CuratedLuxeAdditionsPage = () => {
 

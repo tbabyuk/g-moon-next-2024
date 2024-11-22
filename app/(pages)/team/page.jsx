@@ -5,7 +5,7 @@ import { PageHeader } from "../components/PageHeader";
 
 export const metadata = {
     title: "Team | G Moon Wellness Centre",
-    description: "Our professional team of therapists is here for you",
+    description: "Our skilled professionals specialize in delivering top-notch wellness services, including massages, body treatments, and more, ensuring your ultimate relaxation.",
 }
 
 const TeamPage = () => {

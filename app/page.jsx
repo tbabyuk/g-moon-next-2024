@@ -7,8 +7,8 @@ import { GallerySection } from "./sections/GallerySection";
 
 
 export const metadata = {
-  title: "Home | G Moon Wellness Centre",
-  description: "Spa in Richmond Hill offering massages, body scrubs, table shower, hot stone therapy, and other services",
+  title: "Spa in Richmond Hill - G Moon Wellness Centre",
+  description: "A wellness spa in Richmond Hill offering relaxing massages, rejuvenating body scrubs, combo treatments, and much more in ultimate relaxation and self-care.",
 };
 
 
