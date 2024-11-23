@@ -4,6 +4,13 @@ import { PageSubheader } from "../components/PageSubheader";
 import { PageSubSubheader } from "../components/PageSubSubheader";
 
 
+
+export const metadata = {
+    title: "Ladies Retreat | G Moon Wellness Centre",
+    description: "Indulge in the ultimate ladies' retreat with a variety of luxurious, relaxing options crafted to pamper and rejuvenate your mind and body,",
+}
+
+
 const LadiesRetreatPage = () => {
 
 
