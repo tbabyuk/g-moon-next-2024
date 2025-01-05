@@ -13,7 +13,7 @@ import { useRouter } from "next/navigation";
 
 export const TopHeader = () => {
 
-    const [popupIsOpen, setPopupIsOpen] = useState(true)
+    const [popupIsOpen, setPopupIsOpen] = useState(false)
     const router = useRouter()
 
     const handleClickHere = () => {
