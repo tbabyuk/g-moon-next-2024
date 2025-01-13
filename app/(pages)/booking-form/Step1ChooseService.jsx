@@ -3,10 +3,10 @@
 import { useCartContext } from "@/app/context/CartContext";
 import { MdArrowForwardIos } from "react-icons/md";
 
+
 export const Step1ChooseService = ({ currentStep, totalSteps, nextStep }) => {
 
     const { orderDetails, setOrderDetails } = useCartContext();
-
 
     const handleChooseService = (e) => {
         const serviceId = e.target.value;
@@ -17,6 +17,7 @@ export const Step1ChooseService = ({ currentStep, totalSteps, nextStep }) => {
         }));
     };
 
+    
     return (
         <div>
             <div className="border-b-2 pb-2 mb-2 text-gray-400">Step {currentStep} of {totalSteps}</div>
@@ -57,7 +58,7 @@ export const Step1ChooseService = ({ currentStep, totalSteps, nextStep }) => {
                     <option value="pain-relief-and-pain-prevention-combo">Pain Relief & Pain Prevention Combo</option>
                     <option value="golfers-heaven-combo">Golfer&apos;s Heaven Combo</option>
                     <option value="lets-relax-experience-combo">Let&apos;s Relax Experience Combo</option>
-                    <option value="test-combo">Test Combo</option>
+                    {/* <option value="test-combo">Test Combo</option> */}
                 </optgroup>
             </select>
             <button className="btn g-moon-action-btn float-end" onClick={nextStep}>Next Step <MdArrowForwardIos /></button>

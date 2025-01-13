@@ -3,6 +3,7 @@
 import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
 import { useCartContext } from "@/app/context/CartContext";
 
+
 export const Step3ChooseTime = ({currentStep, totalSteps, previousStep, nextStep}) => {
 
     const {orderDetails, setOrderDetails} = useCartContext()
@@ -12,6 +13,7 @@ export const Step3ChooseTime = ({currentStep, totalSteps, previousStep, nextStep
         setOrderDetails((prevState) => ({...prevState, chosenStartTime: time }))
     }
 
+    
     return(
         <div>
             <div className="border-b-2 pb-2 mb-2 text-gray-400">Step {currentStep} of {totalSteps}</div>
