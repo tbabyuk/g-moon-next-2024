@@ -63,7 +63,10 @@ export const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="px-5 bg-black/30 h-[40px] text-sm flex justify-center items-center text-white/40 font-medium">&copy; {year} Seelio Clinic</div>
+            <div className="p-5 bg-black/30 text-sm flex flex-col-reverse gap-3 md:flex-row md:justify-between md:items-center text-white/40 font-medium">
+                <div className="flex justify-center items-center"><span className="italic">Website by</span>&nbsp;<a href="https://www.strictlywebdev.com/" target="_blank" className="flex items-center"><img src="/images/swd_logo_sm_color.png" className="h-[20px] filter grayscale" /><span className="font-bold">StrictlyWebDev</span></a></div>
+                <div className="flex justify-center items-center">&copy; {year} Seelio Clinic</div>
+            </div>
         </footer>
     )
 }
