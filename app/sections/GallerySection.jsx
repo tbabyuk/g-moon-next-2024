@@ -18,7 +18,7 @@ const galleryImagesArray = [
 export const GallerySection = () => {
 
     return (
-        <div className="py-24" id="gallery">
+        <div className="py-24 bg-gray-100" id="gallery">
             <SectionHeader title="OUR FACILITY" />
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
                 {galleryImagesArray.map((image, index) => (
