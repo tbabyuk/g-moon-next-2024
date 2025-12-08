@@ -41,15 +41,16 @@ const CartClientPage = () => {
             if(res.ok) {
                 // console.log("response was OKAY")
                 const {url} = await res.json()
-                window.location.assign(url)            
+                window.location.assign(url)
+                // Don't reset processing here - keep button disabled until redirect completes
             } else {
                 setError("Ooops, an error occurred while processing your payment. Please call us or visit us in person to book your appointment!");
+                setProcessing(false)
             }
 
         } catch (error) {
             console.log(error.message)
             setError("A network error has occurred. Please try again later or call/visit us in person to book your appointment.");
-        } finally {
             setProcessing(false)
         }
     }

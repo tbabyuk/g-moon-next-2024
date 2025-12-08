@@ -1,15 +1,9 @@
-
-
-
-
-const PagesLayout = ({children}) => {
-
-    return(
-        <>
-            {children}
-        </>
-    )
-}
-
+const PagesLayout = ({ children }) => {
+  return (
+    <>
+      {children}
+    </>
+  );
+};
 
 export default PagesLayout;

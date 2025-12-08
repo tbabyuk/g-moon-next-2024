@@ -49,6 +49,7 @@ export const Navbar = () => {
                             </ul>
                         }
                     </li>
+                    <li><Link href="/gift-cards" className="g-moon-nav-link hover:bg-g-moon-medium-gray-hover" onClick={() => setDropdownIsOpen(false)}>GIFT CARDS</Link></li>
                     <li><Link href="/team" className="g-moon-nav-link hover:bg-g-moon-medium-gray-hover" onClick={() => setDropdownIsOpen(false)}>TEAM</Link></li>
                     {/* <li><Link href="/pricing" className="g-moon-nav-link hover:bg-g-moon-medium-gray-hover" onClick={() => setDropdownIsOpen(false)}>PRICING</Link></li> */}
                     <li><Link href="/about" className="g-moon-nav-link hover:bg-g-moon-medium-gray-hover" onClick={() => setDropdownIsOpen(false)}>ABOUT</Link></li>

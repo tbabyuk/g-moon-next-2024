@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Manrope, Montserrat } from "next/font/google"
 import Header from "./components/Header";
+import HolidayPromoBanner from "./components/HolidayPromoBanner";
 import { Footer } from "./components/Footer";
 import Script from "next/script";
 import { GoogleAnalytics } from "@next/third-parties/google"
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
         <CartContextProvider>
           <body className={`${manrope.className} ${montserrat.variable}`}>
             <Header />
+            <HolidayPromoBanner />
               {children}
             <Footer />
           </body>
