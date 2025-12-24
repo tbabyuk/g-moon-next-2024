@@ -1,0 +1,30 @@
+# Block AI training crawlers
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+# Allow all other bots with a crawl delay
+User-agent: *
+Crawl-delay: 10
+Allow: /
+Disallow: /api/
+Disallow: /checkout-success
+Disallow: /checkout-cancelled
+
+# Sitemap
+Sitemap: https://www.g-moon-wellness.ca/sitemap.xml
+
