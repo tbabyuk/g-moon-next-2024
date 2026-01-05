@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
         <CartContextProvider>
           <body className={`${manrope.className} ${montserrat.variable}`}>
             <Header />
-            <HolidayPromoBanner />
+            {/* <HolidayPromoBanner /> */}
               {children}
             <Footer />
           </body>

@@ -12,7 +12,7 @@ h1, h2, h3 {
 }
 
 .g-moon-nav-link {
-  @apply w-full h-full px-5 py-3 text-g-moon-white font-medium flex justify-center items-center;
+  @apply w-full h-full px-3 lg:px-5 py-3 text-g-moon-white font-medium flex justify-center items-center;
 }
 
 .g-moon-subnav-link {
