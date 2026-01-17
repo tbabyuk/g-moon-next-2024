@@ -1,27 +1,16 @@
 "use client"
 
 import { useState } from "react";
+import { useRecaptcha } from "@/app/hooks/useRecaptcha";
+import { sendContactEmail } from "./actions";
 
-
-const initialState = {
-    name: "",
-    phone: "",
-    email: "",
-    message: ""
-}
 
 const ContactClientPage = () => {
 
-    const [contactDetails, setContactDetails] = useState(initialState)
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [submitSuccess, setSubmitSuccess] = useState(false)
     const [submitFail, setSubmitFail] = useState(false)
-
-    console.log("logging contact Details:", contactDetails)
-
-    const handleInput = (e) => {
-        setContactDetails((prev) => ({...prev, [e.target.name]: e.target.value}))
-    }
+    const { executeRecaptcha, isReady } = useRecaptcha()
 
     const handleFormReset = () => {
         setSubmitSuccess(false)
@@ -30,26 +19,30 @@ const ContactClientPage = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setSubmitFail(false)
+        setIsSubmitting(true)
 
         try {
-            setIsSubmitting(true)
-            const res = await fetch("/api/contact", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(contactDetails)
-            })
-
-            if(res.ok) {
-                console.log("logging if res.ok", res.status)
-                setSubmitSuccess(true)
-            } else {
-                console.log("the else of res.ok block has fired", res.status)
-                setSubmitFail(true)
+            // Get reCAPTCHA token before submitting
+            if (!isReady) {
+                throw new Error("reCAPTCHA not loaded")
             }
+            const recaptchaToken = await executeRecaptcha("contact_form")
+
+            // Create FormData and append reCAPTCHA token
+            const formData = new FormData(e.target)
+            formData.append("recaptchaToken", recaptchaToken)
+
+            // Call server action
+            const result = await sendContactEmail(formData)
+
+            if (!result.success) {
+                throw new Error(result.message || "Failed to send email")
+            }
+
+            setSubmitSuccess(true)
         } catch (error) {
-            console.log(error)
+            console.log("Error sending contact email:", error.message)
             setSubmitFail(true)
         } finally {
             setIsSubmitting(false)
@@ -76,19 +69,19 @@ const ContactClientPage = () => {
                 <form className="mx-auto w-full max-w-[400px]" onSubmit={handleSubmit}>
                     <label className="w-full block mb-6">
                         <span className="text-gray-500 text-sm block mb-1">Name:</span>
-                        <input type="text" name="name" placeholder="type here" className="input input-bordered w-full" required onChange={handleInput} />
+                        <input type="text" name="name" placeholder="type here" className="input input-bordered w-full" required />
                     </label>
                     <label className="w-full block mb-6">
                         <span className="text-gray-500 text-sm block mb-1">Phone:</span>
-                        <input type="tel" name="phone" placeholder="type here" className="input input-bordered w-full" required onChange={handleInput} />
+                        <input type="tel" name="phone" placeholder="type here" className="input input-bordered w-full" required />
                     </label>
                     <label className="w-full block mb-6">
                         <span className="text-gray-500 text-sm block mb-1">Email:</span>
-                        <input type="email" name="email" placeholder="type here" className="input input-bordered w-full" required onChange={handleInput} />
+                        <input type="email" name="email" placeholder="type here" className="input input-bordered w-full" required />
                     </label>
                     <label className="w-full block mb-6">
                         <span className="text-gray-500 text-sm block mb-1">Message:</span>
-                        <textarea name="message" placeholder="type here" className="textarea textarea-bordered w-full h-[100px]"  required onChange={handleInput} />
+                        <textarea name="message" placeholder="type here" className="textarea textarea-bordered w-full h-[100px]" required />
                     </label>
                     <button className="btn g-moon-action-btn text-[1rem] w-full" disabled={isSubmitting}>{isSubmitting ? "Submitting..." : "Submit"}</button>
                 </form>
