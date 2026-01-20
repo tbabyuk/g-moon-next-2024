@@ -9,10 +9,9 @@ import { IoTimeOutline } from "react-icons/io5";
 
 
 
+
 export const Footer = () => {
 
-    const now = new Date();
-    const year = now.getFullYear()
 
     return(
         <footer className="bg-[url('/images/footer-bg.jpg')] bg-center bg-cover text-g-moon-light-gray">
@@ -63,9 +62,15 @@ export const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="p-5 md:py-4 bg-black/30 text-sm flex flex-col-reverse gap-3 md:flex-row md:justify-between md:items-center text-white/40 font-medium">
-                <div className="flex justify-center items-center"><span className="italic">Website by</span>&nbsp;<a href="https://www.strictlywebdev.com/" target="_blank" className="flex items-center"><img src="/images/swd_logo_sm_color.png" className="h-[20px] filter grayscale" /><span className="font-bold">StrictlyWebDev</span></a></div>
-                <div className="flex justify-center items-center">&copy; {year} Seelio Clinic</div>
+            <div className="p-5 md:py-4 gap-5 bg-black/50 flex flex-col md:flex-row md:justify-between text-white/40 text-sm">
+                <div className="flex justify-center items-center">&copy; {new Date().getFullYear()} Seelio Clinic</div>
+                <div className="flex justify-center items-center">
+                    <span className="italic">Website by</span>&nbsp;
+                    <a href="https://www.strictlywebdev.com/" target="_blank" rel="noopener" className="flex items-center group">
+                        <img src="/images/swd_logo_sm_color.png" alt="StrictlyWebDev Logo" className="h-[20px] grayscale group-hover:grayscale-0 transition-all" />
+                        <span className="font-bold group-hover:text-gray-100 transition-all">StrictlyWebDev</span>
+                    </a>
+                </div>
             </div>
         </footer>
     )
