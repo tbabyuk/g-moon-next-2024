@@ -5,7 +5,7 @@ import Link from "next/link";
 export const Hero = () => {
 
     return(
-        <div className="min-h-[calc(100vh-115px)] bg-[url('/hero-bg.jpg')] bg-center bg-cover grid grid-cols-1 lg:grid-cols-2 px-3">
+        <div className="min-h-[calc(100vh-115px)] bg-[url('/hero-bg.jpg')] bg-center bg-cover grid grid-cols-1 lg:grid-cols-2 items-center px-3">
             <div className="flex pt-12 lg:pt-0 justify-center items-center">
                 <img src="/g-moon-header-image-500.png" className="min-w-[300px] max-w-[450px]" alt="Relaxing Massage" />
             </div>
