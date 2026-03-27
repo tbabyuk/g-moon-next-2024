@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { IoLogoFacebook } from "react-icons/io";
+// import { IoLogoFacebook } from "react-icons/io";
 import { IoLogoInstagram } from "react-icons/io";
-import { IoLogoYoutube } from "react-icons/io";
+// import { IoLogoYoutube } from "react-icons/io";
 import { IoMapOutline } from "react-icons/io5";
 import { BsTelephone } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
@@ -20,9 +20,9 @@ export const Footer = () => {
                     <div className="w-[80%]">
                         <h3 className="text-2xl font-semibold mb-8">Social</h3>
                         <ul className="flex space-x-3">
-                            <li><Link href="#" className="g-moon-link"><IoLogoFacebook size="2.5rem" /></Link></li>
-                            <li><Link href="#" className="g-moon-link"><IoLogoInstagram size="2.5rem" /></Link></li>
-                            <li><Link href="#" className="g-moon-link"><IoLogoYoutube size="2.5rem" /></Link></li>
+                            {/* <li><Link href="#" className="g-moon-link"><IoLogoFacebook size="2.5rem" /></Link></li> */}
+                            <li><a href="https://www.instagram.com/g.moon.wellness" target="_blank" className="g-moon-link"><IoLogoInstagram size="2.5rem" /></a></li>
+                            {/* <li><Link href="#" className="g-moon-link"><IoLogoYoutube size="2.5rem" /></Link></li> */}
                         </ul>
                     </div>
                 </div>
