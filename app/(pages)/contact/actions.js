@@ -3,6 +3,108 @@
 import nodemailer from "nodemailer"
 
 
+// --- Spam content detection (scoring-based) ---
+
+const SPAM_INDICATORS = {
+    // 3 points each - almost never used by genuine spa customers
+    strong: [
+        /\bseo\b/i,
+        /search engine optimization/i,
+        /\bbacklinks?\b/i,
+        /link[ -]?building/i,
+        /domain authority/i,
+        /page authority/i,
+        /keyword rankings?\b/i,
+        /google rankings?\b/i,
+        /search rankings?\b/i,
+        /digital marketing/i,
+        /\bppc\b/i,
+        /pay per click/i,
+        /lead generation/i,
+        /web design services?/i,
+        /website redesign/i,
+        /social media marketing/i,
+        /content marketing/i,
+        /marketing (agency|company|services?|firm)/i,
+        /\bsem\b/i,
+        /search engine marketing/i,
+        /indexed pages?/i,
+    ],
+    // 2 points each - unlikely in a spa inquiry context
+    medium: [
+        /website traffic/i,
+        /drop in traffic/i,
+        /organic traffic/i,
+        /free audit/i,
+        /website audit/i,
+        /site audit/i,
+        /errors? on your (website|site)/i,
+        /first page of google/i,
+        /top of google/i,
+        /improve your rankings?/i,
+        /increase your traffic/i,
+        /boost your (traffic|rankings?|visibility|online)/i,
+        /online (presence|visibility)/i,
+        /meta (tags?|descriptions?)/i,
+        /crawl errors?/i,
+        /site speed/i,
+        /mobile optimiz/i,
+        /conversion rate/i,
+        /google (my business|business profile)/i,
+        /off[- ]?page/i,
+        /on[- ]?page/i,
+        /competitive (analysis|advantage)/i,
+        /click[- ]?through rate/i,
+    ],
+    // 1 point each - can appear legitimately but suspicious in combination
+    weak: [
+        /\btraffic\b/i,
+        /\brankings?\b/i,
+        /\boptimiz(e|ed|ation|ing)\b/i,
+        /\baudit\b/i,
+        /\berrors?\b/i,
+        /schedule a call/i,
+        /happy to (send|share)/i,
+        /send you (a |the )?(report|details|audit|analysis|errors)/i,
+        /bring (this |it |them )?to your attention/i,
+        /free (consultation|analysis|report)/i,
+        /wanted to reach out/i,
+        /quick call/i,
+        /we (can|could) help/i,
+        /i can (send|share) (you )?details/i,
+    ],
+}
+
+const SPAM_SCORE_THRESHOLD = 5
+
+const detectSpam = (text) => {
+    const normalizedText = text.toLowerCase()
+    let score = 0
+    const matchedTerms = []
+
+    for (const pattern of SPAM_INDICATORS.strong) {
+        if (pattern.test(normalizedText)) {
+            score += 3
+            matchedTerms.push(`[strong] ${pattern}`)
+        }
+    }
+    for (const pattern of SPAM_INDICATORS.medium) {
+        if (pattern.test(normalizedText)) {
+            score += 2
+            matchedTerms.push(`[medium] ${pattern}`)
+        }
+    }
+    for (const pattern of SPAM_INDICATORS.weak) {
+        if (pattern.test(normalizedText)) {
+            score += 1
+            matchedTerms.push(`[weak] ${pattern}`)
+        }
+    }
+
+    return { isSpam: score >= SPAM_SCORE_THRESHOLD, score, matchedTerms }
+}
+
+
 // Verify reCAPTCHA token with Google
 const verifyRecaptcha = async (token) => {
     const secretKey = process.env.RECAPTCHA_SECRET_KEY
@@ -45,6 +147,13 @@ export const sendContactEmail = async (formData) => {
     }
     console.log("reCAPTCHA verified successfully. Score:", recaptchaResult.score)
 
+    // Check message content for spam/solicitation
+    const spamCheck = detectSpam(`${name} ${message}`)
+    if (spamCheck.isSpam) {
+        console.log(`[SPAM BLOCKED] Score: ${spamCheck.score} | From: ${name} (${email}) | Matched: ${spamCheck.matchedTerms.join(", ")} | Message: ${message}`)
+        return { success: true, message: "Email sent successfully" }
+    }
+
     const transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
@@ -53,10 +162,12 @@ export const sendContactEmail = async (formData) => {
         }
     })
 
+    const isDev = process.env.NODE_ENV === "development"
+
     const mailOptions = {
         from: "vivi@g-moon-wellness.ca",
-        to: "vivi@g-moon-wellness.ca",
-        bcc: "terry@strictlywebdev.com",
+        to: isDev ? "terry@strictlywebdev.com" : "vivi@g-moon-wellness.ca",
+        ...(isDev ? {} : { bcc: "terry@strictlywebdev.com" }),
         subject: "New Contact Form Submission",
         html: `
             <div style="font-family: Arial, sans-serif; padding: 0 0 30px 0">
